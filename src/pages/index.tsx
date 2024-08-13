@@ -1,7 +1,7 @@
 import React from "react";
-
+import Welcome from "../../screens/Welcome/Welcome";
 const index = () => {
-  return <div>index</div>;
+  return <Welcome />;
 };
 
 export default index;

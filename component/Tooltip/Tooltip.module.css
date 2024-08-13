@@ -1,0 +1,7 @@
+.container {
+  border-radius: 9.922px;
+  border: 1.493px solid #c9c9c9;
+  opacity: var(--sds-size-stroke-border);
+  background: #f5f5f5;
+  padding: 24px;
+}
