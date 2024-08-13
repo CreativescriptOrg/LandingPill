@@ -1,13 +1,109 @@
 @import url("https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+
 * {
-  /* font-family: "Inter", sans-serif !important; */
-  box-sizing: border-box;
-  padding: 0;
-  margin: 0;
-  -ms-overflow-style: none;
-  scroll-behavior: smooth;
-  -webkit-font-smoothing: antialiased;
+	/* font-family: "Inter", sans-serif !important; */
+	box-sizing: border-box;
+	padding: 0;
+	margin: 0;
+	-ms-overflow-style: none;
+	scroll-behavior: smooth;
+	-webkit-font-smoothing: antialiased;
+	font-family: "Space Grotesk", sans-serif;
+}
+
+:root {
+	--color-text-default-secondary: #757575;
+	--color-text-default-default: #1e1e1e;
+	--color-border-neutral-secondary: #767676;
+	--color-text-brand-on-brand: #f5f5f5;
+	--purple: #4533e8;
+	--color-border-brand-default: #2c2c2c;
+	--color-background-brand-default: #2c2c2c;
+}
+
+body {
+	padding: 48px;
+}
+
+ul {
+	list-style-type: none;
+	margin-block-start: 0;
+	margin-block-end: 0;
+	margin-inline-start: 0;
+	margin-inline-end: 0;
+	padding-inline-start: 0;
+}
+
+.sr-only {
+	position: absolute;
+	width: 1px;
+	height: 1px;
+	padding: 0;
+	margin: -1px;
+	overflow: hidden;
+	clip: rect(0, 0, 0, 0);
+	border: 0;
+}
+
+.cta_card-subtitle {
+	color: var(--color-text-default-default);
+
+	/* Body/B1/Regular */
+	font-family: "Space Grotesk";
+	font-size: 16px;
+	font-style: normal;
+	font-weight: 400;
+	line-height: normal;
+	margin-bottom: 16px;
+}
+.cta_card-list {
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	gap: 12px;
+	align-self: stretch;
+}
+.cta_card-list li {
+	color: var(--color-text-default-secondary);
+
+	/* Body/B1/Regular */
+	font-size: 16px;
+	font-style: normal;
+	font-weight: 400;
+	line-height: normal;
 }
 .Typewriter__cursor {
-  font-size: 24px !important; /*Setting this to a ridiculous size as an example*/
+	font-size: 24px !important; /*Setting this to a ridiculous size as an example*/
+}
+
+/* Container */
+.main_container {
+	border-radius: 16px;
+	background: hsl(0, 0%, 96%);
+	min-height: calc(100vh - 96px);
+}
+
+.center_content {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+}
+
+.button_primary {
+	border-radius: 8px;
+	border: 1px solid var(--color-border-brand-default);
+	background: var(--color-background-brand-default);
+
+	display: flex;
+	padding: 12px;
+	justify-content: center;
+	align-items: center;
+	gap: 8px;
+
+	color: var(--color-text-brand-on-brand);
+	font-size: 14px;
+	font-weight: 400;
+	line-height: 100%; /* 16px */
 }

@@ -1,19 +1,21 @@
 .container {
-  height: 100vh;
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
+	background: hsl(0, 0%, 96%);
+	height: calc(100vh - 96px);
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	border-radius: 16px;
 }
 .text {
-  color: var(--Neutrals-neutral-1000, #000);
-  text-align: center;
-  /* Subtitle/S1/Semibold */
-  font-family: "Space Grotesk";
-  font-size: 24px;
-  font-style: normal;
-  font-weight: 400;
-  line-height: normal;
-  letter-spacing: -0.48px;
+	color: var(--Neutrals-neutral-1000, #000);
+	text-align: center;
+	/* Subtitle/S1/Semibold */
+	font-family: "Space Grotesk";
+	font-size: 24px;
+	font-style: normal;
+	font-weight: 400;
+	line-height: normal;
+	letter-spacing: -0.48px;
 }
