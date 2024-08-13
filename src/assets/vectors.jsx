@@ -162,6 +162,152 @@ export const LandingPillIcon = () => (
 		</defs>
 	</svg>
 );
+export const LandingPillIcon2 = () => (
+	<svg
+		width='132'
+		height='129'
+		viewBox='0 0 132 129'
+		fill='none'
+		xmlns='http://www.w3.org/2000/svg'
+	>
+		<g clip-path='url(#clip0_274_4112)'>
+			<rect
+				x='35.5'
+				y='5.13672'
+				width='61'
+				height='119'
+				rx='27'
+				fill='#FFF6D7'
+			/>
+			<path
+				d='M47.0625 35.75C48.8668 38.4983 53.5062 42.346 57.629 35.75'
+				stroke='black'
+				stroke-width='3'
+				stroke-linecap='round'
+			/>
+			<path
+				d='M60.2969 51.3242C61.3563 59.1409 68.2902 58.978 71.7099 51.3242'
+				stroke='black'
+				stroke-width='3'
+				stroke-linecap='round'
+			/>
+			<path
+				d='M74.375 35.75C76.1793 38.4983 80.8187 42.346 84.9415 35.75'
+				stroke='black'
+				stroke-width='3'
+				stroke-linecap='round'
+			/>
+			<rect
+				width='59'
+				height='59'
+				transform='translate(35.5 66.1367)'
+				fill='#3EDEA9'
+			/>
+			<path
+				d='M86.4051 95.3689C86.8218 101.816 83.1486 108.799 81.2599 111.484C79.3711 114.17 84.2176 110.735 87.4468 107.738C91.4833 103.991 91.2229 100.234 92.1344 95.3689C93.0459 90.5043 93.2792 36.868 92.9156 31.7244C92.1858 21.3994 85.4936 16.2999 82.7592 14.0764C80.0248 11.853 85.8645 23.5664 86.6227 28.5276C88.6431 41.7462 85.8843 87.3106 86.4051 95.3689Z'
+				fill='#A9A9A9'
+				fill-opacity='0.19'
+			/>
+			<g filter='url(#filter0_f_274_4112)'>
+				<ellipse
+					cx='51.7627'
+					cy='47.8115'
+					rx='3.73926'
+					ry='1.69043'
+					fill='#FCB0E7'
+				/>
+			</g>
+			<g filter='url(#filter1_f_274_4112)'>
+				<ellipse
+					cx='80.2393'
+					cy='47.8115'
+					rx='3.73926'
+					ry='1.69043'
+					fill='#FCB0E7'
+				/>
+			</g>
+		</g>
+		<rect
+			x='36.5'
+			y='6.13672'
+			width='59'
+			height='117'
+			rx='26'
+			stroke='black'
+			stroke-width='2'
+		/>
+		<path
+			d='M120.044 75.6405C119.778 79.7014 126.834 79.4349 125.437 71.5797C124.971 68.9659 121.475 65.494 116.89 61.982C118.451 63.7613 121.722 67.6927 122.307 69.1838C123.04 71.0477 120.31 71.5797 120.044 75.6405Z'
+			fill='black'
+		/>
+		<path
+			d='M96.5 49.2145C101.862 52.0394 110.45 57.0503 116.89 61.982M116.89 61.982C121.475 65.494 124.971 68.9659 125.437 71.5797C126.834 79.4349 119.778 79.7014 120.044 75.6405C120.31 71.5797 123.04 71.0477 122.307 69.1838C121.722 67.6927 118.451 63.7613 116.89 61.982Z'
+			stroke='black'
+		/>
+		<path
+			d='M35.4997 31.803C35.766 28.0064 29.4165 30.7802 26.8196 33.7316C26.5992 33.9821 26.362 34.1708 26.1146 34.3157C25.2498 34.3586 24.654 34.5543 24.0849 34.8814C23.0955 35.0392 22.2027 35.2532 21.773 36.5609C22.7745 35.8405 23.411 35.2688 24.0849 34.8814C24.7552 34.7746 25.4697 34.6936 26.1146 34.3157C26.2346 34.3098 26.3598 34.3068 26.4908 34.3068C28.381 34.3068 35.2334 35.5997 35.4997 31.803Z'
+			fill='black'
+		/>
+		<path
+			d='M35.4995 51.3241C30.1379 48.6829 24.6205 43.1395 21.773 36.5609M21.773 36.5609C22.6055 34.0273 25.1764 35.5991 26.8196 33.7316C29.4165 30.7802 35.766 28.0064 35.4997 31.803C35.2334 35.5997 28.381 34.3068 26.4908 34.3068C24.2977 34.3068 23.7377 35.1477 21.773 36.5609Z'
+			stroke='black'
+		/>
+		<defs>
+			<filter
+				id='filter0_f_274_4112'
+				x='45.5234'
+				y='43.6211'
+				width='12.4766'
+				height='8.38086'
+				filterUnits='userSpaceOnUse'
+				color-interpolation-filters='sRGB'
+			>
+				<feFlood flood-opacity='0' result='BackgroundImageFix' />
+				<feBlend
+					mode='normal'
+					in='SourceGraphic'
+					in2='BackgroundImageFix'
+					result='shape'
+				/>
+				<feGaussianBlur
+					stdDeviation='1.25'
+					result='effect1_foregroundBlur_274_4112'
+				/>
+			</filter>
+			<filter
+				id='filter1_f_274_4112'
+				x='74'
+				y='43.6211'
+				width='12.4766'
+				height='8.38086'
+				filterUnits='userSpaceOnUse'
+				color-interpolation-filters='sRGB'
+			>
+				<feFlood flood-opacity='0' result='BackgroundImageFix' />
+				<feBlend
+					mode='normal'
+					in='SourceGraphic'
+					in2='BackgroundImageFix'
+					result='shape'
+				/>
+				<feGaussianBlur
+					stdDeviation='1.25'
+					result='effect1_foregroundBlur_274_4112'
+				/>
+			</filter>
+			<clipPath id='clip0_274_4112'>
+				<rect
+					x='35.5'
+					y='5.13672'
+					width='61'
+					height='119'
+					rx='27'
+					fill='white'
+				/>
+			</clipPath>
+		</defs>
+	</svg>
+);
 
 export const PressEnterIcon = () => (
 	<svg
