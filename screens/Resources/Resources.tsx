@@ -7,7 +7,7 @@ const Resources = () => {
 	return (
 		<main className='main_container center_content'>
 			<div className={styles.container}>
-				<div className={styles.title_content}>
+				<div className={`title_content`}>
 					<LandingPillIcon />
 					<h1>
 						Resources page +500 free tools to learn about, How to build a

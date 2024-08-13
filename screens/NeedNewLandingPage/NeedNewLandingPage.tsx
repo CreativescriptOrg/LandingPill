@@ -5,7 +5,7 @@ const NeedNewLandingPage = () => {
 	return (
 		<main className='main_container center_content'>
 			<div className={styles.container}>
-				<div className={styles.title_content}>
+				<div className={`title_content`}>
 					<h1>Need a landing page? </h1>
 					<p>Don’t worry, we’ve got your back!</p>
 				</div>

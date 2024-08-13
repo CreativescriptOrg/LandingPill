@@ -7,7 +7,7 @@ const ScheduleCall = () => {
 	return (
 		<main className='main_container center_content'>
 			<div className={styles.container}>
-				<div className={styles.title_content}>
+				<div className={`title_content`}>
 					<LandingPillIcon />
 					<h1>
 						Schedule your FREE <br /> 30 min Expert Call
