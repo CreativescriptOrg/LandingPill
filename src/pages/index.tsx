@@ -1,6 +1,8 @@
 import React from "react";
 import Question from "../../screens/Question/Question";
 import Welcome from "../../screens/Welcome/Welcome";
+import QuestionsRelatedToLandingPage from "../../screens/QuestionsRelatedToLandingPage/QuestionsRelatedToLandingPage";
+
 const index = () => {
 	return (
 		<>
