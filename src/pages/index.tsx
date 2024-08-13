@@ -6,9 +6,8 @@ import DiagonsisResult from "../../screens/DiagonsisResult/DiagonsisResult";
 const index = () => {
 	return (
 		<>
-			{/* <Question curStep={1} totalStep={6} /> */}
+			<Question curStep={1} totalStep={6} />
 			{/* <Welcome /> */}
-			<DiagonsisResult />
 		</>
 	);
 };
