@@ -1,9 +1,51 @@
 * {
-  /* font-family: "Inter", sans-serif !important; */
-  box-sizing: border-box;
-  padding: 0;
-  margin: 0;
-  -ms-overflow-style: none;
-  scroll-behavior: smooth;
-  -webkit-font-smoothing: antialiased;
+	/* font-family: "Inter", sans-serif !important; */
+	box-sizing: border-box;
+	padding: 0;
+	margin: 0;
+	-ms-overflow-style: none;
+	scroll-behavior: smooth;
+	-webkit-font-smoothing: antialiased;
+}
+
+:root {
+	--sds-color-text-default-secondary: #757575;
+	--sds-color-text-default-default: #1e1e1e;
+	--sds-color-border-neutral-secondary: #767676;
+	--sds-color-icon-brand-on-brand: #f5f5f5;
+	--purple: #4533e8;
+	--sds-size-radius-200: 8px;
+	--sds-size-stroke-border: 1px;
+}
+
+/* CTA Card */
+.cta_card-container {
+	display: flex;
+	max-width: 440px;
+	min-width: 240px;
+	padding: 24px;
+	align-items: flex-start;
+	align-content: flex-start;
+	gap: 16px;
+
+	border-radius: 16px;
+	border: var(--sds-size-stroke-border) solid var(--Neutrals-neutral-1000, #000);
+	opacity: var(--sds-size-stroke-border);
+	background: #dfdbff;
+	box-shadow: 4px 4px 0px 0px var(--purple);
+}
+
+.cta_card-recommended {
+	display: flex;
+	padding: 6px 8px;
+	justify-content: center;
+	align-items: center;
+	gap: 8px;
+
+	border-radius: var(--sds-size-radius-200);
+	border: var(--sds-size-stroke-border) solid black;
+	background: var(--purple);
+
+	box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.3),
+		0px 1px 3px 1px rgba(0, 0, 0, 0.15);
 }
