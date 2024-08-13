@@ -1,4 +1,3 @@
-import CTACard from "@/components/CTACard/CTACard";
 import styles from "./styles.module.css";
 import Input from "@/components/InputElement/Input";
 import { LandingPillIcon, PressEnterIcon } from "@/assets/vectors";

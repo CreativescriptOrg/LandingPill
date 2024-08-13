@@ -1,8 +1,10 @@
 import { PressEnterIcon } from "@/assets/vectors";
 import Checkbox from "@/components/Checkbox/Checkbox";
 import styles from "./styles.module.css";
+import { useRouter } from "next/router";
 
 const Question1 = () => {
+	const router = useRouter();
 	return (
 		<form action='' className={styles.form}>
 			<div className={styles.optionsContainer}>
@@ -48,7 +50,13 @@ const Question1 = () => {
 				/>
 			</div>
 			<div className={`submit_container`}>
-				<button className='button_primary'>Next</button>
+				<button
+					type='button'
+					className='button_primary'
+					onClick={() => router.push("/landing-page/performance")}
+				>
+					Next
+				</button>
 				<span className='press_enter'>
 					Press Enter <PressEnterIcon />
 				</span>

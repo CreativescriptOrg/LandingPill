@@ -4,35 +4,7 @@
 	align-items: center;
 	gap: 48px;
 	padding: 64px 0;
-}
-.title_content {
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	gap: 16px;
 	max-width: 960px;
-}
-.title_content h1,
-.title_content p {
-	color: black;
-	text-align: center;
-	font-variant-numeric: lining-nums proportional-nums;
-
-	/* Heading/H1/Semibold */
-	font-size: 72px;
-	font-weight: 400;
-	line-height: normal;
-	letter-spacing: -1.44px;
-}
-.title_content span {
-	color: var(--color-text-default-secondary);
-	text-align: center;
-
-	/* Subtitle/S1/Regular */
-	font-size: 24px;
-	font-weight: 400;
-	line-height: normal;
-	letter-spacing: -0.48px;
 }
 
 .cards_container {

@@ -13,7 +13,7 @@ const NeedNewLandingPage = () => {
 					<CTACard
 						title='FREE Expert Call'
 						ctaText='Connect for FREE Call'
-						ctaLink='/next-page'
+						ctaLink='/schedule-call'
 						recommended={true}
 					>
 						<div>
@@ -32,7 +32,7 @@ const NeedNewLandingPage = () => {
 					<CTACard
 						title='Build your own Landing Page'
 						ctaText='COMING SOON'
-						ctaLink='/next-page'
+						ctaLink='/resources-to-build'
 						recommended={false}
 					>
 						<div>
