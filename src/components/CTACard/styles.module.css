@@ -1,0 +1,91 @@
+/* CTA Card */
+.container {
+	display: flex;
+	max-width: 440px;
+	min-width: 240px;
+	padding: 24px;
+	align-items: flex-start;
+	align-content: flex-start;
+	gap: 16px;
+
+	border-radius: 16px;
+	border: 1px solid black;
+	position: relative;
+
+	margin: 100px 100px;
+
+	background: #fff;
+	box-shadow: 4px 4px 0px 0px rgba(0, 0, 0, 0.4);
+}
+.recommendedContainer {
+	background: #dfdbff;
+	box-shadow: 4px 4px 0px 0px var(--purple);
+}
+
+.recommended {
+	display: flex;
+	padding: 6px 8px;
+	justify-content: center;
+	align-items: center;
+	gap: 8px;
+
+	border-radius: 8px;
+	border: 1px solid black;
+	background: var(--purple);
+
+	box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.3),
+		0px 1px 3px 1px rgba(0, 0, 0, 0.15);
+
+	position: absolute;
+	top: -16px;
+	right: 32px;
+	color: white;
+
+	color: #fff;
+	text-align: center;
+
+	/* M3/label/large */
+	font-family: "Roboto", sans-serif;
+	font-size: 14px;
+	font-weight: 500;
+	line-height: 20px; /* 142.857% */
+	letter-spacing: 0.1px;
+}
+
+.title {
+	color: var(--color-text-default-default);
+
+	/* Subtitle/S1/Semibold */
+	font-size: 24px;
+	font-weight: 400;
+	line-height: normal;
+	letter-spacing: -0.48px;
+}
+
+.card {
+	display: flex;
+	flex-direction: column;
+	gap: 12px;
+}
+
+.cta {
+	margin-top: 8px;
+	display: flex;
+	padding: 12px;
+	justify-content: center;
+	align-items: center;
+	gap: 12px;
+
+	border-radius: 8px;
+	border: 1px solid var(--color-border-neutral-secondary);
+	background: #fff;
+	width: fit-content;
+
+	color: black;
+
+	/* Single Line/Body Base */
+	font-size: 16px;
+	font-weight: 400;
+	line-height: 100%; /* 16px */
+	text-decoration: none;
+}

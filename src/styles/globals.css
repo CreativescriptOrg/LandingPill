@@ -1,4 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+
 * {
 	/* font-family: "Inter", sans-serif !important; */
 	box-sizing: border-box;
@@ -10,43 +12,50 @@
 }
 
 :root {
-	--sds-color-text-default-secondary: #757575;
-	--sds-color-text-default-default: #1e1e1e;
-	--sds-color-border-neutral-secondary: #767676;
-	--sds-color-icon-brand-on-brand: #f5f5f5;
+	--color-text-default-secondary: #757575;
+	--color-text-default-default: #1e1e1e;
+	--color-border-neutral-secondary: #767676;
+	--color-icon-brand-on-brand: #f5f5f5;
 	--purple: #4533e8;
-	--sds-size-radius-200: 8px;
-	--sds-size-stroke-border: 1px;
 }
 
-/* CTA Card */
-.cta_card-container {
+body {
+	font-family: "Space Grotesk";
+}
+
+ul {
+	list-style-type: none;
+	margin-block-start: 0;
+	margin-block-end: 0;
+	margin-inline-start: 0;
+	margin-inline-end: 0;
+	padding-inline-start: 0;
+}
+
+.cta_card-subtitle {
+	color: var(--color-text-default-default);
+
+	/* Body/B1/Regular */
+	font-family: "Space Grotesk";
+	font-size: 16px;
+	font-style: normal;
+	font-weight: 400;
+	line-height: normal;
+	margin-bottom: 16px;
+}
+.cta_card-list {
 	display: flex;
-	max-width: 440px;
-	min-width: 240px;
-	padding: 24px;
+	flex-direction: column;
 	align-items: flex-start;
-	align-content: flex-start;
-	gap: 16px;
-
-	border-radius: 16px;
-	border: var(--sds-size-stroke-border) solid var(--Neutrals-neutral-1000, #000);
-	opacity: var(--sds-size-stroke-border);
-	background: #dfdbff;
-	box-shadow: 4px 4px 0px 0px var(--purple);
+	gap: 12px;
+	align-self: stretch;
 }
+.cta_card-list li {
+	color: var(--color-text-default-secondary);
 
-.cta_card-recommended {
-	display: flex;
-	padding: 6px 8px;
-	justify-content: center;
-	align-items: center;
-	gap: 8px;
-
-	border-radius: var(--sds-size-radius-200);
-	border: var(--sds-size-stroke-border) solid black;
-	background: var(--purple);
-
-	box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.3),
-		0px 1px 3px 1px rgba(0, 0, 0, 0.15);
+	/* Body/B1/Regular */
+	font-size: 16px;
+	font-style: normal;
+	font-weight: 400;
+	line-height: normal;
 }
