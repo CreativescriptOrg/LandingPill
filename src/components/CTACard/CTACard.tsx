@@ -38,26 +38,3 @@ const CTACard = ({
 };
 
 export default CTACard;
-
-// Implementation Code:
-{
-	/* <CTACard
-	title='FREE Expert Call'
-	ctaText='Connect for FREE Call'
-	ctaLink='/next-page'
-	recommended={false}
->
-	<div>
-		<div className='cta_card-subtitle'>
-			Need expert help. Schedule a FREE 30 minute call Today.
-		</div>
-		<p className='cta_card-subtitle'>What to Expect?</p>
-		<ul className='cta_card-list'>
-			<li>🔍 Personalized Insights</li>
-			<li>🎨 Strategic Planning</li>
-			<li>⚡ Fast Action</li>
-			<li>📈 Business Understanding</li>
-		</ul>
-	</div>
-</CTACard> */
-}
