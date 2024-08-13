@@ -59,3 +59,6 @@ ul {
 	font-weight: 400;
 	line-height: normal;
 }
+.Typewriter__cursor {
+  font-size: 24px !important; /*Setting this to a ridiculous size as an example*/
+}

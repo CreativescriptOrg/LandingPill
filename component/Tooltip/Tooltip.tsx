@@ -1,23 +1,54 @@
 import React from "react";
+import Arrow from "./../../public/Arrow.png";
 import Typewriter from "typewriter-effect";
 import styles from "./Tooltip.module.css";
-const Tooltip = ({ text }: { text: string }) => {
+import Image from "next/image";
+const Tooltip = ({ setShowImages }: { setShowImages: any }) => {
   return (
     <div className={styles.container}>
       <Typewriter
+        options={{
+          delay: 50, // Speed for typing (lower value means faster typing)
+          deleteSpeed: 30, // Speed for deleting (lower value means faster deleting)
+        }}
         onInit={(typewriter) => {
           typewriter
-            .typeString("Hello World!")
+            .typeString(
+              '<span style="color: var(--Neutrals-neutral-1000, #000); text-align: center; font-family: Space Grotesk; font-size: 24px;font-style: normal;font-weight: 400;line-height: normal;letter-spacing: -0.48px;">Hey <br/> Founders!</span>'
+            )
+            .pauseFor(300)
+            .deleteChars(20)
+            .typeString(
+              '<span style="color: var(--Neutrals-neutral-1000, #000); text-align: center; font-family: Space Grotesk; font-size: 24px;font-style: normal;font-weight: 400;line-height: normal;letter-spacing: -0.48px;"><strong>I’m Landing Pill, </strong><br/> Your Landing Page Doc, I’m here to help you in fixing your landing page.</span>'
+            )
+            .pauseFor(300)
+            .deleteChars(100)
+            .typeString(
+              '<span style="color: var(--Neutrals-neutral-1000, #000); text-align: center; font-family: Space Grotesk; font-size: 24px;font-style: normal;font-weight: 400;line-height: normal;letter-spacing: -0.48px;"><strong>I have worked with 20+ founders</strong><br/>and helped them in improving their landing page.</span>'
+            )
+            .pauseFor(300)
+            .deleteChars(90)
+            .typeString(
+              '<span style="color: var(--Neutrals-neutral-1000, #000); text-align: center; font-family: Space Grotesk; font-size: 24px;font-style: normal;font-weight: 400;line-height: normal;letter-spacing: -0.48px;"><strong>The results were quite good, have a look</strong><br/><strong><span style="margin-bottom: 6px;">. </span></strong>increased conversion up to 30%<br/><strong>. </strong>user footfall increased by 10%</span>'
+            )
+            .pauseFor(300)
+            .deleteChars(110)
             .callFunction(() => {
-              console.log("String typed out!");
+              console.log("sdkgjrgjk");
+              setShowImages(true);
             })
-            .pauseFor(2500)
-            .deleteAll()
-            .callFunction(() => {
-              console.log("All strings were deleted");
-            })
+            .typeString(
+              '<span style="color: var(--Neutrals-neutral-1000, #000); text-align: center; font-family: Space Grotesk; font-size: 24px;font-style: normal;font-weight: 400;line-height: normal;letter-spacing: -0.48px;"><strong>Here are some of my work</strong>'
+            )
             .start();
         }}
+      />
+      <Image
+        src={Arrow}
+        width={12}
+        height={12}
+        alt="Arrow"
+        className={styles.arrow}
       />
     </div>
   );
