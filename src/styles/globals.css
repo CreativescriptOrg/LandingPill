@@ -8,3 +8,6 @@
   scroll-behavior: smooth;
   -webkit-font-smoothing: antialiased;
 }
+.Typewriter__cursor {
+  font-size: 24px !important; /*Setting this to a ridiculous size as an example*/
+}
