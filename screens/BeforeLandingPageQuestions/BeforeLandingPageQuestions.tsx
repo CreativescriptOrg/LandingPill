@@ -1,6 +1,6 @@
 import Loader from "@/components/Loader/Loader";
 import styles from "./styles.module.css";
-import { LandingPillIcon, PressEnterIcon } from "@/assets/vectors";
+import { LandingPillIcon } from "@/assets/vectors";
 
 const BeforeLandingPageQuestions = () => {
 	return (
