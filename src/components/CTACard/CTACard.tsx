@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { StarIcon } from "../../assets/vectors";
 import style from "./styles.module.css";
 
@@ -23,9 +24,9 @@ const CTACard = ({
 			<div className={style.card}>
 				<h2 className={style.title}>{title}</h2>
 				{children}
-				<a href={ctaLink} className={style.cta}>
+				<Link href={ctaLink} className={style.cta}>
 					{ctaText}
-				</a>
+				</Link>
 			</div>
 			{recommended && (
 				<div className={style.recommended}>

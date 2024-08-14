@@ -341,3 +341,25 @@ export const BarChartIcon = () => (
 		/>
 	</svg>
 );
+
+export const CheckIcon = () => (
+	<svg
+		xmlns='http://www.w3.org/2000/svg'
+		width='24'
+		height='24'
+		viewBox='0 0 24 24'
+		fill='none'
+	>
+		<path
+			d='M2.60938 8.19744C2.60938 4.94836 5.24328 2.31445 8.49236 2.31445H16.3364C19.5854 2.31445 22.2193 4.94836 22.2193 8.19744V16.0414C22.2193 19.2905 19.5854 21.9244 16.3364 21.9244H8.49236C5.24328 21.9244 2.60938 19.2905 2.60938 16.0414V8.19744Z'
+			fill='#635BFF'
+		/>
+		<path
+			d='M7.82031 11.6112L10.7255 14.6072L16.5359 8.61523'
+			stroke='white'
+			stroke-width='1.961'
+			stroke-linecap='round'
+			stroke-linejoin='round'
+		/>
+	</svg>
+);

@@ -2,7 +2,7 @@ import CTACard from "@/components/CTACard/CTACard";
 import styles from "./styles.module.css";
 import { LandingPillIcon2 } from "@/assets/vectors";
 
-const DiagonsisResult = () => {
+const DiagnosisResult = () => {
 	return (
 		<main className='main_container center_content'>
 			<div className={styles.container}>
@@ -14,7 +14,7 @@ const DiagonsisResult = () => {
 					<CTACard
 						title='Page Health Check'
 						ctaText='Get it done for free'
-						ctaLink='/next-page'
+						ctaLink='/page-health'
 						recommended={true}
 					>
 						<div>
@@ -28,7 +28,7 @@ const DiagonsisResult = () => {
 					<CTACard
 						title='Page Redesign'
 						ctaText='Let’s start'
-						ctaLink='/next-page'
+						ctaLink='/page-redesign'
 						recommended={false}
 					>
 						<div>
@@ -45,4 +45,4 @@ const DiagonsisResult = () => {
 	);
 };
 
-export default DiagonsisResult;
+export default DiagnosisResult;

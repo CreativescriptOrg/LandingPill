@@ -1,7 +1,7 @@
 import { PressEnterIcon } from "@/assets/vectors";
 import styles from "./styles.module.css";
 import Input from "@/components/InputElement/Input";
-import { useRouter } from "next/router";
+import { useRouter } from "next/navigation";
 
 const Question3 = () => {
 	const router = useRouter();

@@ -1,0 +1,44 @@
+.container {
+	display: flex;
+	max-width: 600px;
+	padding: 24px;
+	flex-direction: column;
+	align-items: flex-start;
+	gap: 24px;
+
+	border-radius: 16px;
+	border: 1px solid black;
+	background: #dfdbff;
+	box-shadow: 3.53px 3.53px 0px 0px #4533e8;
+
+	color: var(--color-text-default-default);
+
+	font-weight: 400;
+	line-height: normal;
+}
+
+.container > div,
+.container > div ul {
+	display: flex;
+	flex-direction: column;
+	gap: 16px;
+}
+
+.container h2 {
+	/* Subtitle/S1/Semibold */
+	font-size: 24px;
+	letter-spacing: -0.48px;
+}
+.container > div ul {
+	list-style-type: none;
+	padding: 0;
+
+	/* Body/B1/Semibold */
+	font-size: 16px;
+	font-weight: 400;
+}
+
+.container > div ul li {
+	display: flex;
+	gap: 8px;
+}

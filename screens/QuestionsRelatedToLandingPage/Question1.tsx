@@ -1,7 +1,7 @@
 import { PressEnterIcon } from "@/assets/vectors";
 import Checkbox from "@/components/Checkbox/Checkbox";
 import styles from "./styles.module.css";
-import { useRouter } from "next/router";
+import { useRouter } from "next/navigation";
 
 const Question1 = () => {
 	const router = useRouter();

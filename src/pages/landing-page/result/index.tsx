@@ -1,6 +1,6 @@
-import DiagonsisResult from "../../../../screens/DiagonsisResult/DiagonsisResult";
+import DiagnosisResult from "../../../../screens/DiagnosisResult/DiagnosisResult";
 
 const Result = () => {
-	return <DiagonsisResult />;
+	return <DiagnosisResult />;
 };
 export default Result;
