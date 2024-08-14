@@ -1,10 +1,12 @@
 import { PressEnterIcon } from "@/assets/vectors";
 import Checkbox from "@/components/Checkbox/Checkbox";
 import styles from "./styles.module.css";
-import { useRouter } from "next/router";
 
-const Question2 = () => {
-	const router = useRouter();
+const Question2 = ({
+	setStep,
+}: {
+	setStep: React.Dispatch<React.SetStateAction<number>>;
+}) => {
 	return (
 		<form action='' className={styles.form}>
 			<div className={styles.optionsContainer}>
@@ -53,7 +55,7 @@ const Question2 = () => {
 				<button
 					className='button_primary'
 					type='button'
-					onClick={() => router.push("/landing-page/others")}
+					onClick={() => setStep((prev) => prev + 1)}
 				>
 					Next
 				</button>

@@ -1,11 +1,13 @@
 import { PressEnterIcon } from "@/assets/vectors";
 import Input from "@/components/InputElement/Input";
+import { useState } from "react";
 
-// useRouter
-import { useRouter } from "next/navigation";
-
-const Question2 = () => {
-	const router = useRouter();
+const Question2 = ({
+	setStep,
+}: {
+	setStep: React.Dispatch<React.SetStateAction<number>>;
+}) => {
+	const [name, setName] = useState("");
 
 	return (
 		<form action=''>
@@ -16,14 +18,16 @@ const Question2 = () => {
 				placeholder='Enter your name'
 				id='name'
 				required
-				onChange={(e) => console.log(e.target.value)}
+				onChange={(e) => setName(e.target.value)}
 				error=''
 				hideLabel
 			/>
 			<div className={`submit_container`}>
 				<button
+					disabled={!name}
+					type='button'
 					className='button_primary'
-					onClick={() => router.push("/about/business-name")}
+					onClick={() => name && setStep((prev) => prev + 1)}
 				>
 					Next
 				</button>

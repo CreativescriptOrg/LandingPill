@@ -157,3 +157,8 @@ ul {
 	letter-spacing: -0.48px;
 	/* max-width: 640px; */
 }
+
+button,
+label {
+	cursor: pointer;
+}
