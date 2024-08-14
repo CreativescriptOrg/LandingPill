@@ -1,6 +1,6 @@
-import DiagoniseLandingPage from "../../../../screens/DiagoniseLandingPage/DiagoniseLandingPage";
+import DiagnoseLandingPage from "../../../../screens/DiagnoseLandingPage/DiagnoseLandingPage";
 
 const Loader = () => {
-	return <DiagoniseLandingPage />;
+	return <DiagnoseLandingPage />;
 };
 export default Loader;

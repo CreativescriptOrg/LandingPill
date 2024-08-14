@@ -2,7 +2,7 @@ import Loader from "@/components/Loader/Loader";
 import styles from "./styles.module.css";
 import { LandingPillIcon2 } from "@/assets/vectors";
 
-const DiagoniseLandingPage = () => {
+const DiagnoseLandingPage = () => {
 	return (
 		<main className='main_container center_content'>
 			<div className={styles.container}>
@@ -21,4 +21,4 @@ const DiagoniseLandingPage = () => {
 	);
 };
 
-export default DiagoniseLandingPage;
+export default DiagnoseLandingPage;

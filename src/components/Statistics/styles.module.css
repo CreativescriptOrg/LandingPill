@@ -1,0 +1,37 @@
+.container {
+	display: flex;
+	padding: 24px;
+	flex-direction: column;
+	justify-content: space-between;
+	align-items: flex-start;
+
+	border-radius: 16px;
+	border: 1px solid black;
+	background: #fff;
+	box-shadow: 3.53px 3.53px 0px 0px rgba(0, 0, 0, 0.4);
+
+	font-weight: 400;
+	line-height: normal;
+	text-align: center;
+}
+
+.container span:first-of-type {
+	color: #4533e8;
+
+	/* Subtitle/S1/Semibold */
+	font-size: 24px;
+
+	letter-spacing: -0.48px;
+}
+.container span:last-of-type {
+	color: var(--color-text-default-default);
+
+	/* Body/B1/Semibold */
+	font-size: 16px;
+}
+
+.container > div {
+	display: flex;
+	flex-direction: column;
+	gap: 8px;
+}
