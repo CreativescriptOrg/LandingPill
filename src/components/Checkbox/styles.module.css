@@ -1,0 +1,26 @@
+.container {
+	display: flex;
+	padding: 24px 16px;
+	align-items: center;
+	justify-content: space-between;
+	gap: 16px;
+	align-self: stretch;
+
+	border-radius: 16px;
+	border: 1px solid black;
+
+	background: #fff;
+	box-shadow: 4px 4px 0px 0px rgba(0, 0, 0, 0.4);
+}
+
+.checked {
+	background: #dfdbff;
+	box-shadow: none;
+}
+
+.input {
+	width: 24px;
+	height: 24px;
+	border-radius: 12px;
+	accent-color: #635bff;
+}
