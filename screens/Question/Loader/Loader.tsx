@@ -2,7 +2,7 @@ import Loader from "@/components/Loader/Loader";
 import styles from "./styles.module.css";
 import { LandingPillIcon } from "@/assets/vectors";
 
-const BeforeLandingPageQuestions = () => {
+const LoaderAfterSubmit = () => {
 	return (
 		<main className='main_container center_content'>
 			<div className={styles.container}>
@@ -17,4 +17,4 @@ const BeforeLandingPageQuestions = () => {
 	);
 };
 
-export default BeforeLandingPageQuestions;
+export default LoaderAfterSubmit;

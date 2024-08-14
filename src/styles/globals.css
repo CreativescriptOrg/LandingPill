@@ -158,6 +158,7 @@ ul {
 	/* max-width: 640px; */
 }
 
-button {
+button,
+label {
 	cursor: pointer;
 }

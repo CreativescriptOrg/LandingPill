@@ -3,8 +3,14 @@ import Input from "@/components/InputElement/Input";
 
 // useRouter
 import { useRouter } from "next/navigation";
+import { useState } from "react";
 
-const Question5 = () => {
+const Question5 = ({
+	setStep,
+}: {
+	setStep: React.Dispatch<React.SetStateAction<number>>;
+}) => {
+	const [link, setLink] = useState("yes");
 	const router = useRouter();
 
 	return (
@@ -16,15 +22,16 @@ const Question5 = () => {
 				placeholder='Drop it here, please!'
 				id='link'
 				required
-				onChange={(e) => console.log(e.target.value)}
+				onChange={(e) => setLink(e.target.value)}
 				error=''
 				hideLabel
 			/>
 			<div className={`submit_container`}>
 				<button
+					disabled={!link}
 					type='button'
 					className='button_primary'
-					onClick={() => router.push("/about/loader")}
+					onClick={() => link && setStep((prev) => prev + 1)}
 				>
 					Next
 				</button>

@@ -5,9 +5,13 @@ import styles from "./Question.module.css";
 import { useRouter } from "next/navigation";
 import { useState } from "react";
 
-const Question4 = () => {
-	const router = useRouter();
+const Question4 = ({
+	setStep,
+}: {
+	setStep: React.Dispatch<React.SetStateAction<number>>;
+}) => {
 	const [gotALandingPage, setGotALandingPage] = useState("yes");
+	const router = useRouter();
 
 	return (
 		<form action=''>
@@ -54,7 +58,7 @@ const Question4 = () => {
 					onClick={() =>
 						gotALandingPage === "no"
 							? router.push("/new-landing-page")
-							: router.push("/about/link")
+							: setStep((prev) => prev + 1)
 					}
 				>
 					Next
