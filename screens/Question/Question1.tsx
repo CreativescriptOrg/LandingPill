@@ -2,11 +2,13 @@ import { PressEnterIcon } from "@/assets/vectors";
 import Input from "@/components/InputElement/Input";
 
 // useRouter
-import { useRouter } from "next/navigation";
 import { useState } from "react";
 
-const Question1 = () => {
-	const router = useRouter();
+const Question1 = ({
+	setStep,
+}: {
+	setStep: React.Dispatch<React.SetStateAction<number>>;
+}) => {
 	const [name, setName] = useState("");
 
 	return (
@@ -27,7 +29,7 @@ const Question1 = () => {
 					disabled={!name}
 					type='button'
 					className='button_primary'
-					onClick={() => name && router.push("/about/business-category")}
+					onClick={() => name && setStep((prev) => prev + 1)}
 				>
 					Next
 				</button>
