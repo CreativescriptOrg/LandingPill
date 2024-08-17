@@ -8,9 +8,11 @@ const DiagnosisResult = () => {
 			<div className={styles.container}>
 				<div className={`title_content`}>
 					<LandingPillIcon2 />
-					<h1>Based on what you’ve shared, here are the two choices.</h1>
+					<h1 className='heading_2_sb'>
+						Based on what you’ve shared, here are the two choices.
+					</h1>
 				</div>
-				<div className={styles.cards_container}>
+				<div className={`flex_container`}>
 					<CTACard
 						title='Page Health Check'
 						ctaText='Get it done for free'

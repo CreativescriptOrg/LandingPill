@@ -11,8 +11,8 @@ const ChecklistInfo = ({
 	return (
 		<div className={styles.container}>
 			<div>
-				<h2>What to Expect</h2>
-				<ul>
+				<h2 className='subtitle_1_sb'>What to Expect</h2>
+				<ul className='body_1_sb'>
 					{expectationList.map((item, index) => (
 						<li key={index}>
 							<CheckIcon />
@@ -22,8 +22,8 @@ const ChecklistInfo = ({
 				</ul>
 			</div>
 			<div>
-				<h2>Why Choose Us</h2>
-				<ul>
+				<h2 className='subtitle_1_sb'>Why Choose Us</h2>
+				<ul className='body_1_sb'>
 					{chooseUsList.map((item, index) => (
 						<li key={index}>
 							<CheckIcon />

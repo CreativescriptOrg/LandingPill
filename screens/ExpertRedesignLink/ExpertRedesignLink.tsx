@@ -8,7 +8,7 @@ const ExpertRedesignLink = () => {
 			<div className={styles.container}>
 				<div className={`title_content`}>
 					<LandingPillIcon />
-					<h1>Ready to Revamp Your Landing Page?</h1>
+					<h1 className='heading_2_sb'>Ready to Revamp Your Landing Page?</h1>
 				</div>
 				<form className={styles.cards_container}>
 					<Input

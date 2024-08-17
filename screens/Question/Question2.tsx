@@ -13,10 +13,10 @@ const Question2 = ({
 		<form action=''>
 			<Input
 				type='text'
-				name='name'
-				label='Name'
-				placeholder='Enter your name'
-				id='name'
+				name='category'
+				label='category'
+				placeholder='Enter your business category'
+				id='category'
 				required
 				onChange={(e) => setName(e.target.value)}
 				error=''

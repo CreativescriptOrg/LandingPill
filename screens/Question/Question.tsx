@@ -9,6 +9,7 @@ import Question5 from "./Question5";
 import Question2 from "./Question2";
 import Question3 from "./Question3";
 import LoaderAfterSubmit from "./Loader/Loader";
+import ProgressBar from "@/components/ProgressBar/ProgressBar";
 
 const Question = () => {
 	const totalStep = 5;
@@ -16,21 +17,24 @@ const Question = () => {
 
 	return curStep <= totalStep ? (
 		<div className={styles.mainContainer}>
-			<div className={styles.pos}>
-				<div className={styles.progress}>
-					<div
-						className={styles.progressBar}
-						style={{ width: `${(curStep / totalStep) * 100}%` }}
-					/>
+			<ProgressBar curStep={curStep} totalStep={totalStep} />
+			<div className={`${styles.container} bg_container`}>
+				<div>
+					<Image width={128} height={128} alt='Pill' src={Frame} />
+					<div>
+						<div className={`${styles.text} heading_2_sb`}>
+							{STRINGS[curStep].title}
+						</div>
+						<div className={`${styles.text} heading_2_sb`}>
+							{STRINGS[curStep].title2}
+						</div>
+						{STRINGS[curStep].subtitle && (
+							<div className={`${styles.subtext} subtitle_1_re`}>
+								{STRINGS[curStep].subtitle}
+							</div>
+						)}
+					</div>
 				</div>
-			</div>
-			<div className={styles.container}>
-				<Image width={128} height={128} alt='Pill' src={Frame} />
-				<div className={styles.text}>{STRINGS[curStep].title}</div>
-				<div className={styles.text}>{STRINGS[curStep].title2}</div>
-				{STRINGS[curStep].subtitle && (
-					<div className={styles.subtext}>{STRINGS[curStep].subtitle}</div>
-				)}
 
 				{curStep === 1 && <Question1 setStep={setStep} />}
 				{curStep === 2 && <Question2 setStep={setStep} />}

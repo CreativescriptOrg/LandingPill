@@ -5,8 +5,3 @@
 	gap: 48px;
 	max-width: 1000px;
 }
-
-.cards_container {
-	display: flex;
-	gap: 48px;
-}

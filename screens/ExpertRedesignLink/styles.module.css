@@ -3,7 +3,6 @@
 	flex-direction: column;
 	align-items: center;
 	gap: 48px;
-	padding: 48px 0;
 }
 .container > div:first-of-type {
 	max-width: 800px;
@@ -11,7 +10,13 @@
 .cards_container {
 	display: flex;
 	flex-direction: column;
-	gap: 48px;
+	gap: 24px;
 	width: 100%;
 	max-width: 880px;
+}
+
+@media (min-width: 768px) {
+	.cards_container {
+		gap: 48px;
+	}
 }

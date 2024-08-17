@@ -4,22 +4,22 @@ const Statistics = () => {
 	return (
 		<div className={styles.container}>
 			<div>
-				<span>100+</span>
-				<span>
+				<span className='subtitle_1_sb'>100+</span>
+				<span className='body_1_sb'>
 					<b>Successful Projects</b>
 				</span>
 			</div>
 			<div>
-				<span>30%</span>
-				<span>Boost in Conversions</span>
+				<span className='subtitle_1_sb'>30%</span>
+				<span className='body_1_sb'>Boost in Conversions</span>
 			</div>
 			<div>
-				<span>48 hours</span>
-				<span>First Draft Delivery</span>
+				<span className='subtitle_1_sb'>48 hours</span>
+				<span className='body_1_sb'>First Draft Delivery</span>
 			</div>
 			<div>
-				<span>95%</span>
-				<span>Claimed Improvements</span>
+				<span className='subtitle_1_sb'>95%</span>
+				<span className='body_1_sb'>Claimed Improvements</span>
 			</div>
 		</div>
 	);
