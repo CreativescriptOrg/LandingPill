@@ -12,18 +12,18 @@ const ExpertDiagnosis = () => {
 		<main className='main_container center_content'>
 			<div className={styles.container}>
 				<div className={`title_content`}>
-					<h1>Expert Diagnosis</h1>
+					<h1 className='heading_1_sb'>Expert Diagnosis</h1>
 					<div className={styles.flex}>
 						<div>
 							<Image src={"/founder1.png"} alt='' width={24} height={24} />
 							<Image src={"/founder2.png"} alt='' width={24} height={24} />
 							<Image src={"/founder3.png"} alt='' width={24} height={24} />
 						</div>
-						<span>Approved by 17+ Founders</span>
+						<span className='body_2_sb'>Approved by 17+ Founders</span>
 					</div>
 				</div>
 
-				<div className={styles.cards_container}>
+				<div className={`flex_container`}>
 					<ChecklistInfo
 						expectationList={[
 							"📋 Personalized Insights: Tailored insights from over 100 + successful projects.",

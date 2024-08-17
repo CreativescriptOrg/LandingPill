@@ -6,10 +6,10 @@ const NeedNewLandingPage = () => {
 		<main className='main_container center_content'>
 			<div className={styles.container}>
 				<div className={`title_content`}>
-					<h1>Need a landing page? </h1>
-					<p>Don’t worry, we’ve got your back!</p>
+					<h1 className='heading_2_sb'>Need a landing page? </h1>
+					<p className='heading_2_sb'>Don’t worry, we’ve got your back!</p>
 				</div>
-				<div className={styles.cards_container}>
+				<div className={`flex_container`}>
 					<CTACard
 						title='FREE Expert Call'
 						ctaText='Connect for FREE Call'

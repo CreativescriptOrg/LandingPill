@@ -22,7 +22,7 @@ const CTACard = ({
 			}`}
 		>
 			<div className={style.card}>
-				<h2 className={style.title}>{title}</h2>
+				<h2 className={`${style.title} subtitle_1_sb`}>{title}</h2>
 				{children}
 				<Link href={ctaLink} className={style.cta}>
 					{ctaText}

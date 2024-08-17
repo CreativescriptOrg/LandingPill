@@ -4,8 +4,3 @@
 	align-items: center;
 	gap: 48px;
 }
-
-.cards_container {
-	display: flex;
-	gap: 48px;
-}

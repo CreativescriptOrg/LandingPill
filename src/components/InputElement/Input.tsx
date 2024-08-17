@@ -30,7 +30,7 @@ const Input = ({
 		</label>
 		{type === "textarea" ? (
 			<textarea
-				className={styles.input}
+				className={`${styles.input} subtitle_1_re ${error ? styles.error : ""}`}
 				name={name}
 				id={id}
 				placeholder={placeholder}
@@ -47,7 +47,7 @@ const Input = ({
 				{...props}
 				id={id}
 				required={required}
-				className={`${styles.input} ${error ? styles.error : ""}`}
+				className={`${styles.input} subtitle_1_re ${error ? styles.error : ""}`}
 				placeholder={placeholder}
 			/>
 		)}

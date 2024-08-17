@@ -2,6 +2,7 @@ import React from "react";
 import styles from "./styles.module.css";
 
 import { BarChartIcon, LandingPillIcon } from "@/assets/vectors";
+import ProgressBar from "@/components/ProgressBar/ProgressBar";
 
 const QuestionsContainer = ({
 	curStep,
@@ -22,17 +23,10 @@ const QuestionsContainer = ({
 }) => {
 	return (
 		<div className={styles.mainContainer}>
-			<div className={styles.pos}>
-				<div className={styles.progress}>
-					<div
-						className={styles.progressBar}
-						style={{ width: `${(curStep / totalStep) * 100}%` }}
-					/>
-				</div>
-			</div>
-			<div className={styles.container}>
+			<ProgressBar curStep={curStep} totalStep={totalStep} />
+			<div className={`${styles.container} bg_container`}>
 				{didYouKnow && (
-					<div className={styles.didYouKnow}>
+					<div className={`${styles.didYouKnow} label_1_b`}>
 						<BarChartIcon /> Did you know, 45% users convert with look & feel
 					</div>
 				)}
@@ -41,7 +35,7 @@ const QuestionsContainer = ({
 						<LandingPillIcon />
 					</div>
 				)}
-				<div className={styles.text}>
+				<div className={`${styles.text} heading_2_sb`}>
 					{title}
 					{iconDirection === "right" && (
 						<div className={styles.icon}>
@@ -49,7 +43,7 @@ const QuestionsContainer = ({
 						</div>
 					)}
 				</div>
-				<div className={styles.subtext}>{subtitle}</div>
+				<div className={`${styles.subtext} subtitle_1_re`}>{subtitle}</div>
 				{children}
 			</div>
 		</div>

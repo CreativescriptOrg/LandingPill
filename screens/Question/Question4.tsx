@@ -17,7 +17,7 @@ const Question4 = ({
 		<form action=''>
 			<label
 				htmlFor='gotOne'
-				className={`${styles.radio_container} ${
+				className={`${styles.radio_container} body_1_sb ${
 					gotALandingPage === "yes" && styles.checked
 				}`}
 			>
@@ -35,7 +35,7 @@ const Question4 = ({
 			</label>
 			<label
 				htmlFor='new'
-				className={`${styles.radio_container} ${
+				className={`${styles.radio_container} body_1_sb ${
 					gotALandingPage === "no" && styles.checked
 				}`}
 			>

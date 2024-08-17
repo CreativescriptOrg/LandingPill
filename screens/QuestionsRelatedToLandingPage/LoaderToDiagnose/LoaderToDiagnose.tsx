@@ -8,9 +8,9 @@ const LoaderToDiagnose = () => {
 			<div className={styles.container}>
 				<div className={`title_content`}>
 					<LandingPillIcon2 />
-					<span className=''>Awesome!</span>
-					<h1>Diagnosing your landing page...</h1>
-					<span>
+					<span className='subtitle_1_sb'>Awesome!</span>
+					<h1 className='heading_1_sb'>Diagnosing your landing page...</h1>
+					<span className='subtitle_1_sb'>
 						🩺 Let me put on my doctor’s coat and take a closer look. This won’t
 						take long!
 					</span>

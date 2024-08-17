@@ -1,0 +1,23 @@
+.pos {
+	position: absolute;
+	left: 0;
+	right: 0;
+	top: 0;
+}
+.progress {
+	width: 100%;
+	max-width: 840px;
+	height: 12px;
+	border-radius: var(--sds-size-radius-200, 8px);
+	background: #ededed;
+	position: relative;
+	margin-inline: auto;
+}
+.progressBar {
+	height: 12px;
+	border-radius: var(--sds-size-radius-200, 8px);
+	background: #4533e8;
+	position: absolute;
+	left: 0px;
+	width: 100%;
+}

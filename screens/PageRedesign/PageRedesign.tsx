@@ -6,10 +6,12 @@ const PageRedesign = () => {
 		<main className='main_container center_content'>
 			<div className={styles.container}>
 				<div className={`title_content`}>
-					<h1>Page Redesign</h1>
-					<span>Great choice! Here are two options you can choose from.</span>
+					<h1 className='heading_2_sb'>Page Redesign</h1>
+					<span className='subtitle_1_re'>
+						Great choice! Here are two options you can choose from.
+					</span>
 				</div>
-				<div className={styles.cards_container}>
+				<div className={`flex_container`}>
 					<CTACard
 						title='Redesign by experts'
 						ctaText='Connect For redesign'

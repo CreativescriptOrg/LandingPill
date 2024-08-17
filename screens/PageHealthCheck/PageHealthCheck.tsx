@@ -6,10 +6,12 @@ const PageHealthCheck = () => {
 		<main className='main_container center_content'>
 			<div className={styles.container}>
 				<div className={`title_content`}>
-					<h1>Page Health Check</h1>
-					<span>Great choice! Here are two options you can choose from.</span>
+					<h1 className='heading_2_sb'>Page Health Check</h1>
+					<span className='subtitle_1_re'>
+						Great choice! Here are two options you can choose from.
+					</span>
 				</div>
-				<div className={styles.cards_container}>
+				<div className={`flex_container`}>
 					<CTACard
 						title='Expert Diagnosis (free)'
 						ctaText='Connect For Expert Diagnosis'
