@@ -6,13 +6,13 @@ const CTACard = ({
 	title,
 	children,
 	ctaText,
-	ctaLink,
+	ctaAction,
 	recommended,
 }: {
 	title: string;
 	children: React.ReactNode;
 	ctaText: string;
-	ctaLink: string;
+	ctaAction: any;
 	recommended: boolean;
 }) => {
 	return (
@@ -24,9 +24,9 @@ const CTACard = ({
 			<div className={style.card}>
 				<h2 className={`${style.title} subtitle_1_sb`}>{title}</h2>
 				{children}
-				<Link href={ctaLink} className={style.cta}>
+				<button onClick={() => ctaAction()} className={style.cta}>
 					{ctaText}
-				</Link>
+				</button>
 			</div>
 			{recommended && (
 				<div className={style.recommended}>
