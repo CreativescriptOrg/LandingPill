@@ -11,8 +11,6 @@
 	border-radius: 16px;
 	display: flex;
 	align-items: center;
-	gap: 16px;
-	padding-inline: 16px;
 }
 .input {
 	width: 100%;
@@ -22,8 +20,12 @@
 	color: var(--color-text-default-secondary);
 	border-radius: 16px;
 	height: 100%;
-	padding-block: 16px;
+	padding: 16px;
 }
 .input::placeholder {
 	opacity: 0.8;
+}
+
+.container_icon > div {
+	padding-left: 16px;
 }
