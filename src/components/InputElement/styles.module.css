@@ -4,25 +4,26 @@
 	gap: 8px;
 	width: 100%;
 }
-
-.input {
-	border-radius: 16px;
+.container > div {
+	width: 100%;
 	border: 1px solid black;
 	background: #fff;
-
+	border-radius: 16px;
 	display: flex;
-	padding: 12px;
 	align-items: center;
 	gap: 16px;
-
+	padding-inline: 16px;
+}
+.input {
+	width: 100%;
+	padding: 0;
+	border: 0;
+	outline: none;
 	color: var(--color-text-default-secondary);
+	border-radius: 16px;
+	height: 100%;
+	padding-block: 16px;
 }
 .input::placeholder {
 	opacity: 0.8;
-}
-
-@media (min-width: 768px) {
-	.input {
-		padding: 16px;
-	}
 }

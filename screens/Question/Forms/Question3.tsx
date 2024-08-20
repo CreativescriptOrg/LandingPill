@@ -24,6 +24,7 @@ const Question3 = ({
 					onChange={(e) => setFormData(e.target.value)}
 					error=''
 					hideLabel
+					value={businessName}
 				/>
 				<div className={`submit_container`}>
 					<button disabled={!businessName} className='button_primary'>
