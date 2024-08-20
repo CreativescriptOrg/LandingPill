@@ -11,17 +11,18 @@
 	background: #fff;
 
 	display: flex;
-	padding: 16px;
+	padding: 12px;
 	align-items: center;
 	gap: 16px;
 
 	color: var(--color-text-default-secondary);
-
-	/* Subtitle/S1/Regular */
-	font-size: 24px;
-	font-weight: 400;
-	letter-spacing: -0.48px;
 }
 .input::placeholder {
 	opacity: 0.8;
+}
+
+@media (min-width: 768px) {
+	.input {
+		padding: 16px;
+	}
 }

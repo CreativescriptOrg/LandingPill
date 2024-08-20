@@ -1,6 +1,6 @@
 .container {
 	display: flex;
-	padding: 24px 16px;
+	padding: 16px 8px;
 	align-items: center;
 	justify-content: space-between;
 	gap: 16px;
@@ -11,6 +11,7 @@
 
 	background: #fff;
 	box-shadow: 4px 4px 0px 0px rgba(0, 0, 0, 0.4);
+	color: #14181f;
 }
 
 .checked {
@@ -19,8 +20,20 @@
 }
 
 .input {
-	width: 24px;
-	height: 24px;
+	width: 16px;
+	height: 16px;
 	border-radius: 12px;
 	accent-color: #635bff;
+}
+
+@media (min-width: 768px) {
+	.container {
+		padding: 24px 16px;
+	}
+	.input {
+		width: 24px;
+		height: 24px;
+		border-radius: 12px;
+		accent-color: #635bff;
+	}
 }

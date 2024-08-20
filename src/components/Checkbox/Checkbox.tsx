@@ -18,7 +18,9 @@ const Checkbox = ({
 	return (
 		<label
 			htmlFor={id}
-			className={`${styles.container} ${checked ? styles.checked : ""}`}
+			className={`${styles.container} ${
+				checked ? styles.checked : ""
+			} body_1_sb`}
 		>
 			<div>{label}</div>
 			<input

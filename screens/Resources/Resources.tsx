@@ -8,7 +8,7 @@ const Resources = () => {
 			<div className={styles.container}>
 				<div className={`title_content`}>
 					<LandingPillIcon />
-					<h1>
+					<h1 className='heading_1_sb'>
 						Resources page +500 free tools to learn about, How to build a
 						landing page
 					</h1>

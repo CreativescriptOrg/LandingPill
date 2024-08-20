@@ -12,18 +12,18 @@ const ExpertRedesign = () => {
 		<main className='main_container center_content'>
 			<div className={styles.container}>
 				<div className={`title_content`}>
-					<h1>Expert Redesign</h1>
+					<h1 className='heading_2_sb'>Expert Redesign</h1>
 					<div className={styles.flex}>
 						<div>
 							<Image src={"/founder1.png"} alt='' width={24} height={24} />
 							<Image src={"/founder2.png"} alt='' width={24} height={24} />
 							<Image src={"/founder3.png"} alt='' width={24} height={24} />
 						</div>
-						<span>Approved by 17+ Founders</span>
+						<span className='subtitle_1_re'>Approved by 17+ Founders</span>
 					</div>
 				</div>
 
-				<div className={styles.cards_container}>
+				<div className={`flex_container`}>
 					<ChecklistInfo
 						expectationList={[
 							"🔍 Deep Analysis: Tailored insights based on 100+ successful projects.",

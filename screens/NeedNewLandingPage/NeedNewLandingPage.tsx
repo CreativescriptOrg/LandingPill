@@ -1,19 +1,19 @@
 import CTACard from "@/components/CTACard/CTACard";
 import styles from "./styles.module.css";
 
-const NeedNewLandingPage = () => {
+const NeedNewLandingPage = ({ ctaAction }: { ctaAction: any }) => {
 	return (
 		<main className='main_container center_content'>
 			<div className={styles.container}>
 				<div className={`title_content`}>
-					<h1>Need a landing page? </h1>
-					<p>Don’t worry, we’ve got your back!</p>
+					<h1 className='heading_2_sb'>Need a landing page? </h1>
+					<p className='heading_2_sb'>Don’t worry, we’ve got your back!</p>
 				</div>
-				<div className={styles.cards_container}>
+				<div className={`flex_container`}>
 					<CTACard
 						title='FREE Expert Call'
 						ctaText='Connect for FREE Call'
-						ctaLink='/schedule-call'
+						ctaAction={() => ctaAction("scheduleCall")}
 						recommended={true}
 					>
 						<div>
@@ -32,7 +32,7 @@ const NeedNewLandingPage = () => {
 					<CTACard
 						title='Build your own Landing Page'
 						ctaText='COMING SOON'
-						ctaLink='/resources-to-build'
+						ctaAction={() => ctaAction("buildOwn")}
 						recommended={false}
 					>
 						<div>

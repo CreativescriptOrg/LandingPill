@@ -8,8 +8,10 @@ const ExpertDiagnosisLink = () => {
 			<div className={styles.container}>
 				<div className={`title_content`}>
 					<LandingPillIcon />
-					<h1>Get Your Landing Page health check in 1hr!</h1>
-					<span>
+					<h1 className='heading_2_sb'>
+						Get Your Landing Page health check in 1hr!
+					</h1>
+					<span className='subtitle_1_re'>
 						Just need your email to send the report, and your landing page link
 						if you haven’t shared it already. <br />
 						Let's get this done!

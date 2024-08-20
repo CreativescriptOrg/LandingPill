@@ -8,14 +8,14 @@ const ScheduleCall = () => {
 			<div className={styles.container}>
 				<div className={`title_content`}>
 					<LandingPillIcon />
-					<h1>
+					<h1 className='heading_1_sb'>
 						Schedule your FREE <br /> 30 min Expert Call
 					</h1>
-					<span>
+					<span className='subtitle_1_re'>
 						Just need your email to send the report, and your landing page link
 						if you haven’t shared it already.
 					</span>
-					<span>Let's get this done!</span>
+					<span className='subtitle_1_re'>Let's get this done!</span>
 				</div>
 				<form className={styles.cards_container}>
 					<Input

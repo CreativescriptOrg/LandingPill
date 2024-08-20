@@ -11,9 +11,7 @@
 	color: var(--Neutrals-neutral-1000, #000);
 	text-align: center;
 	/* Subtitle/S1/Semibold */
-	font-family: "Space Grotesk";
 	font-size: 24px;
-	font-style: normal;
 	font-weight: 400;
 	line-height: normal;
 	letter-spacing: -0.48px;

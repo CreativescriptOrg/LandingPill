@@ -1,9 +1,8 @@
 /* CTA Card */
 .container {
 	display: flex;
-	max-width: 440px;
-	min-width: 400px;
-	padding: 24px;
+
+	padding: 16px;
 	align-items: flex-start;
 	align-content: flex-start;
 	gap: 16px;
@@ -35,8 +34,8 @@
 		0px 1px 3px 1px rgba(0, 0, 0, 0.15);
 
 	position: absolute;
-	top: -16px;
-	right: 32px;
+	top: -24px;
+	right: 8px;
 	color: white;
 
 	color: #fff;
@@ -52,12 +51,6 @@
 
 .title {
 	color: var(--color-text-default-default);
-
-	/* Subtitle/S1/Semibold */
-	font-size: 24px;
-	font-weight: 400;
-	line-height: normal;
-	letter-spacing: -0.48px;
 }
 
 .card {
@@ -69,7 +62,7 @@
 .cta {
 	margin-top: 8px;
 	display: flex;
-	padding: 12px;
+	padding: 8px;
 	justify-content: center;
 	align-items: center;
 	gap: 12px;
@@ -81,9 +74,27 @@
 
 	color: black;
 
-	/* Single Line/Body Base */
-	font-size: 16px;
-	font-weight: 400;
 	line-height: 100%; /* 16px */
 	text-decoration: none;
+
+	/* Label/L1/Bold */
+	font-size: 14px;
+	font-weight: 700;
+}
+
+@media (min-width: 768px) {
+	.container {
+		max-width: 440px;
+		min-width: 400px;
+		padding: 24px;
+	}
+	.recommended {
+		top: -16px;
+		right: 32px;
+	}
+	.cta {
+		padding: 12px;
+		font-size: 16px;
+		font-weight: 400;
+	}
 }
