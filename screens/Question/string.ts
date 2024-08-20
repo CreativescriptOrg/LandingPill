@@ -39,4 +39,34 @@ const STRINGS: StringObject = {
 	},
 };
 
+export const categories = [
+	"Artificial Intelligence",
+	"Business",
+	"Collaboration",
+	"CRM",
+	"Crypto & Web3",
+	"Developer Tools",
+	"Education",
+	"Entertainment",
+	"Finance",
+	"Food & Drink",
+	"Graphics & Design",
+	"Health & Fitness",
+	"Jobs & Recruitment",
+	"Lifestyle",
+	"Medical",
+	"Music & Audio",
+	"Maps & Navigation",
+	"News",
+	"Photo & Video",
+	"Productivity",
+	"Real Estate",
+	"Reference",
+	"Shopping",
+	"Social Networking",
+	"Sports",
+	"Travel & Transportation",
+	"Utilities",
+];
+
 export default STRINGS;
