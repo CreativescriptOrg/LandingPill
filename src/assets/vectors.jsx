@@ -363,3 +363,21 @@ export const CheckIcon = () => (
 		/>
 	</svg>
 );
+
+export const SearchIcon = () => (
+	<svg
+		xmlns='http://www.w3.org/2000/svg'
+		width='25'
+		height='25'
+		viewBox='0 0 25 25'
+		fill='none'
+	>
+		<path
+			d='M21.5 21.8164L17.15 17.4664M19.5 11.8164C19.5 16.2347 15.9183 19.8164 11.5 19.8164C7.08172 19.8164 3.5 16.2347 3.5 11.8164C3.5 7.39813 7.08172 3.81641 11.5 3.81641C15.9183 3.81641 19.5 7.39813 19.5 11.8164Z'
+			stroke='#757575'
+			stroke-width='4'
+			stroke-linecap='round'
+			stroke-linejoin='round'
+		/>
+	</svg>
+);

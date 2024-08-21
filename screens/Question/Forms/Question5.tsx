@@ -24,6 +24,7 @@ const Question5 = ({
 					onChange={(e) => setFormData(e.target.value)}
 					error=''
 					hideLabel
+					value={landingPageLink}
 				/>
 				<div className={`submit_container`}>
 					<button disabled={!landingPageLink} className='button_primary'>
