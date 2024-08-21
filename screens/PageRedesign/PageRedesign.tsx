@@ -18,7 +18,9 @@ const PageRedesign = () => {
             ctaText="Connect For redesign"
             ctaLink="/expert-redesign"
             recommended={true}
-            ctaAction={() => {}}
+            ctaAction={() => {
+              router.push("/expert-redesign");
+            }}
           >
             <div>
               <div className="cta_card-subtitle">
