@@ -4,11 +4,15 @@ import Input from "@/components/InputElement/Input";
 
 const Question3 = ({
 	setStep,
+	setFormData,
+	metaData,
 }: {
-	setStep: React.Dispatch<React.SetStateAction<number>>;
+	setStep: any;
+	setFormData: any;
+	metaData: string;
 }) => {
 	return (
-		<form action='' className={styles.form}>
+		<form action='' className={styles.form} onSubmit={() => setStep()}>
 			<Input
 				label='Write it here, please!📖'
 				type='textarea'
@@ -16,19 +20,14 @@ const Question3 = ({
 				id='storytelling'
 				placeholder='Write it here, please!'
 				required={false}
-				onChange={() => {}}
+				onChange={(e) => setFormData(e.target.value)}
 				error={undefined}
 				hideLabel={true}
 				rows={4}
+				value={metaData}
 			/>
 			<div className={`submit_container`}>
-				<button
-					className='button_primary'
-					type='button'
-					onClick={() => setStep((prev) => prev + 1)}
-				>
-					Next
-				</button>
+				<button className='button_primary'>Next</button>
 				<span className='press_enter'>
 					Press Enter <PressEnterIcon />
 				</span>

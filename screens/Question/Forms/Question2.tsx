@@ -9,10 +9,12 @@ const Question2 = ({
 	setStep,
 	setFormData,
 	category,
+	customerName,
 }: {
 	setStep: any;
 	setFormData: any;
 	category: string;
+	customerName: string;
 }) => {
 	const [filteredCategories, setFilteredCategories] = useState(categories);
 
@@ -26,7 +28,7 @@ const Question2 = ({
 	};
 
 	return (
-		<Container>
+		<Container customerName={customerName}>
 			<form
 				action=''
 				onSubmit={() => category && setStep()}

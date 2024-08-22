@@ -6,40 +6,34 @@ interface StepState {
 	totalStep: number;
 	form: {
 		name: string;
-		category: string;
+		businessType: string;
 		businessName: string;
-		haveALandingPage: boolean;
-		landingPageLink: string;
-		scheduleCall: {
-			selected: boolean;
-			email: string;
-			productLink: string;
-		};
-		buildOwn: {
-			selected: boolean;
-			email: string;
-		};
+		hasLandingPage: boolean;
+		email: string;
+		website: string;
+		metaData: string;
+		optedFor: string;
+		serviceType: string;
+		performanceAnswers: Array<string>;
+		lookFeelAnswers: Array<string>;
 	};
 }
 
 const initialState: StepState = {
 	curStep: 1,
-	totalStep: 6,
+	totalStep: 10,
 	form: {
 		name: "",
-		category: "",
+		businessType: "",
 		businessName: "",
-		haveALandingPage: true,
-		landingPageLink: "",
-		scheduleCall: {
-			selected: false,
-			email: "",
-			productLink: "",
-		},
-		buildOwn: {
-			selected: false,
-			email: "",
-		},
+		hasLandingPage: true,
+		email: "",
+		website: "",
+		metaData: "",
+		optedFor: "",
+		serviceType: "",
+		performanceAnswers: [],
+		lookFeelAnswers: [],
 	},
 };
 
