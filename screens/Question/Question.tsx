@@ -32,10 +32,11 @@ const Question = () => {
 			)}
 			{curStep === 2 && (
 				<Question2
+					customerName={formState.name}
 					setStep={() => dispatch(setStep(curStep + 1))}
-					category={formState.category}
-					setFormData={(category: string) =>
-						dispatch(setForm({ ...formState, category }))
+					category={formState.businessType}
+					setFormData={(businessType: string) =>
+						dispatch(setForm({ ...formState, businessType }))
 					}
 				/>
 			)}
@@ -51,58 +52,51 @@ const Question = () => {
 			{curStep === 4 && (
 				<Question4
 					setStep={() => dispatch(setStep(curStep + 1))}
-					haveALandingPage={formState.haveALandingPage}
-					setFormData={(haveALandingPage: string) =>
+					haveALandingPage={formState.hasLandingPage}
+					setFormData={(hasLandingPage: string) => {
+						let form = {
+							...formState,
+							hasLandingPage: hasLandingPage === "true",
+						};
+						if (hasLandingPage === "false") {
+							form.optedFor = "NoLandingPage";
+						}
 						dispatch(
 							setForm({
-								...formState,
-								haveALandingPage: haveALandingPage === "true",
+								...form,
 							})
-						)
-					}
+						);
+					}}
 				/>
 			)}
-			{curStep === 5 && formState.haveALandingPage && (
+			{curStep === 5 && formState.hasLandingPage && (
 				<Question5
 					setStep={() => dispatch(setStep(curStep + 2))}
-					landingPageLink={formState.landingPageLink}
-					setFormData={(landingPageLink: string) =>
-						dispatch(setForm({ ...formState, landingPageLink }))
+					landingPageLink={formState.website}
+					setFormData={(website: string) =>
+						dispatch(setForm({ ...formState, website }))
 					}
 				/>
 			)}
-			{!formState.haveALandingPage && (
+			{!formState.hasLandingPage && (
 				<>
 					{curStep === 5 && (
 						<NeedNewLandingPage
 							ctaAction={(key: string) => {
-								let form = {
-									...formState,
-								};
-								if (key === "scheduleCall") {
-									form = {
-										...formState,
-										scheduleCall: {
-											...formState.scheduleCall,
-											selected: true,
-										},
-									};
-								} else {
-									form = {
-										...formState,
-										buildOwn: {
-											...formState.buildOwn,
-											selected: true,
-										},
-									};
-								}
-								dispatch(setForm({ ...form }));
+								dispatch(setForm({ ...formState, serviceType: key }));
 								dispatch(setStep(curStep + 1));
 							}}
 						/>
 					)}
-					{formState.scheduleCall.selected && curStep === 6 && <ScheduleCall />}
-					{formState.buildOwn.selected && curStep === 6 && <Resources />}
+					{formState.serviceType === "CS" && curStep === 6 && (
+						<ScheduleCall
+							setFormData={(email: string, website: string) =>
+								dispatch(setForm({ ...formState, email, website }))
+							}
+							formState={formState}
+						/>
+					)}
+					{formState.serviceType === "Self" && curStep === 6 && <Resources />}
 				</>
 			)}
 		</>

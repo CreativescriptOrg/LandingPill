@@ -5,7 +5,13 @@ import styles from "../Question.module.css";
 import Image from "next/image";
 import STRINGS from "../string";
 
-const Container = ({ children }: { children: React.ReactNode }) => {
+const Container = ({
+	customerName = "",
+	children,
+}: {
+	customerName?: string;
+	children: React.ReactNode;
+}) => {
 	const curStep = useSelector((state: RootState) => state.step.curStep);
 	const totalStep = useSelector((state: RootState) => state.step.totalStep);
 
@@ -17,14 +23,14 @@ const Container = ({ children }: { children: React.ReactNode }) => {
 					<Image width={128} height={128} alt='Pill' src={"/Frame.png"} />
 					<div>
 						<div className={`${styles.text} heading_2_sb`}>
-							{STRINGS[curStep].title}
+							{STRINGS(curStep, customerName).title}
 						</div>
 						<div className={`${styles.text} heading_2_sb`}>
-							{STRINGS[curStep].title2}
+							{STRINGS(curStep, customerName).title2}
 						</div>
-						{STRINGS[curStep].subtitle && (
+						{STRINGS(curStep, customerName).subtitle && (
 							<div className={`${styles.subtext} subtitle_1_re`}>
-								{STRINGS[curStep].subtitle}
+								{STRINGS(curStep).subtitle}
 							</div>
 						)}
 					</div>
