@@ -7,17 +7,18 @@ import STRINGS from "../string";
 
 const Container = ({
 	customerName = "",
+	curStepProgress = 1,
 	children,
 }: {
 	customerName?: string;
+	curStepProgress: number;
 	children: React.ReactNode;
 }) => {
 	const curStep = useSelector((state: RootState) => state.step.curStep);
-	const totalStep = useSelector((state: RootState) => state.step.totalStep);
 
 	return (
 		<div className={styles.mainContainer}>
-			<ProgressBar curStep={curStep} totalStep={totalStep} />
+			<ProgressBar curStep={curStepProgress} totalStep={5} />
 			<div className={`${styles.container} bg_container`}>
 				<div>
 					<Image width={128} height={128} alt='Pill' src={"/Frame.png"} />

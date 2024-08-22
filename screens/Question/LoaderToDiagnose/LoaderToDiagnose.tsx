@@ -1,8 +1,17 @@
 import Loader from "@/components/Loader/Loader";
 import styles from "./styles.module.css";
 import { LandingPillIcon2 } from "@/assets/vectors";
+import { useEffect } from "react";
 
-const LoaderToDiagnose = () => {
+const LoaderToDiagnose = ({ setStep }: { setStep: any }) => {
+	useEffect(() => {
+		const timeoutId = setTimeout(() => {
+			setStep();
+		}, 1000);
+
+		return () => clearTimeout(timeoutId);
+	}, []);
+
 	return (
 		<main className='main_container center_content'>
 			<div className={styles.container}>

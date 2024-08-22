@@ -6,43 +6,61 @@ interface StringObject {
 	};
 }
 
-const STRINGS = (curStep: number, customerName?: string) => {
+const STRINGS = (curStep: string, customerName?: string) => {
 	switch (curStep) {
-		case 1:
+		case "name":
 			return {
 				title: "What should i call you?",
 				title2: "",
 				subtitle: "I’ll remember, promise!",
 			};
-		case 2:
+		case "businessType":
 			return {
 				title: `Cool! ${customerName}!`,
 				title2: "So, what’s your business about?",
 				subtitle: "",
 			};
-		case 3:
+		case "businessName":
 			return {
 				title: "Nice! What’s your business called?",
 				title2: "",
 				subtitle: "Bet it’s awesome!",
 			};
-		case 4:
+		case "hasLandingPage":
 			return {
 				title: "Got a landing page already? ",
 				title2: "",
 				subtitle: "",
 			};
-		case 5:
+		case "website":
 			return {
 				title: "Got a link to your landing page?",
 				title2: "",
 				subtitle: "",
 			};
-		case 6:
+		case "loader1":
 			return {
 				title: "",
 				title2: "",
 				subtitle: "",
+			};
+		case "look":
+			return {
+				title: "How’s the vibe (look & feel) of your landing page?",
+				title2: "",
+				subtitle: "What’s bugging you? Pick one or more",
+			};
+		case "performance":
+			return {
+				title: "How’s your landing page performing?",
+				title2: "",
+				subtitle: "What’s not working as well as you’d like? Pick one or more:",
+			};
+		case "mtadata":
+			return {
+				title: "Anything else giving you trouble with your landing page?",
+				title2: "",
+				subtitle: "I’m listening!",
 			};
 
 		default:

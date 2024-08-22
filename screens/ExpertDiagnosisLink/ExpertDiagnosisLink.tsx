@@ -1,8 +1,15 @@
 import styles from "./styles.module.css";
 import Input from "@/components/InputElement/Input";
-import { LandingPillIcon, PressEnterIcon } from "@/assets/vectors";
+import { LandingPillIcon } from "@/assets/vectors";
+import submitForm from "@/utils/submitForm";
 
-const ExpertDiagnosisLink = () => {
+const ExpertDiagnosisLink = ({
+	setFormData,
+	formState,
+}: {
+	setFormData: (email: string, website: string) => void;
+	formState: any;
+}) => {
 	return (
 		<main className='main_container center_content'>
 			<div className={styles.container}>
@@ -17,7 +24,13 @@ const ExpertDiagnosisLink = () => {
 						Let's get this done!
 					</span>
 				</div>
-				<form className={styles.cards_container}>
+				<form
+					className={styles.cards_container}
+					onSubmit={(e) => {
+						e.preventDefault();
+						submitForm(formState);
+					}}
+				>
 					<Input
 						type='email'
 						placeholder='Need your email to mail you'
@@ -26,7 +39,7 @@ const ExpertDiagnosisLink = () => {
 						id='email'
 						required
 						hideLabel={true}
-						onChange={() => {}}
+						onChange={(e) => setFormData(e.target.value, formState.website)}
 						error=''
 					/>
 					<Input
@@ -37,11 +50,16 @@ const ExpertDiagnosisLink = () => {
 						id='link'
 						required
 						hideLabel={true}
-						onChange={() => {}}
+						onChange={(e) => setFormData(formState.email, e.target.value)}
 						error=''
 					/>
 					<div className={`submit_container`}>
-						<button className='button_primary'>Get Healthcheck done</button>
+						<button
+							className='button_primary'
+							disabled={!formState.email || !formState.website}
+						>
+							Get Healthcheck done
+						</button>
 					</div>
 				</form>
 			</div>

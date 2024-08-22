@@ -1,8 +1,15 @@
 import styles from "./styles.module.css";
 import Input from "@/components/InputElement/Input";
 import { LandingPillIcon, PressEnterIcon } from "@/assets/vectors";
+import submitForm from "@/utils/submitForm";
 
-const ExpertRedesignLink = () => {
+const ExpertRedesignLink = ({
+	setFormData,
+	formState,
+}: {
+	setFormData: (email: string, website: string) => void;
+	formState: any;
+}) => {
 	return (
 		<main className='main_container center_content'>
 			<div className={styles.container}>
@@ -10,7 +17,24 @@ const ExpertRedesignLink = () => {
 					<LandingPillIcon />
 					<h1 className='heading_2_sb'>Ready to Revamp Your Landing Page?</h1>
 				</div>
-				<form className={styles.cards_container}>
+				<form
+					className={styles.cards_container}
+					onSubmit={(e) => {
+						e.preventDefault();
+						submitForm(formState);
+					}}
+				>
+					<Input
+						type='email'
+						placeholder='Need your email to mail you'
+						label='email'
+						name='email'
+						id='email'
+						required
+						hideLabel={true}
+						onChange={(e) => setFormData(e.target.value, formState.website)}
+						error=''
+					/>
 					<Input
 						type='link'
 						placeholder='Share your Landing Page link in case you haven’t...'
@@ -19,7 +43,7 @@ const ExpertRedesignLink = () => {
 						id='link'
 						required
 						hideLabel={true}
-						onChange={() => {}}
+						onChange={(e) => setFormData(formState.email, e.target.value)}
 						error=''
 					/>
 					<div className={`submit_container`}>
