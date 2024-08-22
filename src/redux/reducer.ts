@@ -2,7 +2,7 @@ import { combineReducers } from "redux";
 import { createSlice, PayloadAction } from "@reduxjs/toolkit";
 
 interface StepState {
-	curStep: number;
+	curStep: string;
 	totalStep: number;
 	form: {
 		name: string;
@@ -20,7 +20,7 @@ interface StepState {
 }
 
 const initialState: StepState = {
-	curStep: 1,
+	curStep: "name",
 	totalStep: 10,
 	form: {
 		name: "",
@@ -41,7 +41,7 @@ const stepSlice = createSlice({
 	name: "step",
 	initialState,
 	reducers: {
-		setStep: (state, action: PayloadAction<number>) => {
+		setStep: (state, action: PayloadAction<string>) => {
 			state.curStep = action.payload;
 		},
 		setForm: (state, action: PayloadAction<StepState["form"]>) => {

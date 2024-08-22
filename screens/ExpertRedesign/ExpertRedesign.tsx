@@ -3,11 +3,8 @@ import { PressEnterIcon } from "@/assets/vectors";
 import ChecklistInfo from "@/components/ChecklistInfo/ChecklistInfo";
 import Statistics from "@/components/Statistics/Statistics";
 import Image from "next/image";
-import { useRouter } from "next/navigation";
 
-const ExpertRedesign = () => {
-	const router = useRouter();
-
+const ExpertRedesign = ({ setStep }: { setStep: any }) => {
 	return (
 		<main className='main_container center_content'>
 			<div className={styles.container}>
@@ -42,7 +39,7 @@ const ExpertRedesign = () => {
 					<button
 						type='button'
 						className='button_primary'
-						onClick={() => router.push("/expert-redesign/link")}
+						onClick={() => setStep()}
 					>
 						Next
 					</button>

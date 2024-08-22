@@ -3,27 +3,26 @@ import styles from "./styles.module.css";
 
 import { BarChartIcon, LandingPillIcon } from "@/assets/vectors";
 import ProgressBar from "@/components/ProgressBar/ProgressBar";
+import STRINGS from "../../../screens/Question/string";
+import { useSelector } from "react-redux";
+import { RootState } from "../../../src/redux/reducer";
 
 const QuestionsContainer = ({
-	curStep,
-	totalStep,
-	title,
+	curStepProgress = 1,
 	didYouKnow,
-	subtitle,
 	children,
-	iconDirection,
+	iconDirection = "right",
 }: {
-	curStep: any;
-	totalStep: any;
-	title: string;
-	didYouKnow: string;
-	subtitle: string;
+	curStepProgress: any;
+	didYouKnow?: boolean;
 	children: React.ReactNode;
-	iconDirection: string;
+	iconDirection?: string;
 }) => {
+	const curStep = useSelector((state: RootState) => state.step.curStep);
+
 	return (
 		<div className={styles.mainContainer}>
-			<ProgressBar curStep={curStep} totalStep={totalStep} />
+			<ProgressBar curStep={curStepProgress} totalStep={3} />
 			<div className={`${styles.container} bg_container`}>
 				{didYouKnow && (
 					<div className={`${styles.didYouKnow} label_1_b`}>
@@ -36,14 +35,16 @@ const QuestionsContainer = ({
 					</div>
 				)}
 				<div className={`${styles.text} heading_2_sb`}>
-					{title}
+					{STRINGS(curStep).title}
 					{iconDirection === "right" && (
 						<div className={styles.icon}>
 							<LandingPillIcon />
 						</div>
 					)}
 				</div>
-				<div className={`${styles.subtext} subtitle_1_re`}>{subtitle}</div>
+				<div className={`${styles.subtext} subtitle_1_re`}>
+					{STRINGS(curStep).subtitle}
+				</div>
 				{children}
 			</div>
 		</div>

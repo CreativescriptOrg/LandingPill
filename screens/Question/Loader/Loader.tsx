@@ -1,18 +1,17 @@
 import Loader from "@/components/Loader/Loader";
 import styles from "./styles.module.css";
 import { LandingPillIcon } from "@/assets/vectors";
-import React from "react";
-import { useRouter } from "next/router";
-const LoaderAfterSubmit = () => {
-	const router = useRouter();
+import { useEffect } from "react";
 
-	React.useEffect(() => {
+const LoaderAfterSubmit = ({ setStep }: { setStep: any }) => {
+	useEffect(() => {
 		const timeoutId = setTimeout(() => {
-			router.push("/landing-page");
+			setStep();
 		}, 1000);
 
 		return () => clearTimeout(timeoutId);
 	}, []);
+
 	return (
 		<main className='main_container center_content'>
 			<div className={styles.container}>

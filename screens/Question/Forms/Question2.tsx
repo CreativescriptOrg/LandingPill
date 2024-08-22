@@ -28,7 +28,7 @@ const Question2 = ({
 	};
 
 	return (
-		<Container customerName={customerName}>
+		<Container customerName={customerName} curStepProgress={2}>
 			<form
 				action=''
 				onSubmit={() => category && setStep()}
