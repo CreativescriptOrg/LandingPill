@@ -7,7 +7,7 @@ const ExpertRedesignLink = ({
 	setFormData,
 	formState,
 }: {
-	setFormData: (email: string, website: string) => void;
+	setFormData: (email: string) => void;
 	formState: any;
 }) => {
 	return (
@@ -32,22 +32,11 @@ const ExpertRedesignLink = ({
 						id='email'
 						required
 						hideLabel={true}
-						onChange={(e) => setFormData(e.target.value, formState.website)}
-						error=''
-					/>
-					<Input
-						type='link'
-						placeholder='Share your Landing Page link in case you haven’t...'
-						label='link'
-						name='link'
-						id='link'
-						required
-						hideLabel={true}
-						onChange={(e) => setFormData(formState.email, e.target.value)}
+						onChange={(e) => setFormData(e.target.value)}
 						error=''
 					/>
 					<div className={`submit_container`}>
-						<button className='button_primary'>
+						<button className='button_primary' disabled={!formState.email}>
 							Schedule call with expert
 						</button>
 						<span className='press_enter'>

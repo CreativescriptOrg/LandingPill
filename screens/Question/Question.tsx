@@ -188,8 +188,8 @@ const Question = () => {
 			)}
 			{curStep === "AuditCSLink" && (
 				<ExpertDiagnosisLink
-					setFormData={(email: string, website: string) =>
-						dispatch(setForm({ ...formState, email, website }))
+					setFormData={(email: string) =>
+						dispatch(setForm({ ...formState, email }))
 					}
 					formState={formState}
 				/>
@@ -207,8 +207,8 @@ const Question = () => {
 			)}
 			{curStep === "RedesignCSLink" && (
 				<ExpertRedesignLink
-					setFormData={(email: string, website: string) =>
-						dispatch(setForm({ ...formState, email, website }))
+					setFormData={(email: string) =>
+						dispatch(setForm({ ...formState, email }))
 					}
 					formState={formState}
 				/>
