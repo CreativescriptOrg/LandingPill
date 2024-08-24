@@ -56,7 +56,7 @@ const STRINGS = (curStep: string, customerName?: string) => {
 				title2: "",
 				subtitle: "What’s not working as well as you’d like? Pick one or more:",
 			};
-		case "mtadata":
+		case "metadata":
 			return {
 				title: "Anything else giving you trouble with your landing page?",
 				title2: "",

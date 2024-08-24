@@ -7,7 +7,7 @@ const ExpertDiagnosisLink = ({
 	setFormData,
 	formState,
 }: {
-	setFormData: (email: string, website: string) => void;
+	setFormData: (email: string) => void;
 	formState: any;
 }) => {
 	return (
@@ -39,25 +39,12 @@ const ExpertDiagnosisLink = ({
 						id='email'
 						required
 						hideLabel={true}
-						onChange={(e) => setFormData(e.target.value, formState.website)}
+						onChange={(e) => setFormData(e.target.value)}
 						error=''
 					/>
-					<Input
-						type='link'
-						placeholder='Add your Product Link here'
-						label='link'
-						name='link'
-						id='link'
-						required
-						hideLabel={true}
-						onChange={(e) => setFormData(formState.email, e.target.value)}
-						error=''
-					/>
+
 					<div className={`submit_container`}>
-						<button
-							className='button_primary'
-							disabled={!formState.email || !formState.website}
-						>
+						<button className='button_primary' disabled={!formState.email}>
 							Get Healthcheck done
 						</button>
 					</div>

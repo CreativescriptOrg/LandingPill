@@ -43,11 +43,11 @@ const ScheduleCall = ({
 						error=''
 					/>
 					<Input
-						type='text'
+						type='link'
 						placeholder='Add your Product Link here'
-						label='Email'
-						name='email'
-						id='email'
+						label='Add your Product Link here'
+						name='link'
+						id='link'
 						required
 						hideLabel={true}
 						onChange={(e) => setFormData(formState.email, e.target.value)}
