@@ -9,19 +9,19 @@ const Tooltip = ({ setShowImages }: { setShowImages: any }) => {
       <Typewriter
         options={{
           delay: 50, // Speed for typing (lower value means faster typing)
-          deleteSpeed: 30, // Speed for deleting (lower value means faster deleting)
+          deleteSpeed: 0.00001, // Speed for deleting (lower value means faster deleting)
         }}
         onInit={(typewriter) => {
           typewriter
             .typeString(
               '<span class="typewriter_text subtitle_1_sb">Hey <br/> Founders!</span>'
             )
-            .pauseFor(300)
+            // .pauseFor(300)
             .deleteChars(20)
             .typeString(
               '<span class="typewriter_text subtitle_1_sb"><strong>I’m Landing Pill, </strong><br/> Your Landing Page Doc, I’m here to help you in fixing your landing page.</span>'
             )
-            .pauseFor(300)
+            // .pauseFor(300)
             .deleteChars(100)
             .typeString(
               '<span class="typewriter_text subtitle_1_sb">But first, I need to get to know you a little better</span>'
