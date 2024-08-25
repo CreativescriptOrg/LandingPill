@@ -1,0 +1,52 @@
+.container {
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	flex-shrink: 0;
+	text-wrap: nowrap;
+}
+
+.stepWrapper {
+	display: flex;
+	align-items: center;
+	position: relative;
+}
+
+.circle {
+	width: 20px;
+	height: 20px;
+	border-radius: 50%;
+	background-color: #e0e0e0;
+	cursor: pointer;
+	z-index: 10;
+}
+
+.line {
+	width: 2px;
+	height: 64px;
+	background-color: #e0e0e0;
+	position: absolute;
+	top: 24px;
+	left: 9px;
+}
+
+.text {
+	padding: 20px 16px;
+	border-radius: 16px;
+	position: relative;
+	margin-left: 16px;
+	min-width: 240px;
+}
+
+.activeStepWrapper .circle {
+	background-color: #4533e8;
+}
+.activeStepWrapper .text {
+	border: 1px solid black;
+	background: #dfdbff;
+}
+
+.activeLine,
+.activeCircle {
+	background-color: #4533e8;
+}

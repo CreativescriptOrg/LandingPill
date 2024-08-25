@@ -1,0 +1,19 @@
+.container {
+	display: flex;
+	max-width: 1280px;
+	padding: 22px 16px;
+	align-items: center;
+	justify-content: space-between;
+	margin-inline: auto;
+
+	border-radius: 16px;
+	border: 1px solid black;
+	background: #fff;
+	box-shadow: 4px 4px 0px 0px rgba(0, 0, 0, 0.4);
+}
+
+.container > div:first-of-type {
+	display: flex;
+	align-items: center;
+	gap: 16px;
+}

@@ -1,0 +1,20 @@
+.container {
+	max-width: 1220px;
+	margin-inline: auto;
+
+	display: flex;
+	align-items: center;
+	gap: 22px;
+}
+
+.container > div {
+	display: flex;
+	flex-direction: column;
+	gap: 4px;
+	width: 100%;
+}
+
+.container > div progress {
+	width: 100%;
+	accent-color: #4533e8;
+}

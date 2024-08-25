@@ -1,0 +1,51 @@
+.container {
+	padding: 22px 32px;
+	border-radius: 40px;
+	border: 1px solid black;
+	background: #fff;
+	box-shadow: 4px 4px 0px 0px #999;
+	cursor: pointer;
+}
+.container.active {
+	background: #dfdbff;
+	box-shadow: 4px 4px 0px 0px #4533e8;
+}
+.container > summary {
+	display: flex;
+	gap: 24px;
+	width: 100%;
+}
+.container > summary h2 {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	width: 100%;
+	margin-bottom: 16px;
+}
+.container > summary p {
+	color: #757575;
+}
+.container.active > summary p {
+	color: black;
+}
+.container.active > summary .arrow {
+	transform: rotate(180deg);
+}
+.container > div > div {
+	padding-top: 24px;
+}
+.eye {
+	color: var(--color-text-default-default);
+	font-size: 64px;
+	font-weight: 700;
+	line-height: 76.8px;
+	letter-spacing: -0.02em;
+	text-align: left;
+}
+
+.end {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	margin-top: 16px;
+}

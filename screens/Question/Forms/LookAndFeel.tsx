@@ -6,12 +6,12 @@ import styles from "../Question.module.css";
 const options = [
 	{
 		label: "No Clear Storytelling 📖",
-		id: "wronStorytelling",
+		id: "wrongStorytelling",
 		name: "issuesWithLook",
 	},
 	{
 		label: "Confusing Section Placement📍",
-		id: "wrongOrdering",
+		id: "wronggOrdering",
 		name: "issuesWithLook",
 	},
 	{
