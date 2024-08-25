@@ -34,7 +34,7 @@ const QuestionsContainer = ({
 						<LandingPillIcon />
 					</div>
 				)}
-				<div className={`${styles.text} heading_2_sb`}>
+				<div className={`${styles.text} heading_2_sb font_sb`}>
 					{STRINGS(curStep).title}
 					{iconDirection === "right" && (
 						<div className={styles.icon}>

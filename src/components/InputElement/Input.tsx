@@ -37,17 +37,21 @@ const Input = ({
 		</label>
 
 		{type === "textarea" ? (
-			<textarea
-				className={`${styles.input} subtitle_1_re ${error ? styles.error : ""}`}
-				name={name}
-				id={id}
-				placeholder={placeholder}
-				required={required}
-				onChange={onChange}
-				rows={rows}
-				{...props}
-				value={value}
-			/>
+			<div>
+				<textarea
+					className={`${styles.input} subtitle_1_re ${
+						error ? styles.error : ""
+					}`}
+					name={name}
+					id={id}
+					placeholder={placeholder}
+					required={required}
+					onChange={onChange}
+					rows={rows}
+					{...props}
+					value={value}
+				/>
+			</div>
 		) : (
 			<div>
 				{type === "search" && <SearchIcon />}

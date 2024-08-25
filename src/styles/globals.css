@@ -258,6 +258,10 @@ label {
 	gap: 48px;
 }
 
+.font_sb {
+	font-weight: 600;
+}
+
 @media (min-width: 768px) {
 	.typewriter_text {
 		font-size: 24px;

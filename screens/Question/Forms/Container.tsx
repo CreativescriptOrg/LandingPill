@@ -23,10 +23,10 @@ const Container = ({
 				<div>
 					<Image width={128} height={128} alt='Pill' src={"/Frame.png"} />
 					<div>
-						<div className={`${styles.text} heading_2_sb`}>
+						<div className={`${styles.text} heading_2_sb font_sb`}>
 							{STRINGS(curStep, customerName).title}
 						</div>
-						<div className={`${styles.text} heading_2_sb`}>
+						<div className={`${styles.text} heading_2_sb font_sb`}>
 							{STRINGS(curStep, customerName).title2}
 						</div>
 						{STRINGS(curStep, customerName).subtitle && (
