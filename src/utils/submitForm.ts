@@ -13,7 +13,14 @@ const submitForm = async (formState: any) => {
 				},
 			}
 		);
-		console.log(res);
+		if (res?.data) {
+			return res.data
+				? res.data
+				: {
+						status: "error",
+						message: "Something went wrong",
+				  };
+		}
 	} catch (error) {
 		console.log(error);
 	}

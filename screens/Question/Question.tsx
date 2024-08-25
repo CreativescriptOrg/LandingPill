@@ -21,6 +21,7 @@ import ExpertDiagnosis from "../ExpertDiagnosis/ExpertDiagnosis";
 import ExpertRedesign from "../ExpertRedesign/ExpertRedesign";
 import ExpertDiagnosisLink from "../ExpertDiagnosisLink/ExpertDiagnosisLink";
 import ExpertRedesignLink from "../ExpertRedesignLink/ExpertRedesignLink";
+import GameOn from "../GameOn/GameOn";
 
 const Question = () => {
 	const dispatch = useDispatch();
@@ -183,6 +184,8 @@ const Question = () => {
 					}}
 				/>
 			)}
+
+			{/* User will audit their landing page through us */}
 			{curStep === "AuditCS" && (
 				<ExpertDiagnosis setStep={() => dispatch(setStep("AuditCSLink"))} />
 			)}
@@ -194,6 +197,23 @@ const Question = () => {
 					formState={formState}
 				/>
 			)}
+
+			{/* User will audit their landing page on their own */}
+			{curStep === "AuditSelf" && (
+				<GameOn
+					type='GAME_ON_AUDIT'
+					formState={formState}
+					setFormData={(value: string) =>
+						dispatch(
+							setForm({
+								...formState,
+								email: value,
+							})
+						)
+					}
+				/>
+			)}
+
 			{curStep === "Redesign" && (
 				<PageRedesign
 					ctaAction={(key: string) => {
@@ -211,6 +231,21 @@ const Question = () => {
 						dispatch(setForm({ ...formState, email }))
 					}
 					formState={formState}
+				/>
+			)}
+
+			{curStep === "RedesignSelf" && (
+				<GameOn
+					type='GAME_ON_REDESIGN'
+					formState={formState}
+					setFormData={(value: string) =>
+						dispatch(
+							setForm({
+								...formState,
+								email: value,
+							})
+						)
+					}
 				/>
 			)}
 		</>
