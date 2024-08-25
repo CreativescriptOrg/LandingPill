@@ -1,7 +1,7 @@
 import React from "react";
-import GameOn from "../../../screens/GameOn/GameOn";
+import AuditGuide from "../../../screens/AuditGuide/AuditGuide";
 const index = () => {
-  return <GameOn />;
+  return <AuditGuide />;
 };
 
 export default index;
