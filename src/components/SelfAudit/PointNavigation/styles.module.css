@@ -6,7 +6,8 @@
 	text-wrap: nowrap;
 
 	position: sticky;
-	top: 0;
+	top: 16px;
+	align-self: flex-start;
 }
 
 .stepWrapper {
