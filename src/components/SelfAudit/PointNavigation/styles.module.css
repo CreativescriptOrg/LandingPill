@@ -4,6 +4,9 @@
 	align-items: flex-start;
 	flex-shrink: 0;
 	text-wrap: nowrap;
+
+	position: sticky;
+	top: 0;
 }
 
 .stepWrapper {
