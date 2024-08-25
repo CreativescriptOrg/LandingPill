@@ -5,29 +5,29 @@ import styles from "../Question.module.css";
 
 const options = [
 	{
-		label: "No Clear Storytelling 📖",
-		id: "wronStorytelling",
-		name: "issuesWithLook",
+		label: "Not getting enough sign-ups 📝",
+		id: "noSignUps",
+		name: "issuesWithPerformance",
 	},
 	{
-		label: "Confusing Section Placement📍",
-		id: "wrongOrdering",
-		name: "issuesWithLook",
+		label: "Visitors leaving too quickly 🚪",
+		id: "visitorsLeaving",
+		name: "issuesWithPerformance",
 	},
 	{
-		label: "Spacing Issues 📏",
-		id: "spacingIssues",
-		name: "issuesWithLook",
+		label: "Sales aren’t where they should be 💸",
+		id: "lowSales",
+		name: "issuesWithPerformance",
 	},
 	{
-		label: "Copy Writing Struggles ✍️",
-		id: "copyWriting",
-		name: "issuesWithLook",
+		label: "Low engagement with content 😴",
+		id: "lowEngagement",
+		name: "issuesWithPerformance",
 	},
 	{
 		label: "Not sure 🤷‍♂️",
 		id: "notSure",
-		name: "issuesWithLook",
+		name: "issuesWithPerformance",
 	},
 ];
 
