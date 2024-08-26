@@ -25,9 +25,10 @@
 }
 
 body {
+}
+main.padding {
 	padding: 16px;
 }
-
 ul {
 	list-style-type: none;
 	margin-block-start: 0;
@@ -270,7 +271,7 @@ label {
 	.typewriter_text {
 		font-size: 24px;
 	}
-	body {
+	main.padding {
 		padding: 40px;
 	}
 	.bg_container {
@@ -323,4 +324,16 @@ label {
 .container_small {
 	width: 100%;
 	max-width: 1260px;
+}
+.swiper-button-custom,
+.swiper-button-custom {
+	width: 32px;
+	height: 32px;
+	background-color: transparent;
+	border: 0;
+}
+
+.swiper-button-disabled.swiper-button-custom {
+	opacity: 0.5;
+	cursor: not-allowed;
 }

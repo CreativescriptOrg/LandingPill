@@ -116,3 +116,9 @@
 	border: 0.851px solid rgba(251, 191, 36, 0.19);
 	background: rgba(251, 191, 36, 0.19);
 }
+
+.swiperContainer {
+	display: flex;
+	align-items: center;
+	gap: 24px;
+}

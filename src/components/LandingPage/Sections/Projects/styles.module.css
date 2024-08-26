@@ -5,18 +5,26 @@
 }
 
 .subcontainer {
-	margin-left: 124px;
+	margin-left: 64px;
+	/* margin-right: 80px; */
 }
 
+.swiperContainer {
+	display: flex;
+	gap: 24px;
+	align-items: center;
+	max-width: 1440px;
+}
 .main {
 	margin-block: 56px;
-}
-
-.slideContent {
 	border-radius: 24px;
 	background: #f7f7f7;
 	padding: 40px;
-
+}
+.projects > div {
+	max-width: 1200px;
+}
+.slideContent {
 	display: grid;
 	grid-template-columns: repeat(2, 1fr);
 	align-items: center;

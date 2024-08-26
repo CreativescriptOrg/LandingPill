@@ -2,6 +2,7 @@
 	position: fixed;
 	top: 12px;
 	width: 100%;
+	z-index: 1000000;
 }
 .container > div {
 	width: 100%;

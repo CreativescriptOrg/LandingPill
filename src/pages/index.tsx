@@ -4,6 +4,7 @@ import Header from "@/components/LandingPage/Sections/Header/Header";
 import Testimonials from "@/components/LandingPage/Sections/Testimonials/Testimonials";
 import Projects from "@/components/LandingPage/Sections/Projects/Projects";
 import Solution from "@/components/LandingPage/Sections/Solution/Solution";
+import HowItWorks from "@/components/LandingPage/Sections/HowItWorks/HowItWorks";
 
 const index = () => {
 	return (
@@ -13,6 +14,7 @@ const index = () => {
 			<Testimonials />
 			<Projects />
 			<Solution />
+			<HowItWorks />
 		</main>
 	);
 };
