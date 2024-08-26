@@ -11,7 +11,7 @@ import { CarouselButtonNext, CarouselButtonPrev } from "@/assets/vectors";
 
 const Testimonials = () => {
 	return (
-		<div className={styles.container}>
+		<section id='testimonies' className={styles.container}>
 			<SectionTitle
 				title="Our clients' growth speaks for itself"
 				type='center'
@@ -76,7 +76,7 @@ const Testimonials = () => {
 				title='See how a Health check can solve falling Conversion rate problems'
 				buttonText='Get Health check Report'
 			/>
-		</div>
+		</section>
 	);
 };
 

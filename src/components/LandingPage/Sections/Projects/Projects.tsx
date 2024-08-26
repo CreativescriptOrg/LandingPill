@@ -11,7 +11,7 @@ import { CarouselButtonNext, CarouselButtonPrev } from "@/assets/vectors";
 
 const Projects = () => {
 	return (
-		<div className={styles.container}>
+		<section id='works' className={styles.container}>
 			<SectionTitle
 				title='My Creative work that drives crazy 
 results for our clients.'
@@ -76,7 +76,7 @@ results for our clients.'
 					icon='info'
 				/>
 			</div>
-		</div>
+		</section>
 	);
 };
 

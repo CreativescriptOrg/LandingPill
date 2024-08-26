@@ -16,7 +16,7 @@ const arr = [
 
 const HowItWorks = () => {
 	return (
-		<div className={styles.container}>
+		<section id='howItWorks' className={styles.container}>
 			<SectionTitle title='How it works?' />
 			<div className={styles.subcontainer}>
 				<div className={styles.main}>
@@ -48,7 +48,7 @@ const HowItWorks = () => {
 					icon='link'
 				/>
 			</div>
-		</div>
+		</section>
 	);
 };
 
