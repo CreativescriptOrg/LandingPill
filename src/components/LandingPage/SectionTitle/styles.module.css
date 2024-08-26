@@ -1,0 +1,72 @@
+.title,
+.titleCenter {
+	display: flex;
+	align-items: flex-end;
+	gap: 24px;
+}
+.titleCenter {
+	justify-content: flex-end;
+}
+
+.title > div,
+.titleCenter > div {
+	display: flex;
+	flex-direction: column;
+	gap: 16px;
+}
+.titleCenter > div {
+	margin-bottom: 40px;
+}
+.title h2,
+.titleCenter h2 {
+	color: black;
+	font-variant-numeric: lining-nums proportional-nums;
+	font-size: 36px;
+	font-weight: 500;
+	line-height: normal;
+	letter-spacing: -1.44px;
+
+	border-radius: 64px 64px 64px 0px;
+	border: 0.562px solid rgba(223, 219, 255, 0.6);
+	background: #dfdbff;
+
+	padding: 40px;
+	max-width: 640px;
+}
+.titleCenter h2 {
+	max-width: 546px;
+}
+.title p {
+	padding: 24px;
+
+	border-radius: 35.979px 35.979px 35.979px 0px;
+	border: 1px solid rgba(0, 0, 0, 0.4);
+
+	color: black;
+	font-variant-numeric: lining-nums proportional-nums;
+	font-size: 24px;
+	font-weight: 500;
+	line-height: normal;
+	letter-spacing: -0.96px;
+}
+
+.title > div:last-of-type > div {
+	display: flex;
+	gap: 16px;
+	align-items: flex-end;
+}
+
+.flex {
+	display: flex;
+	gap: 4px;
+	align-items: center;
+}
+.flex > div:first-child {
+	display: flex;
+}
+
+@media (min-width: 768px) {
+	.flex {
+		gap: 16px;
+	}
+}

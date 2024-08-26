@@ -23,6 +23,7 @@
 		"react-dom": "18.2.0",
 		"react-redux": "^7.2.9",
 		"redux-persist": "^6.0.0",
+		"swiper": "^11.1.10",
 		"typescript": "5.1.6",
 		"typewriter-effect": "^2.21.0"
 	}

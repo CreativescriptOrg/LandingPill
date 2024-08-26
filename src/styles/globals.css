@@ -37,6 +37,10 @@ ul {
 	padding-inline-start: 0;
 }
 
+img {
+	max-width: 100%;
+	height: auto;
+}
 .sr-only {
 	position: absolute;
 	width: 1px;
@@ -308,4 +312,15 @@ label {
 	.flex_container {
 		flex-direction: row;
 	}
+}
+
+/* Landing Page */
+.container_big {
+	width: 100%;
+	max-width: 1440px;
+	margin-inline: auto;
+}
+.container_small {
+	width: 100%;
+	max-width: 1260px;
 }

@@ -1,0 +1,20 @@
+.container {
+	margin-top: 86px;
+	max-width: 1440px;
+	margin-inline: auto;
+}
+
+.subcontainer {
+	margin-left: 124px;
+}
+
+.main {
+	margin-block: 56px;
+	border-radius: 24px;
+	background: #f7f7f7;
+
+	display: flex;
+	padding: 40px;
+	align-items: center;
+	gap: 24px;
+}
