@@ -1,6 +1,6 @@
 import React from "react";
 import styles from "./AuditGuide.module.css";
-import { Mark } from "./Icon";
+import { Arrow1, Arrow2, Mark } from "./Icon";
 
 const arr = [
   {
@@ -41,6 +41,49 @@ const AuditGuide = () => {
             <span className="subtitle_1_sb">
               Boost Your landing Page conversion in 5 Easy Steps!
             </span>
+          </div>
+          <div className={styles.last}>
+            {arr.map((item: any, index: any) => {
+              return (
+                <div>
+                  {index % 2 === 0 ? (
+                    <>
+                      <div
+                        className={styles.btn1}
+                        style={{
+                          marginBottom:
+                            arr.length != index + 1 ? "86px" : "0px",
+                        }}
+                      >
+                        {arr.length != index + 1 && (
+                          <div className={styles.arrow1}>
+                            <Arrow1 />
+                          </div>
+                        )}
+                        {item?.text}
+                      </div>
+                    </>
+                  ) : (
+                    <>
+                      <div
+                        className={styles.btn2}
+                        style={{
+                          marginBottom:
+                            arr.length != index + 1 ? "86px" : "0px",
+                        }}
+                      >
+                        {arr.length != index + 1 && (
+                          <div className={styles.arrow2}>
+                            <Arrow2 />
+                          </div>
+                        )}
+                        {item?.text}
+                      </div>
+                    </>
+                  )}
+                </div>
+              );
+            })}
           </div>
         </div>
       </main>
