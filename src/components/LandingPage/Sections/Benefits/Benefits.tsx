@@ -6,7 +6,7 @@ import SectionTitle from "@/components/LandingPage/SectionTitle/SectionTitle";
 
 const Benefits = () => {
 	return (
-		<div className={styles.container}>
+		<section id='benefits' className={styles.container}>
 			<SectionTitle
 				title='How your will get benefit from me!'
 				subtitle='Will do a page health check, which includes'
@@ -74,7 +74,7 @@ const Benefits = () => {
 					buttonText='Get Health check Report'
 				/>
 			</div>
-		</div>
+		</section>
 	);
 };
 

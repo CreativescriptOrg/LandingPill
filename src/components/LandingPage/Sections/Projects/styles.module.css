@@ -6,7 +6,9 @@
 
 .subcontainer {
 	margin-left: 64px;
-	/* margin-right: 80px; */
+}
+.subcontainer > div:last-of-type {
+	margin-left: 60px;
 }
 
 .swiperContainer {

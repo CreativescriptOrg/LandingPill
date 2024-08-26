@@ -21,6 +21,28 @@
 	gap: 32px;
 }
 
+.stats li {
+	display: flex;
+	flex-direction: column;
+	gap: 8px;
+	align-items: center;
+}
+.stats li span:first-of-type {
+	font-size: 24px;
+	font-weight: 500;
+	line-height: 30.62px;
+	letter-spacing: -0.02em;
+	text-align: left;
+
+	color: #4533e8;
+}
+.stats li span:last-of-type {
+	font-size: 16px;
+	font-weight: 400;
+	line-height: 20.42px;
+	text-align: center;
+	color: #1e1e1e;
+}
 .subcontainer {
 	border-radius: 24px;
 	border: 1px solid #2e2e2e;

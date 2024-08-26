@@ -10,19 +10,19 @@ const Navigation = () => {
 
 				<ul>
 					<li>
-						<Link href='/about'>Benefits</Link>
+						<Link href='/#benefits'>Benefits</Link>
 					</li>
 					<li>
-						<Link href='/contact'>Testimonies</Link>
+						<Link href='/#testimonies'>Testimonies</Link>
 					</li>
 					<li>
-						<Link href='/contact'>Works</Link>
+						<Link href='/#works'>Works</Link>
 					</li>
 					<li>
-						<Link href='/contact'>How it works</Link>
+						<Link href='/#howItWorks'>How it works</Link>
 					</li>
 					<li>
-						<Link href='/contact' className={styles.button}>
+						<Link href='/welcome' className={styles.button}>
 							Get Page Health Report <ArrowNextIcon />
 						</Link>
 					</li>
