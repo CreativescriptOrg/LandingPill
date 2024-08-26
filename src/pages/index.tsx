@@ -1,12 +1,22 @@
 import React from "react";
-import Welcome from "../../screens/Welcome/Welcome";
+import Benefits from "@/components/LandingPage/Sections/Benefits/Benefits";
+import Header from "@/components/LandingPage/Sections/Header/Header";
+import Testimonials from "@/components/LandingPage/Sections/Testimonials/Testimonials";
+import Projects from "@/components/LandingPage/Sections/Projects/Projects";
+import Solution from "@/components/LandingPage/Sections/Solution/Solution";
+import HowItWorks from "@/components/LandingPage/Sections/HowItWorks/HowItWorks";
 
 const index = () => {
-  return (
-    <>
-      <Welcome />
-    </>
-  );
+	return (
+		<main>
+			<Header />
+			<Benefits />
+			<Testimonials />
+			<Projects />
+			<Solution />
+			<HowItWorks />
+		</main>
+	);
 };
 
 export default index;

@@ -1,9 +1,9 @@
-import SelfAudit from "../../../screens/SelfAudit/SelfAudit";
+import SelfRedesign from "../../../screens/SelfRedesign/SelfRedesign";
 
 const SelfAuditPage = () => {
 	return (
 		<main className='padding'>
-			<SelfAudit />
+			<SelfRedesign />
 		</main>
 	);
 };
