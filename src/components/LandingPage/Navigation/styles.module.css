@@ -1,0 +1,51 @@
+.container {
+	position: fixed;
+	top: 12px;
+	width: 100%;
+}
+.container > div {
+	width: 100%;
+	max-width: 1440px;
+	margin-inline: auto;
+	display: flex;
+	padding: 12px;
+	justify-content: space-between;
+	align-items: center;
+
+	border-radius: 16px;
+	border: 1px solid rgba(0, 0, 0, 0.15);
+	background: #fff;
+}
+
+.container ul {
+	display: flex;
+	align-items: center;
+	gap: 20px;
+}
+
+.container ul a {
+	color: #1d1d1d;
+	text-align: center;
+	leading-trim: both;
+	text-edge: cap;
+	font-size: 16px;
+	font-weight: 400;
+	line-height: 140%;
+	text-decoration: none;
+}
+
+.button {
+	display: flex;
+	padding: 16px;
+	align-items: center;
+	gap: 16px;
+
+	border-radius: 16px;
+	border: 1px solid black;
+	background: #dfdbff;
+
+	color: #14181f;
+	font-size: 18px;
+	font-weight: 400;
+	line-height: normal;
+}

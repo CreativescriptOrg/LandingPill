@@ -1,0 +1,42 @@
+.container {
+	display: flex;
+	padding: 22px 24px;
+	justify-content: space-between;
+	align-items: center;
+	gap: 16px;
+
+	border-radius: 32px;
+	border: 1px solid rgba(0, 0, 0, 0.4);
+	background: #fff;
+}
+
+.container > div {
+	display: flex;
+	gap: 8px;
+	align-items: center;
+}
+.cta {
+	display: flex;
+	padding: 12px;
+	justify-content: center;
+	align-items: center;
+	gap: 8px;
+
+	border-radius: 8px;
+	border: 1px solid #767676;
+	background: #3edea9;
+
+	color: black;
+	font-size: 18px;
+	font-weight: 400;
+	line-height: 100%; /* 18px */
+}
+
+.title {
+	color: var(--color-text-default-default);
+
+	font-size: 24px;
+	font-weight: 400;
+	line-height: normal;
+	letter-spacing: -0.48px;
+}
