@@ -5,18 +5,20 @@ import Testimonials from "@/components/LandingPage/Sections/Testimonials/Testimo
 import Projects from "@/components/LandingPage/Sections/Projects/Projects";
 import Solution from "@/components/LandingPage/Sections/Solution/Solution";
 import HowItWorks from "@/components/LandingPage/Sections/HowItWorks/HowItWorks";
+import Footer from "@/components/LandingPage/Footer/Footer";
 
 const index = () => {
-	return (
-		<main>
-			<Header />
-			<Benefits />
-			<Testimonials />
-			<Projects />
-			<Solution />
-			<HowItWorks />
-		</main>
-	);
+  return (
+    <main>
+      <Header />
+      <Benefits />
+      <Testimonials />
+      <Projects />
+      <Solution />
+      <HowItWorks />
+      <Footer />
+    </main>
+  );
 };
 
 export default index;
