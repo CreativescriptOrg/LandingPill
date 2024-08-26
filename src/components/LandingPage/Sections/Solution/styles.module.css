@@ -1,0 +1,16 @@
+.container {
+	max-width: 1440px;
+	margin-inline: auto;
+	margin-top: 86px;
+}
+
+.container > div {
+	margin-left: 124px;
+}
+
+.main {
+	display: flex;
+	flex-direction: column;
+	gap: 48px;
+	margin-bottom: 24px;
+}

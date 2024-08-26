@@ -1,7 +1,11 @@
 import AuditGuide from "../../../screens/AuditGuide/AuditGuide";
 
 const RedesignGuidePage = () => {
-	return <AuditGuide />;
+	return (
+		<main className='padding'>
+			<AuditGuide />
+		</main>
+	);
 };
 
 export default RedesignGuidePage;

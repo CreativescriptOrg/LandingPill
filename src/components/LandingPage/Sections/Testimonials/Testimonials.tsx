@@ -7,6 +7,7 @@ import { Navigation } from "swiper/modules";
 
 import "swiper/css";
 import "swiper/css/navigation";
+import { CarouselButtonNext, CarouselButtonPrev } from "@/assets/vectors";
 
 const Testimonials = () => {
 	return (
@@ -36,60 +37,39 @@ const Testimonials = () => {
 						</li>
 					</ul>
 				</div>
-				<div>
+				<div className={styles.swiperContainer}>
+					<button className='swiper-button-custom testimonials-button-prev'>
+						<CarouselButtonPrev />
+					</button>
 					<Swiper
 						spaceBetween={30}
-						navigation
+						navigation={{
+							nextEl: ".testimonials-button-next",
+							prevEl: ".testimonials-button-prev",
+						}}
 						modules={[Navigation]}
 						slidesPerView={3}
 						className={styles.testimonials}
 					>
-						<SwiperSlide>
-							<SwiperSlideContent
-								title='Improved Hero section!'
-								name='Sarah Mitchell'
-								role='Marketing Director at BrightWave Media'
-								rating={5}
-								review={`LandingPill has completely transformed the way we approach landing page design. With its intuitivs about maximizing your landing page performance, LandingPill is the ultimate solution!`}
-							/>
-						</SwiperSlide>
-						<SwiperSlide>
-							<SwiperSlideContent
-								title='Improved Hero section!'
-								name='Sarah Mitchell'
-								role='Marketing Director at BrightWave Media'
-								rating={4}
-								review={`LandingPill has completely transformed the way we approach landing page design. With its intuitivs about maximizing your landing page performance, LandingPill is the ultimate solution!`}
-							/>
-						</SwiperSlide>
-						<SwiperSlide>
-							<SwiperSlideContent
-								title='Improved Hero section!'
-								name='Sarah Mitchell'
-								role='Marketing Director at BrightWave Media'
-								rating={4}
-								review={`LandingPill has completely transformed the way we approach landing page design. With its intuitivs about maximizing your landing page performance, LandingPill is the ultimate solution!`}
-							/>
-						</SwiperSlide>
-						<SwiperSlide>
-							<SwiperSlideContent
-								title='Improved Hero section!'
-								name='Sarah Mitchell'
-								role='Marketing Director at BrightWave Media'
-								rating={4}
-								review={`LandingPill has completely transformed the way we approach landing page design. With its intuitivs about maximizing your landing page performance, LandingPill is the ultimate solution!`}
-							/>
-						</SwiperSlide>
-						<SwiperSlide>
-							<SwiperSlideContent
-								title='Improved Hero section!'
-								name='Sarah Mitchell'
-								role='Marketing Director at BrightWave Media'
-								rating={4}
-								review={`LandingPill has completely transformed the way we approach landing page design. With its intuitivs about maximizing your landing page performance, LandingPill is the ultimate solution!`}
-							/>
-						</SwiperSlide>
+						{Array.from({
+							length: 5,
+						}).map((el, i) => {
+							return (
+								<SwiperSlide>
+									<SwiperSlideContent
+										title='Improved Hero section!'
+										name='Sarah Mitchell'
+										role='Marketing Director at BrightWave Media'
+										rating={5}
+										review={`LandingPill has completely transformed the way we approach landing page design. With its intuitivs about maximizing your landing page performance, LandingPill is the ultimate solution!`}
+									/>
+								</SwiperSlide>
+							);
+						})}
 					</Swiper>
+					<button className='swiper-button-custom testimonials-button-next'>
+						<CarouselButtonNext />
+					</button>
 				</div>
 			</div>
 			<CTA
