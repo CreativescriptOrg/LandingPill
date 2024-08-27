@@ -11,21 +11,25 @@ const GAME_ON_AUDIT = {
       img: "/Card1.png",
       title: "Spot the Issues",
       des: "Identify key problems holding your page back.",
+      background: "#F4E5FF",
     },
     {
       img: "/Card2.png",
       title: "Proven Strategies",
       des: "85% of users see a 20% boost in conversions.",
+      background: "#E9E4FF",
     },
     {
       img: "/Card3.png",
       title: "Target Right",
       des: "Define and reach the right audience with ease.",
+      background: "#EFFFF4",
     },
     {
       img: "/Card4.png",
       title: "Save Time",
       des: "Get actionable insights without the fluff.",
+      background: "#E9FCFF",
     },
   ],
 };
@@ -44,7 +48,10 @@ const Footer = () => {
         <div className={styles.flex1}>
           {GAME_ON_AUDIT.data.map((item: any) => {
             return (
-              <div className={styles.card}>
+              <div
+                className={styles.card}
+                style={{ background: item?.background }}
+              >
                 <div className={styles.flex2}>
                   <Image src={item?.img} alt="img" height={28} width={28} />
                   <div>
