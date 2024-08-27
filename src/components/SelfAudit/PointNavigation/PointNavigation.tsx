@@ -5,13 +5,13 @@ const PointNavigation = ({
 	activePoint,
 	setActivePoint,
 }: {
-	points: string[];
+	points: any;
 	activePoint: number;
 	setActivePoint: (index: number) => void;
 }) => {
 	return (
 		<div className={styles.container}>
-			{points.map((point, index) => (
+			{points.map((point: { title: string }, index: number) => (
 				<div
 					key={index}
 					className={`${styles.stepWrapper} ${
@@ -35,7 +35,7 @@ const PointNavigation = ({
 						className={`body_1_re ${styles.text}`}
 						onClick={() => setActivePoint(index)}
 					>
-						{point}
+						{point.title}
 					</div>
 				</div>
 			))}
