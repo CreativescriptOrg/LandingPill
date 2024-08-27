@@ -22,6 +22,8 @@ import ExpertRedesign from "../ExpertRedesign/ExpertRedesign";
 import ExpertDiagnosisLink from "../ExpertDiagnosisLink/ExpertDiagnosisLink";
 import ExpertRedesignLink from "../ExpertRedesignLink/ExpertRedesignLink";
 import GameOn from "../GameOn/GameOn";
+import AuditGuide from "../AuditGuide/AuditGuide";
+import SuccessModal from "@/components/ConfirmationModal/SuccessModal";
 
 const Question = () => {
 	const dispatch = useDispatch();
@@ -211,8 +213,10 @@ const Question = () => {
 							})
 						)
 					}
+					setStep={() => dispatch(setStep("AuditGuide"))}
 				/>
 			)}
+			{curStep === "AuditGuide" && <AuditGuide />}
 
 			{curStep === "Redesign" && (
 				<PageRedesign
@@ -246,8 +250,11 @@ const Question = () => {
 							})
 						)
 					}
+					setStep={() => dispatch(setStep("RedesignGuide"))}
 				/>
 			)}
+
+			{curStep === "RedesignGuide" && <AuditGuide />}
 		</>
 	);
 };

@@ -9,10 +9,12 @@ const GameOn = ({
 	type,
 	formState,
 	setFormData,
+	setStep,
 }: {
 	type: string;
 	formState: any;
 	setFormData: any;
+	setStep: any;
 }) => {
 	const router = useRouter();
 
@@ -20,11 +22,7 @@ const GameOn = ({
 		e.preventDefault();
 		const res = await submitForm(formState);
 		if (res.status === "success") {
-			if (type === "GAME_ON_AUDIT") {
-				router.push("/audit-guide");
-			} else {
-				router.push("/redesign-guide");
-			}
+			setStep();
 		}
 	};
 
