@@ -16,8 +16,10 @@
 		"@types/react": "18.2.21",
 		"@types/react-dom": "18.2.7",
 		"axios": "^1.7.4",
+		"gsap": "^3.12.5",
 		"next": "13.4.19",
 		"next-redux-wrapper": "^6.0.2",
+		"next-transpile-modules": "^10.0.1",
 		"react": "18.2.0",
 		"react-animate-height": "^3.2.3",
 		"react-dom": "18.2.0",
@@ -26,5 +28,8 @@
 		"swiper": "^11.1.10",
 		"typescript": "5.1.6",
 		"typewriter-effect": "^2.21.0"
+	},
+	"devDependencies": {
+		"@types/gsap": "^3.0.0"
 	}
 }
