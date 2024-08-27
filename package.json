@@ -17,6 +17,7 @@
 		"@types/react-dom": "18.2.7",
 		"axios": "^1.7.4",
 		"gsap": "^3.12.5",
+		"html-react-parser": "^5.1.13",
 		"next": "13.4.19",
 		"next-redux-wrapper": "^6.0.2",
 		"next-transpile-modules": "^10.0.1",

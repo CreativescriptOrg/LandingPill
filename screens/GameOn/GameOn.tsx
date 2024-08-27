@@ -6,27 +6,25 @@ import { useRouter } from "next/navigation";
 import STRINGS from "./string";
 
 const GameOn = ({
-  type,
-  formState,
-  setFormData,
+	type,
+	formState,
+	setFormData,
+	setStep,
 }: {
-  type: string;
-  formState: any;
-  setFormData: any;
+	type: string;
+	formState: any;
+	setFormData: any;
+	setStep: any;
 }) => {
   const router = useRouter();
 
-  const handleSubmit = async (e: any) => {
-    e.preventDefault();
-    const res = await submitForm(formState);
-    if (res.status === "success") {
-      if (type === "GAME_ON_AUDIT") {
-        router.push("/audit-guide");
-      } else {
-        router.push("/redesign-guide");
-      }
-    }
-  };
+	const handleSubmit = async (e: any) => {
+		e.preventDefault();
+		const res = await submitForm(formState);
+		if (res.status === "success") {
+			setStep();
+		}
+	};
 
   return (
     <main className="main_container center_content">

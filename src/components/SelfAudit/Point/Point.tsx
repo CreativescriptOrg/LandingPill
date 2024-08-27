@@ -1,16 +1,19 @@
-import { useState } from "react";
 import styles from "./styles.module.css";
 import AnimateHeight, { Height } from "react-animate-height";
 import { ArrowIcon } from "@/assets/vectors";
+import Link from "next/link";
+import ReactHtmlParser from "html-react-parser";
 
 const Point = ({
 	title,
 	active,
 	setActivePoint,
+	data,
 }: {
 	title: string;
 	active: boolean;
 	setActivePoint: () => void;
+	data: any;
 }) => {
 	return (
 		<div
@@ -18,7 +21,7 @@ const Point = ({
 			onClick={() => setActivePoint()}
 		>
 			<summary>
-				<span className={styles.eye}>👀</span>
+				<span className={styles.eye}>{data.emoji}</span>
 				<div>
 					<h2 className='heading_3_sb'>
 						<span>{title}</span>
@@ -26,49 +29,47 @@ const Point = ({
 							<ArrowIcon />
 						</div>
 					</h2>
-					<p className='subtitle_1_re'>
-						Body text for whatever you’d like to say. Add main takeaway points,
-						quotes, anecdotes, or even a very very short story.{" "}
-					</p>
+					<p className='subtitle_1_re'>{data.subtitle}</p>
 				</div>
 			</summary>
 			<AnimateHeight duration={500} height={active ? "auto" : 0}>
-				<span>Usability Test</span>
-				<ul>
-					<li>
-						Body text for whatever you’d like to say. Add main takeaway points,
-						quotes, anecdotes, or even a very very short story. Body text for
-						whatever you’d like to say. Add main taBody text for whatever you’d
-						like to say. Add main takeaway points, quotes, anecdotes.
-					</li>
-					<li>
-						or even a veBody text for whatever you’d like to say. Add main
-						takeaway points, quotes, anecdotes, or even a very very short story.
-						ry very short story. keaway points
-					</li>
-					<li>
-						Body text for whatever you’d like to say. Add main takeaway points,
-						quotes, anecdotes, or even a very very short story. quotes,
-						anecdotesBody text for whatever you’d like to say
-					</li>
-					<li>
-						Add main takeaway points, quotes, anecdotes, or even a very very
-						short story. , or even a very very short story.
-					</li>
-				</ul>
-				<div className={styles.end}>
-					<a href='http://' target='_blank' rel='noopener noreferrer'>
-						Resource article
-					</a>
-					<a
-						href='http://'
-						target='_blank'
-						rel='noopener noreferrer'
-						className='button_primary'
-					>
-						Visual & Aesthetic
-					</a>
-				</div>
+				{data.content && ReactHtmlParser(`${data.content}`)}
+				{data.hasSubpoints && (
+					<ol className={styles.subpoints}>
+						{data.subpoints.map((subpoint: any, index: number) => (
+							<li>
+								<h3 className='heading_4_sb'>{subpoint.title}</h3>
+								<p className='subtitle_1_re'>
+									{ReactHtmlParser(`${subpoint.content}`)}
+								</p>
+							</li>
+						))}
+					</ol>
+				)}
+				{data.contentAfterSubpoints &&
+					ReactHtmlParser(`${data.contentAfterSubpoints}`)}
+				{data.resources && (
+					<div className={styles.resources}>
+						<span>
+							{data.resources.length > 1
+								? "Here are some resources for you:"
+								: "Here is a resource link for you:"}
+						</span>
+						<div>
+							{data.resources.map((resource: any, index: number) => (
+								<Link
+									href={resource.link}
+									className='subtitle_1_re'
+									target='_blank'
+								>
+									{resource.title ? resource.title : resource.link}
+								</Link>
+							))}
+						</div>
+					</div>
+				)}
+				{data.contentAfterResources &&
+					ReactHtmlParser(`${data.contentAfterResources}`)}
 			</AnimateHeight>
 		</div>
 	);
