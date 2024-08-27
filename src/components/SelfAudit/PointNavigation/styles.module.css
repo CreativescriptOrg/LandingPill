@@ -39,7 +39,8 @@
 	border-radius: 16px;
 	position: relative;
 	margin-left: 16px;
-	min-width: 240px;
+	width: 240px;
+	white-space: wrap;
 }
 
 .activeStepWrapper .circle {

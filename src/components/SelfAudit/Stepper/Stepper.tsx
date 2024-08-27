@@ -1,24 +1,14 @@
 import styles from "./styles.module.css";
 
-const Stepper = () => {
+const Stepper = ({ steps }: { steps: { title: string; index: number }[] }) => {
 	return (
 		<div className={styles.container}>
-			<div>
-				<span>Usability Test</span>
-				<progress value={50} max={100}></progress>
-			</div>
-			<div>
-				<span>Copy Writing</span>
-				<progress value={0} max={100}></progress>
-			</div>
-			<div>
-				<span>Idea Validation</span>
-				<progress value={0} max={100}></progress>
-			</div>
-			<div>
-				<span>Target Audience</span>
-				<progress value={0} max={100}></progress>
-			</div>
+			{steps.map((step) => (
+				<div key={step.index}>
+					<span>{step.title}</span>
+					<progress value={0} max={100}></progress>
+				</div>
+			))}
 		</div>
 	);
 };
