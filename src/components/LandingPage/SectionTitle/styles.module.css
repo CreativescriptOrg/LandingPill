@@ -20,42 +20,43 @@
 .title h2,
 .titleCenter h2 {
 	color: black;
-	font-variant-numeric: lining-nums proportional-nums;
-	font-size: 36px;
-	font-weight: 500;
-	line-height: normal;
-	letter-spacing: -1.44px;
-
-	border-radius: 64px 64px 64px 0px;
+	border-radius: 32px 32px 32px 0px;
 	border: 0.562px solid rgba(223, 219, 255, 0.6);
 	background: #dfdbff;
 
-	padding: 40px;
-	max-width: 640px;
+	padding: 16px 24px;
+
+	font-size: 18px;
+	font-weight: 500;
+	line-height: 22.97px;
+	letter-spacing: -0.04em;
 }
 .titleCenter h2 {
 	max-width: 546px;
 }
 .title p {
-	padding: 24px;
+	padding: 16px 24px;
 
-	border-radius: 35.979px 35.979px 35.979px 0px;
+	border-radius: 32px 32px 32px 0px;
 	border: 1px solid rgba(0, 0, 0, 0.4);
 
 	color: black;
-	font-variant-numeric: lining-nums proportional-nums;
-	font-size: 24px;
+	font-size: 14px;
 	font-weight: 500;
-	line-height: normal;
-	letter-spacing: -0.96px;
+	line-height: 17.86px;
+	letter-spacing: -0.04em;
 }
 
 .title > div:last-of-type > div {
 	display: flex;
+	flex-direction: column;
 	gap: 16px;
-	align-items: flex-end;
+	align-items: center;
 }
-
+.title > div:last-of-type > div svg {
+	max-width: 32px;
+	max-height: 32px;
+}
 .flex {
 	display: flex;
 	gap: 4px;
@@ -68,5 +69,34 @@
 @media (min-width: 768px) {
 	.flex {
 		gap: 16px;
+	}
+	.title h2,
+	.titleCenter h2 {
+		font-variant-numeric: lining-nums proportional-nums;
+		font-size: 36px;
+		font-weight: 500;
+		line-height: normal;
+		letter-spacing: -1.44px;
+
+		border-radius: 64px 64px 64px 0px;
+
+		padding: 40px;
+	}
+	.title p {
+		padding: 24px;
+
+		border-radius: 35.979px 35.979px 35.979px 0px;
+		font-size: 24px;
+		font-weight: 500;
+		line-height: normal;
+		letter-spacing: -0.96px;
+	}
+	.title > div:last-of-type > div {
+		flex-direction: row;
+		align-items: flex-end;
+	}
+	.title > div:last-of-type > div svg {
+		max-width: none;
+		max-height: none;
 	}
 }
