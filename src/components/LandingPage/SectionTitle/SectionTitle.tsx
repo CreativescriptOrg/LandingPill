@@ -12,8 +12,23 @@ const SectionTitle = ({
 	type?: string;
 }) => {
 	return type === "left" ? (
-		<div className={styles.title}>
-			<Image src='/landingPillDoctor.png' alt='' width={100} height={100} />
+		<div
+			className={`${styles.title} ${subtitle ? "" : styles.withoutSubtitle}`}
+		>
+			<picture>
+				<source
+					media='(min-width: 768px)'
+					srcSet={"/landingPillDoctor.png"}
+					width={100}
+					height={100}
+				/>
+				<Image
+					src={"/landingPillDoctor.png"}
+					alt='hero'
+					width={50}
+					height={50}
+				/>
+			</picture>
 			<div>
 				<h2>{title}</h2>
 				{subtitle && (
@@ -26,7 +41,20 @@ const SectionTitle = ({
 		</div>
 	) : (
 		<div className={styles.titleCenter}>
-			<Image src='/landingPillDoctor2.png' alt='' width={300} height={160} />
+			<picture>
+				<source
+					media='(min-width: 768px)'
+					srcSet={"/landingPillDoctor2.png"}
+					width={300}
+					height={150}
+				/>
+				<Image
+					src={"/landingPillDoctor2.png"}
+					alt='hero'
+					width={120}
+					height={72}
+				/>
+			</picture>
 			<div>
 				<h2>{title}</h2>
 				<div className={styles.flex}>
@@ -35,7 +63,7 @@ const SectionTitle = ({
 						<Image src={"/founder2.png"} alt='' width={24} height={24} />
 						<Image src={"/founder3.png"} alt='' width={24} height={24} />
 					</div>
-					<span className='body_2_sb'>Approved by 17+ Founders</span>
+					<span className='body_2_sb'>Impacted 17+ Founders</span>
 				</div>
 			</div>
 		</div>

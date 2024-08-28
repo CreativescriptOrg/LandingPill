@@ -2,10 +2,17 @@
 .titleCenter {
 	display: flex;
 	align-items: flex-end;
-	gap: 24px;
+	gap: 12px;
+}
+.title picture,
+.titleCenter picture {
+	flex-shrink: 0;
 }
 .titleCenter {
 	justify-content: flex-end;
+}
+.withoutSubtitle > div {
+	margin-bottom: 30px;
 }
 
 .title > div,
@@ -15,8 +22,10 @@
 	gap: 16px;
 }
 .titleCenter > div {
-	margin-bottom: 40px;
+	margin-left: -48px;
+	margin-bottom: 64px;
 }
+
 .title h2,
 .titleCenter h2 {
 	color: black;
@@ -65,10 +74,29 @@
 .flex > div:first-child {
 	display: flex;
 }
-
+.flex > div:first-child img:nth-child(2) {
+	margin-left: -8px;
+}
+.flex > div:first-child img:nth-child(3) {
+	margin-left: -8px;
+}
+.title > img {
+	max-width: 50px;
+}
+@media (max-width: 768px) {
+	.flex span {
+		font-size: 12px;
+		font-weight: 400;
+		line-height: 15.31px;
+	}
+}
 @media (min-width: 768px) {
 	.flex {
 		gap: 16px;
+	}
+	.title,
+	.titleCenter {
+		gap: 24px;
 	}
 	.title h2,
 	.titleCenter h2 {
@@ -77,9 +105,7 @@
 		font-weight: 500;
 		line-height: normal;
 		letter-spacing: -1.44px;
-
 		border-radius: 64px 64px 64px 0px;
-
 		padding: 40px;
 	}
 	.title p {
@@ -98,5 +124,15 @@
 	.title > div:last-of-type > div svg {
 		max-width: none;
 		max-height: none;
+	}
+	.title > img {
+		max-width: 100%;
+	}
+	.withoutSubtitle > div {
+		margin-bottom: 0;
+	}
+	.titleCenter > div {
+		margin-left: 0;
+		margin-bottom: 64px;
 	}
 }

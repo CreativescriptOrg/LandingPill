@@ -52,6 +52,7 @@
 	color: var(--Neutrals-neutral-1000, #000);
 	text-align: center;
 	text-decoration: none;
+	margin-bottom: 8px;
 }
 .cta span {
 	color: #4d4d4d;
