@@ -1,4 +1,4 @@
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import Image from "next/image";
@@ -9,7 +9,23 @@ import SectionTitle from "@/components/LandingPage/SectionTitle/SectionTitle";
 
 gsap.registerPlugin(ScrollTrigger);
 
+const config = [
+  {
+    title: "why LP score ?",
+    img: "/MainBanner1.webp",
+  },
+  {
+    title: "Your Actionable Insights",
+    img: "/MainBanner2.webp",
+  },
+  {
+    title: "Better Copy Better Optimization",
+    img: "/MainBanner3.webp",
+  },
+];
 const Benefits = () => {
+  const [currentText, setCurrentText] = useState(0);
+
   useEffect(() => {
     const subcontainer: any = document.querySelector(`.${styles.subcontainer}`);
 
@@ -35,6 +51,8 @@ const Benefits = () => {
               tab.classList.remove(styles.active);
             }
           });
+
+          setCurrentText(currentIndex);
         },
         onLeave: () => {
           ScrollTrigger.refresh(); // Refresh triggers when leaving pinning
@@ -79,7 +97,9 @@ const Benefits = () => {
             </div>
             <div className={styles.tabBody}>
               <div>
-                <h3 className={styles.tabBodyTitle}>Why LP score?</h3>
+                <h3 className={styles.tabBodyTitle}>
+                  {config[currentText].title}
+                </h3>
                 <div className={styles.tabBodyCheckList}>
                   <div>
                     <CheckSuccessIcon />
@@ -101,7 +121,7 @@ const Benefits = () => {
               </div>
               <div className={styles.tabImage}>
                 <Image
-                  src="/healthReport.png"
+                  src={config[currentText].img}
                   alt=""
                   width={655}
                   height={375}
