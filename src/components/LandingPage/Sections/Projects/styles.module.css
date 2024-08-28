@@ -1,87 +1,87 @@
 .container {
-	margin-top: 86px;
-	max-width: 1440px;
-	margin-inline: auto;
+  margin-top: 86px;
+  max-width: 1440px;
+  margin-inline: auto;
 }
 
 .subcontainer {
-	margin-left: 64px;
+  margin-left: 64px;
 }
 .subcontainer > div:last-of-type {
-	margin-left: 60px;
+  margin-left: 60px;
 }
 
 .swiperContainer {
-	display: flex;
-	gap: 24px;
-	align-items: center;
-	max-width: 1440px;
+  display: flex;
+  gap: 24px;
+  align-items: center;
+  max-width: 1440px;
 }
 .main {
-	margin-block: 56px;
-	border-radius: 24px;
-	background: #f7f7f7;
-	padding: 40px;
+  margin-block: 56px;
+  border-radius: 24px;
+  background: #f7f7f7;
+  padding: 40px;
 }
 .projects > div {
-	max-width: 1200px;
+  max-width: 1200px;
 }
 .slideContent {
-	display: grid;
-	grid-template-rows: repeat(2, 1fr);
-	align-items: center;
-	gap: 24px;
+  display: grid;
+  grid-template-rows: repeat(1, 1fr);
+  align-items: center;
+  gap: 24px;
 }
 .slideContent span {
-	border-radius: 16px 16px 0px 0px;
+  border-radius: 16px 16px 0px 0px;
 
-	display: flex;
-	padding: 8px 0px;
-	justify-content: center;
-	align-items: center;
-	flex-shrink: 0;
-	align-self: stretch;
+  display: flex;
+  padding: 8px 0px;
+  justify-content: center;
+  align-items: center;
+  flex-shrink: 0;
+  align-self: stretch;
 
-	font-size: 19.133px;
-	font-weight: 500;
-	line-height: normal;
-	letter-spacing: -0.765px;
-	text-transform: capitalize;
+  font-size: 19.133px;
+  font-weight: 500;
+  line-height: normal;
+  letter-spacing: -0.765px;
+  text-transform: capitalize;
 }
 
 .slideContent .before span {
-	background: #d8d8d8;
-	color: #222;
+  background: #d8d8d8;
+  color: #222;
 }
 
 .slideContent .after span {
-	background: #4533e8;
-	color: white;
+  background: #4533e8;
+  color: white;
 }
 
 .slideContent img {
-	width: 100%;
+  width: 100%;
 }
 
 .imageBg {
-	padding: 24px;
-	background-color: white;
-	display: flex;
-	justify-content: center;
-	align-items: center;
+  padding: 24px;
+  background-color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .imageBg > img {
-	width: 100%;
+  width: 100%;
 }
 
 @media (min-width: 768px) {
-	.slideContent {
-		display: grid;
-		grid-template-columns: repeat(2, 1fr);
-		align-items: center;
-		gap: 24px;
-	}
-	.slideContent img {
-		width: 100%;
-	}
+  .slideContent {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+    gap: 24px;
+  }
+  .slideContent img {
+    width: 100%;
+  }
 }
