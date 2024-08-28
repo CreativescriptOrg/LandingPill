@@ -40,22 +40,46 @@
 
 .title {
 	color: var(--color-text-default-default);
-
 	font-size: 14px;
 	font-weight: 400;
 	line-height: 16.8px;
 	letter-spacing: -0.02em;
 	text-align: left;
-	max-width: 180px;
+}
+
+.input {
+	border: none;
+	outline: none;
+	color: var(--color-text-default-default);
+	background: #fff8df;
+}
+
+.title:focus {
+	border: none;
+	outline: none;
 }
 
 @media (min-width: 768px) {
-	.title {
+	.input {
+		font-size: 24px;
+		font-weight: 400;
+		width: 100%;
+	}
+
+	.title1 {
+		position: relative;
 		font-size: 24px;
 		font-weight: 400;
 		line-height: normal;
 		letter-spacing: -0.48px;
-		max-width: none;
+	}
+	.title {
+		position: relative;
+		font-size: 24px;
+		font-weight: 400;
+		line-height: normal;
+		letter-spacing: -0.48px;
+		width: 700px;
 	}
 	.container {
 		display: flex;
@@ -68,7 +92,6 @@
 	}
 	.cta {
 		padding: 12px;
-
 		color: black;
 		font-size: 18px;
 		font-weight: 400;

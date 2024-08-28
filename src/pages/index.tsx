@@ -6,11 +6,18 @@ import Projects from "@/components/LandingPage/Sections/Projects/Projects";
 import Solution from "@/components/LandingPage/Sections/Solution/Solution";
 import HowItWorks from "@/components/LandingPage/Sections/HowItWorks/HowItWorks";
 import Footer from "@/components/LandingPage/Footer/Footer";
+import Script from "next/script";
 
 const index = () => {
 	return (
 		<main>
 			<Header />
+			<Script
+				src='https://app.10xlaunch.ai/widget'
+				data-app-id='519bf231-fe1b-46db-9a63-3d99639d6ed0'
+				async
+				defer
+			/>
 			<Benefits />
 			<Testimonials />
 			<Projects />

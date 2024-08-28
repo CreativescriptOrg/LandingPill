@@ -3,12 +3,21 @@ import SectionTitle from "@/components/LandingPage/SectionTitle/SectionTitle";
 import styles from "./styles.module.css";
 import Image from "next/image";
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Navigation, Pagination } from "swiper/modules";
+import { Navigation, Pagination, Autoplay } from "swiper/modules";
 
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
 import { CarouselButtonNext, CarouselButtonPrev } from "@/assets/vectors";
+
+const Images = [
+	{ before: "/before1.webp", after: "/after1.webp" },
+	{ before: "/before2.webp", after: "/after2.webp" },
+	{ before: "/before3.webp", after: "/after3.webp" },
+	{ before: "/before4.webp", after: "/after4.webp" },
+	{ before: "/before5.webp", after: "/after5.webp" },
+	{ before: "/before6.webp", after: "/after6.webp" },
+];
 
 const Projects = () => {
 	return (
@@ -31,9 +40,14 @@ results for our clients.'
 									clickable: true,
 									el: ".projects-pagination",
 								}}
-								modules={[Navigation, Pagination]}
+								modules={[Navigation, Pagination, Autoplay]}
 								slidesPerView={1}
 								className={styles.projects}
+								autoplay={{
+									delay: 2000, // Time delay between slides (in milliseconds)
+									disableOnInteraction: false, // Autoplay won't stop on user interactions like swiping
+								}}
+								loop={true}
 								breakpoints={{
 									768: {
 										navigation: {
@@ -45,7 +59,7 @@ results for our clients.'
 								}}
 							>
 								{Array.from({
-									length: 4,
+									length: 6,
 								}).map((el, i) => {
 									return (
 										<SwiperSlide>
@@ -56,12 +70,12 @@ results for our clients.'
 														<picture>
 															<source
 																media='(min-width: 768px)'
-																srcSet={"/beforeProject.png"}
+																srcSet={Images[i].before}
 																width={500}
 																height={276}
 															/>
 															<Image
-																src={"/beforeProject.png"}
+																src={Images[i].before}
 																alt='hero'
 																width={320}
 																height={320}
@@ -76,12 +90,12 @@ results for our clients.'
 														<picture>
 															<source
 																media='(min-width: 768px)'
-																srcSet={"/afterProject.png"}
+																srcSet={Images[i].after}
 																width={500}
 																height={276}
 															/>
 															<Image
-																src={"/afterProject.png"}
+																src={Images[i].after}
 																alt='hero'
 																width={320}
 																height={320}
@@ -103,6 +117,7 @@ results for our clients.'
 					<div className='swiper-pagination-custom projects-pagination'></div>
 				</div>
 				<CTA
+					flag={true}
 					title='Wanna redesign from scratch ?'
 					buttonText='Get it redesigned'
 					icon='info'
