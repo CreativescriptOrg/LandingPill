@@ -2,18 +2,6 @@ import CTA from "@/components/LandingPage/CTA/CTA";
 import SectionTitle from "@/components/LandingPage/SectionTitle/SectionTitle";
 import styles from "./styles.module.css";
 
-const arr = [
-	{
-		title: `Share your landing page link with me`,
-	},
-	{
-		title: "Get a detailed report",
-	},
-	{
-		title: "Improve your landing page",
-	},
-];
-
 const HowItWorks = () => {
 	return (
 		<section id='howItWorks' className={styles.container}>
@@ -42,6 +30,8 @@ const HowItWorks = () => {
 						</li>
 					</ul>
 				</div>
+			</div>
+			<div className={styles.subcontainer2}>
 				<CTA
 					title='Paste your landing page link here to get started...'
 					buttonText='Get Page health check'

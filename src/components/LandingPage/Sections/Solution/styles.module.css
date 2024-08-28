@@ -5,12 +5,22 @@
 }
 
 .container > div {
-	margin-left: 124px;
+	margin-inline: 8px;
 }
 
 .main {
 	display: flex;
 	flex-direction: column;
-	gap: 48px;
+	gap: 16px;
 	margin-bottom: 24px;
+}
+
+@media (min-width: 768px) {
+	.container > div {
+		margin-left: 124px;
+		margin-right: 0;
+	}
+	.main {
+		gap: 48px;
+	}
 }

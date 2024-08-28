@@ -67,13 +67,11 @@
 
 .tabButtonTitle {
 	color: var(--Neutrals-neutral-1000, #000);
-	font-variant-numeric: lining-nums proportional-nums;
-	font-family: "Space Grotesk";
-	font-size: 24px;
-	font-style: normal;
-	font-weight: 400;
-	line-height: normal;
-	letter-spacing: -0.96px;
+
+	font-size: 18px;
+	font-weight: 500;
+	line-height: 22.97px;
+	letter-spacing: -0.04em;
 }
 
 .tabButton.active .tabButtonTitle {
@@ -82,13 +80,11 @@
 
 .tabButton p {
 	color: rgba(0, 0, 0, 0.6);
-	font-variant-numeric: lining-nums proportional-nums;
-	font-family: "Space Grotesk";
-	font-size: 16px;
-	font-style: normal;
+
+	font-size: 14px;
 	font-weight: 500;
-	line-height: normal;
-	letter-spacing: -0.64px;
+	line-height: 17.86px;
+	letter-spacing: -0.04em;
 }
 
 .tabButton div {
@@ -128,14 +124,12 @@
 
 .tabBodyTitle {
 	color: black;
-	font-variant-numeric: lining-nums proportional-nums;
-	font-family: "Space Grotesk";
-	font-size: 32px;
-	font-style: normal;
-	font-weight: 500;
-	line-height: normal;
-	letter-spacing: -1.28px;
 	margin-bottom: 16px;
+
+	font-size: 24px;
+	font-weight: 500;
+	line-height: 30.62px;
+	letter-spacing: -0.04em;
 }
 
 .tabBodyCheckList {
@@ -190,7 +184,7 @@
 	}
 	.tabButton {
 		display: flex;
-		height: 150px;
+		height: 100%;
 	}
 	.subcontainer {
 		border-radius: 0px 36px 36px 36px;
@@ -226,5 +220,23 @@
 		font-style: normal;
 		font-weight: 400;
 		line-height: normal;
+	}
+	.tabBodyTitle {
+		font-size: 32px;
+		font-weight: 500;
+		line-height: normal;
+		letter-spacing: -1.28px;
+	}
+	.tabButtonTitle {
+		font-size: 24px;
+		font-weight: 400;
+		line-height: normal;
+		letter-spacing: -0.96px;
+	}
+	.tabButton p {
+		font-size: 16px;
+		font-weight: 500;
+		line-height: normal;
+		letter-spacing: -0.64px;
 	}
 }

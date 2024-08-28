@@ -2,26 +2,36 @@
 	margin-top: 86px;
 	max-width: 1440px;
 	margin-inline: auto;
+	padding-inline: 8px;
 }
 
-.subcontainer {
+/* .subcontainer {
 	margin-left: 64px;
 }
 .subcontainer > div:last-of-type {
 	margin-left: 60px;
-}
+} */
 
 .swiperContainer {
 	display: flex;
+	flex-direction: column;
 	gap: 24px;
 	align-items: center;
 	max-width: 1440px;
+	width: 100%;
+	background: #f7f7f7;
+	padding: 32px 16px;
+	margin-block: 32px;
+	border-radius: 24px;
+}
+.swiperContainer > div:first-of-type {
+	width: 100%;
+	display: flex;
+	gap: 24px;
+	align-items: center;
 }
 .main {
-	margin-block: 56px;
-	border-radius: 24px;
-	background: #f7f7f7;
-	padding: 40px;
+	width: 100%;
 }
 .projects > div {
 	max-width: 1200px;
@@ -42,11 +52,12 @@
 	flex-shrink: 0;
 	align-self: stretch;
 
-	font-size: 19.133px;
-	font-weight: 500;
-	line-height: normal;
-	letter-spacing: -0.765px;
 	text-transform: capitalize;
+
+	font-size: 14px;
+	font-weight: 500;
+	line-height: 17.86px;
+	letter-spacing: -0.04em;
 }
 
 .slideContent .before span {
@@ -64,7 +75,7 @@
 }
 
 .imageBg {
-	padding: 24px;
+	padding: 12px 8px;
 	background-color: white;
 	display: flex;
 	justify-content: center;
@@ -76,12 +87,49 @@
 
 @media (min-width: 768px) {
 	.slideContent {
-		display: grid;
 		grid-template-columns: repeat(2, 1fr);
-		align-items: center;
-		gap: 24px;
+		grid-template-rows: auto;
 	}
-	.slideContent img {
+
+	.subcontainer {
+		margin-left: 64px;
+	}
+	.subcontainer > div:last-of-type {
+		margin-left: 60px;
+	}
+
+	.slideContent span {
+		font-size: 19.133px;
+		font-weight: 500;
+		line-height: normal;
+		letter-spacing: -0.765px;
+	}
+	.imageBg {
+		padding: 24px;
+	}
+	.swiperContainer {
+		display: flex;
+		flex-direction: column;
+		gap: 24px;
+		align-items: center;
+
+		background: transparent;
+		padding: 32px 16px;
+		margin-block: 0;
 		width: 100%;
+	}
+	.swiperContainer > div:first-of-type {
+		width: 100%;
+		display: flex;
+		gap: 24px;
+		align-items: center;
+	}
+	.main {
+		width: 100%;
+		background: #f7f7f7;
+		border-radius: 24px;
+		margin-block: 0;
+		padding: 40px;
+		max-width: 1200px;
 	}
 }

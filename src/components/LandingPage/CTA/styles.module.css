@@ -15,7 +15,9 @@
 .container > div {
 	display: flex;
 	gap: 8px;
-	align-items: center;
+}
+.container > div svg {
+	min-width: 16px;
 }
 .cta {
 	display: flex;
@@ -71,5 +73,8 @@
 		font-size: 18px;
 		font-weight: 400;
 		line-height: 100%; /* 18px */
+	}
+	.container > div {
+		align-items: center;
 	}
 }

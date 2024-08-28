@@ -8,17 +8,17 @@ import HowItWorks from "@/components/LandingPage/Sections/HowItWorks/HowItWorks"
 import Footer from "@/components/LandingPage/Footer/Footer";
 
 const index = () => {
-  return (
-    <main>
-      <Header />
-      <Benefits />
-      <Testimonials />
-      <Projects />
-      <Solution />
-      <HowItWorks />
-      <Footer />
-    </main>
-  );
+	return (
+		<main>
+			<Header />
+			<Benefits />
+			<Testimonials />
+			<Projects />
+			<Solution />
+			<HowItWorks />
+			<Footer />
+		</main>
+	);
 };
 
 export default index;
