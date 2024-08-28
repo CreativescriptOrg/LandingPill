@@ -86,6 +86,7 @@ results for our clients."
           </button>
         </div>
         <CTA
+          flag={true}
           title="Wanna redesign from scratch ?"
           buttonText="Get it redesigned"
           icon="info"

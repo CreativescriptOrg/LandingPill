@@ -110,6 +110,7 @@ const Testimonials = () => {
         </div>
       </div>
       <CTA
+        flag={true}
         title="See how a Health check can solve falling Conversion rate problems"
         buttonText="Get Health check Report"
       />

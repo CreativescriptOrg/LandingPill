@@ -1,6 +1,6 @@
 import { CTANext, InfoIcon, LinkIcon } from "@/assets/vectors";
 import styles from "./styles.module.css";
-import { useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 
 const CTA = ({
   title,
@@ -11,6 +11,7 @@ const CTA = ({
   title: string;
   buttonText: string;
   icon?: string;
+  flag?: boolean;
 }) => {
   const landingPageLinkRef = useRef(null);
   const [input, setInput] = useState("");
