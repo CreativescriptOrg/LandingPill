@@ -3,6 +3,7 @@ import SectionTitle from "@/components/LandingPage/SectionTitle/SectionTitle";
 import styles from "./styles.module.css";
 import Image from "next/image";
 import { Swiper, SwiperSlide } from "swiper/react";
+import { Autoplay } from "swiper/modules";
 import { Navigation } from "swiper/modules";
 
 import "swiper/css";
@@ -16,7 +17,6 @@ const Images = [
   { before: "/before4.webp", after: "/after4.webp" },
   { before: "/before5.webp", after: "/after5.webp" },
   { before: "/before6.webp", after: "/after6.webp" },
-  { before: "/before7.webp", after: "/after7.webp" },
 ];
 
 const Projects = () => {
@@ -38,12 +38,17 @@ results for our clients."
                 nextEl: ".projects-button-next",
                 prevEl: ".projects-button-prev",
               }}
-              modules={[Navigation]}
+              modules={[Navigation, Autoplay]}
               slidesPerView={1}
               className={styles.projects}
+              autoplay={{
+                delay: 2000, // Time delay between slides (in milliseconds)
+                disableOnInteraction: false, // Autoplay won't stop on user interactions like swiping
+              }}
+              loop={true}
             >
               {Array.from({
-                length: 7,
+                length: 6,
               }).map((el, i) => {
                 return (
                   <SwiperSlide>
