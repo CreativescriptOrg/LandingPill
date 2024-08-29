@@ -1,7 +1,7 @@
-import QuestionsContainer from "@/components/QuestionsContainer/QuestionsContainer";
 import { PressEnterIcon } from "@/assets/vectors";
 import Checkbox from "@/components/Checkbox/Checkbox";
 import styles from "../Question.module.css";
+import Container from "./Container";
 
 const options = [
 	{
@@ -41,7 +41,7 @@ const LookAndFeel = ({
 	lookFeelAnswers: string[];
 }) => {
 	return (
-		<QuestionsContainer curStepProgress={1} didYouKnow={true}>
+		<Container iconDirection='right' didYouKnow={true}>
 			<form action='' className={styles.form} onSubmit={() => setStep()}>
 				<div className={styles.optionsContainer}>
 					{options.map((option) => (
@@ -68,7 +68,7 @@ const LookAndFeel = ({
 					</span>
 				</div>
 			</form>
-		</QuestionsContainer>
+		</Container>
 	);
 };
 

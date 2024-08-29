@@ -12,7 +12,7 @@ const Question5 = ({
 	landingPageLink: string;
 }) => {
 	return (
-		<Container curStepProgress={5}>
+		<Container iconDirection='top'>
 			<form action='' onSubmit={() => landingPageLink && setStep()}>
 				<Input
 					type='link'

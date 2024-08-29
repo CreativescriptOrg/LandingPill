@@ -31,8 +31,8 @@ const GameOn = ({
 	};
 
 	return (
-		<main className='main_container center_content'>
-			<div className={styles.container}>
+		<div className={styles.container}>
+			<div className={styles.subcontainer}>
 				<div className={`title_content`}>
 					<h1 className='heading_1_sb'>{STRINGS[type].title}</h1>
 					<span className='subtitle_1_sb'>{STRINGS[type].subtitle}</span>
@@ -45,9 +45,11 @@ const GameOn = ({
 					</div>
 					<span className='subtitle_1_re'>Approved by 17+ Founders</span>
 				</div>
+			</div>
 
-				<Cards type={type} />
+			<Cards type={type} />
 
+			<div className={styles.subcontainer}>
 				<div className={styles.text2}>
 					Don’t wait! Pop in your email for instant access to your guide!
 				</div>
@@ -78,11 +80,12 @@ const GameOn = ({
 					</div>
 				</form>
 			</div>
-		</main>
+		</div>
 	);
 };
 
 export default GameOn;
+
 export const Cards = ({ type }: { type: any }) => {
 	return (
 		<div className={styles.flex1}>
