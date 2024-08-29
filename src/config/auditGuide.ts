@@ -1,6 +1,7 @@
 const AUDIT_GUIDE = [
 	{
 		key: "User-Friendly Check",
+		id: "user-friendly-check",
 		title: "Why User-Friendly Check?",
 		description: `Usability testing is key for landing pages because it finds 75-80% of problems and helps fix issues that stop users from taking action, boosting both conversions and user satisfaction.
 			<br/><br/>	
@@ -191,6 +192,7 @@ const AUDIT_GUIDE = [
 	},
 	{
 		key: "Are Your Words Working?",
+		id: "are-your-words-working",
 		title: "Why focus on copywriting?",
 		description: `Strong words clearly explain what your brand offers in terms of your users and why it matters. It’s crucial for capturing attention and driving customer actions.
 			<br/><br/>
@@ -344,6 +346,7 @@ const AUDIT_GUIDE = [
 	},
 	{
 		key: "Is the idea solid?",
+		id: "is-the-idea-solid",
 		title: "Why your idea should be solid?",
 		description: `With 35% of startups failing due to no market need, validating your idea via your landing page is crucial. It confirms interest, saving you time and boosting your success chances.
 			<br/><br/>
@@ -491,6 +494,7 @@ const AUDIT_GUIDE = [
 	},
 	{
 		key: "Talking to the right people",
+		id: "talking-to-the-right-people",
 		title: "Why Talking to the right people is important?",
 		description: `Finding the right target audience for your landing page ensures it reaches those most likely to convert, maximizing your marketing efforts and avoiding wasted opportunities.
 			<br/><br/>
@@ -649,6 +653,7 @@ const AUDIT_GUIDE = [
 	},
 	{
 		key: "Define and Prioritize Problem?",
+		id: "define-and-prioritize-problem",
 		title: "Why defining and prioritizing problem is important?",
 		description:
 			"Prioritizing problems helps you focus on what needs fixing first, making your task easier and more organized.",

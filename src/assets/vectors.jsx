@@ -535,3 +535,84 @@ export const CTANext = () => (
 		/>
 	</svg>
 );
+
+export const CheckBlueIcon = () => (
+	<svg
+		width='44'
+		height='44'
+		viewBox='0 0 44 44'
+		fill='none'
+		xmlns='http://www.w3.org/2000/svg'
+	>
+		<g filter='url(#filter0_dd_587_3332)'>
+			<rect x='5' y='4' width='34' height='34' rx='17' fill='#4533E8' />
+			<rect x='5' y='4' width='34' height='34' rx='17' stroke='black' />
+			<path
+				d='M27.3307 17L19.9974 24.3333L16.6641 21'
+				stroke='#F5F5F5'
+				stroke-width='1.6'
+				stroke-linecap='round'
+				stroke-linejoin='round'
+			/>
+		</g>
+		<defs>
+			<filter
+				id='filter0_dd_587_3332'
+				x='0.5'
+				y='0.5'
+				width='43'
+				height='43'
+				filterUnits='userSpaceOnUse'
+				color-interpolation-filters='sRGB'
+			>
+				<feFlood flood-opacity='0' result='BackgroundImageFix' />
+				<feColorMatrix
+					in='SourceAlpha'
+					type='matrix'
+					values='0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0'
+					result='hardAlpha'
+				/>
+				<feMorphology
+					radius='1'
+					operator='dilate'
+					in='SourceAlpha'
+					result='effect1_dropShadow_587_3332'
+				/>
+				<feOffset dy='1' />
+				<feGaussianBlur stdDeviation='1.5' />
+				<feColorMatrix
+					type='matrix'
+					values='0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.15 0'
+				/>
+				<feBlend
+					mode='normal'
+					in2='BackgroundImageFix'
+					result='effect1_dropShadow_587_3332'
+				/>
+				<feColorMatrix
+					in='SourceAlpha'
+					type='matrix'
+					values='0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0'
+					result='hardAlpha'
+				/>
+				<feOffset dy='1' />
+				<feGaussianBlur stdDeviation='1' />
+				<feColorMatrix
+					type='matrix'
+					values='0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.3 0'
+				/>
+				<feBlend
+					mode='normal'
+					in2='effect1_dropShadow_587_3332'
+					result='effect2_dropShadow_587_3332'
+				/>
+				<feBlend
+					mode='normal'
+					in='SourceGraphic'
+					in2='effect2_dropShadow_587_3332'
+					result='shape'
+				/>
+			</filter>
+		</defs>
+	</svg>
+);
