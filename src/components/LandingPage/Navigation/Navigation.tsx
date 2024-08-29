@@ -6,7 +6,9 @@ const Navigation = () => {
 	return (
 		<nav className={styles.container}>
 			<div>
-				<LogoIcon />
+				<Link href='/' className={styles.logo}>
+					<LogoIcon />
+				</Link>
 
 				<ul>
 					<li>
@@ -24,6 +26,11 @@ const Navigation = () => {
 					<li>
 						<Link href='/welcome' className={styles.button}>
 							Get Page Health Report <ArrowNextIcon />
+						</Link>
+					</li>
+					<li>
+						<Link href='/welcome' className={styles.button}>
+							Connect with us <ArrowNextIcon />
 						</Link>
 					</li>
 				</ul>

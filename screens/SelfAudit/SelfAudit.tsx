@@ -5,25 +5,25 @@ import AUDIT_GUIDE from "@/config/auditGuide";
 import Main from "./Main";
 
 const SelfAudit = () => {
-	return (
-		<div className={styles.container}>
-			<CTA
-				onClick={() => {}}
-				text='Get audit done by our experts'
-				buttonTitle='Connect for Redesign'
-			/>
-			<Stepper
-				steps={AUDIT_GUIDE.map((point, index) => ({
-					title: point.key,
-					index: index + 1,
-				}))}
-			/>
+  return (
+    <div className={styles.container}>
+      <CTA
+        onClick={() => {}}
+        text="Get audit done by our experts"
+        buttonTitle="Connect for Redesign"
+      />
+      <Stepper
+        steps={AUDIT_GUIDE.map((point, index) => ({
+          title: point.key,
+          index: index + 1,
+        }))}
+      />
 
-			{AUDIT_GUIDE.map((point, index) => (
-				<Main key={index} point={point} />
-			))}
-		</div>
-	);
+      {AUDIT_GUIDE.map((point, index) => (
+        <Main key={index} point={point} />
+      ))}
+    </div>
+  );
 };
 
 export default SelfAudit;

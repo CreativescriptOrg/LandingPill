@@ -1,146 +1,215 @@
 .container {
-  max-width: 1440px;
-  margin-inline: auto;
-  margin-top: 86px;
+	max-width: 1440px;
+	margin-inline: auto;
+	margin-top: 86px;
+	padding-inline: 8px;
 }
 
 .stats {
-  max-width: 880px;
-  padding: 24px;
-  margin-top: -56px;
+	max-width: 880px;
+	padding: 24px;
+	/* margin-top: -56px; */
 
-  border-radius: 16px;
-  border: 0.882px solid black;
-  background: #fff;
-  box-shadow: 3.53px 3.53px 0px 0px rgba(0, 0, 0, 0.4);
+	border-radius: 16px;
+	border: 0.882px solid black;
+	background: #fff;
+	box-shadow: 3.53px 3.53px 0px 0px rgba(0, 0, 0, 0.4);
+	width: 100%;
 }
 .stats ul {
-  display: flex;
-  align-items: flex-start;
-  align-content: flex-start;
-  gap: 32px;
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	gap: 32px;
 }
 
 .stats li {
-  display: flex;
-  flex-direction: column;
-  gap: 8px;
-  align-items: center;
+	display: flex;
+	flex-direction: column;
+	gap: 8px;
+	align-items: center;
 }
 .stats li span:first-of-type {
-  font-size: 24px;
-  font-weight: 500;
-  line-height: 30.62px;
-  letter-spacing: -0.02em;
-  text-align: left;
+	font-size: 24px;
+	font-weight: 500;
+	line-height: 30.62px;
+	letter-spacing: -0.02em;
+	text-align: left;
 
-  color: #4533e8;
+	color: #4533e8;
 }
 .stats li span:last-of-type {
-  font-size: 16px;
-  font-weight: 400;
-  line-height: 20.42px;
-  text-align: center;
-  color: #1e1e1e;
+	font-size: 16px;
+	font-weight: 400;
+	line-height: 20.42px;
+	text-align: center;
+	color: #1e1e1e;
 }
 .subcontainer {
-  border-radius: 24px;
-  border: 1px solid #2e2e2e;
-  background: #fff8df;
-
-  display: flex;
-  flex-direction: column;
-  padding: 0 56px 50px;
-  justify-content: center;
-  align-items: center;
-  margin-block: 56px;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	margin-bottom: 32px;
 }
 
 .testimonials {
-  margin-top: 48px;
-  display: flex;
-  gap: 16px;
+	display: flex;
+	gap: 16px;
 }
 .testimonials > div {
-  max-width: 1290px !important;
+	max-width: 1290px !important;
 }
 
 .testimonial {
-  display: flex;
-  flex-direction: column;
-  gap: 24px;
+	display: flex;
+	flex-direction: column;
+	gap: 24px;
 }
 
 .testimonial > div:first-child {
-  display: flex;
-  padding: 16px 24px;
-  align-items: center;
-  gap: 16px;
-  align-self: stretch;
+	display: flex;
+	padding: 16px;
+	align-items: center;
+	gap: 16px;
+	align-self: stretch;
 
-  border-radius: 16px;
-  border: 1px solid black;
-  background: #dfdbff;
+	border-radius: 16px;
+	border: 1px solid black;
+	background: #dfdbff;
 }
 
 .testimonial > div:last-of-type {
-  border-radius: 16px;
-  border: 1px solid black;
-  background: #fff;
+	border-radius: 16px;
+	border: 1px solid black;
+	background: #fff;
 
-  display: flex;
-  padding: 24px 23px;
-  flex-direction: column;
-  align-items: flex-start;
-  gap: 12px;
-  align-self: stretch;
+	display: flex;
+	padding: 16px;
+	flex-direction: column;
+	align-items: flex-start;
+	gap: 8px;
+	align-self: stretch;
 }
 
 .testimonial .name {
-  color: #171717;
-  font-family: "Space Grotesk";
-  font-size: 24px;
-  font-style: normal;
-  font-weight: 700;
-  line-height: 21.6px; /* 90% */
+	color: #171717;
+
+	font-size: 18px;
+	font-weight: 700;
+	line-height: 22.97px;
 }
 .testimonial .role {
-  color: #171717;
-  font-family: "Space Grotesk";
-  font-size: 14px;
-  font-style: normal;
-  font-weight: 500;
-  line-height: 21.6px; /* 154.286% */
+	color: #171717;
+	font-size: 14px;
+	font-weight: 500;
+	line-height: 21.6px; /* 154.286% */
 }
 .testimonial .review {
-  color: #171717;
-  font-family: "Space Grotesk";
-  font-size: 16px;
-  font-style: normal;
-  font-weight: 400;
-  line-height: 25px; /* 156.25% */
+	color: #171717;
+
+	font-size: 14px;
+	font-weight: 400;
+	line-height: 17.86px;
+	margin-top: 12px;
 }
 .testimonial .stars {
-  display: flex;
-  gap: 12px;
+	display: flex;
+	gap: 12px;
 }
 .testimonial .star {
-  display: flex;
-  padding: 8.506px;
-  align-items: flex-start;
-  gap: 8.506px;
+	display: flex;
+	padding: 4px;
+	align-items: flex-start;
+	gap: 8px;
 
-  border-radius: 85.056px;
-  border: 0.851px solid rgba(217, 217, 217, 0.19);
-  background: rgba(220, 220, 220, 0.19);
+	border-radius: 85.056px;
+	border: 0.851px solid rgba(217, 217, 217, 0.19);
+	background: rgba(220, 220, 220, 0.19);
 }
 .testimonial .star.active {
-  border: 0.851px solid rgba(251, 191, 36, 0.19);
-  background: rgba(251, 191, 36, 0.19);
+	border: 0.851px solid rgba(251, 191, 36, 0.19);
+	background: rgba(251, 191, 36, 0.19);
+}
+
+.testimonials .star svg {
+	max-width: 12px;
+	max-height: 12px;
 }
 
 .swiperContainer {
-  display: flex;
-  align-items: center;
-  gap: 24px;
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	gap: 16px;
+	background: #fff8df;
+	border: 1px solid #2e2e2e;
+	border-radius: 24px;
+	margin-top: 24px;
+	padding: 16px;
+}
+.swiperContainer > div {
+	width: 100%;
+	display: flex;
+	align-items: center;
+	gap: 16px;
+}
+@media (min-width: 768px) {
+	.stats ul {
+		flex-direction: row;
+	}
+	.stats {
+		margin-top: -56px;
+	}
+	.subcontainer {
+		border-radius: 24px;
+		border: 1px solid #2e2e2e;
+		background: #fff8df;
+
+		display: flex;
+		flex-direction: column;
+		padding: 0 56px 50px;
+		justify-content: center;
+		align-items: center;
+		margin-block: 56px;
+	}
+	.swiperContainer {
+		background: transparent;
+		border: 0;
+		border-radius: 0;
+		margin-top: 0;
+	}
+	.testimonials {
+		margin-top: 48px;
+	}
+	.testimonial .review {
+		font-size: 16px;
+		font-weight: 400;
+		line-height: 25px; /* 156.25% */
+		margin-top: 0;
+	}
+	.testimonial .name {
+		font-size: 24px;
+		font-weight: 700;
+		line-height: 21.6px; /* 90% */
+	}
+	.testimonial > div:last-of-type {
+		padding: 24px 23px;
+		gap: 16px;
+	}
+	.testimonial .star {
+		padding: 8px;
+	}
+
+	.testimonials .star svg {
+		max-width: none;
+		max-height: none;
+	}
+	.testimonial > div:first-child {
+		padding: 16px 24px;
+		gap: 16px;
+	}
 }

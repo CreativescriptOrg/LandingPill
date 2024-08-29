@@ -23,6 +23,9 @@
 	align-items: center;
 	gap: 20px;
 }
+.container ul li:not(:last-child) {
+	display: none;
+}
 
 .container ul a {
 	color: #1d1d1d;
@@ -37,9 +40,9 @@
 
 .button {
 	display: flex;
-	padding: 16px;
+	padding: 8px 16px;
 	align-items: center;
-	gap: 16px;
+	gap: 2px;
 
 	border-radius: 16px;
 	border: 1px solid black;
@@ -49,4 +52,28 @@
 	font-size: 18px;
 	font-weight: 400;
 	line-height: normal;
+}
+
+.logo {
+	display: block;
+	height: fit-content;
+}
+.logo svg {
+	max-width: 100px;
+}
+
+@media (min-width: 768px) {
+	.container ul li:not(:last-child) {
+		display: block;
+	}
+	.container ul li:last-child {
+		display: none;
+	}
+	.logo svg {
+		max-width: none;
+	}
+	.button {
+		padding: 16px;
+		gap: 16px;
+	}
 }

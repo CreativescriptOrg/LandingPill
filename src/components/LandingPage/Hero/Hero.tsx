@@ -7,13 +7,21 @@ const Hero = () => {
 	return (
 		<div>
 			<div className={styles.hero}>
-				<Image
-					src={"/heroBg.png"}
-					alt='hero'
-					width={500}
-					height={500}
-					className={styles.heroImage}
-				/>
+				<picture>
+					<source
+						media='(min-width: 768px)'
+						srcSet={"/heroBg.png"}
+						width={302}
+						height={295}
+					/>
+					<Image
+						src={"/heroBgMobile.png"}
+						alt='hero'
+						width={320}
+						height={320}
+						className={styles.heroImage}
+					/>
+				</picture>
 				<div className={styles.heroContent}>
 					<div className={styles.heroFounders}>
 						<Image

@@ -1,185 +1,242 @@
 .container {
-  max-width: 1440px;
-  margin-inline: auto;
-  width: 100%;
-  margin-top: 88px;
-  position: relative;
-  z-index: 10; /* Ensures this section stays on top */
-  background-color: white; /* Set a background color if necessary */
+	max-width: 1440px;
+	margin-inline: auto;
+	width: 100%;
+	margin-top: 88px;
+	position: relative;
+	z-index: 10; /* Ensures this section stays on top */
+	background-color: white; /* Set a background color if necessary */
+	padding: 0 16px;
 }
 
 .mainContainer {
-  margin-left: 124px;
-  display: flex;
-  flex-direction: column;
-  gap: 36px;
+	display: flex;
+	flex-direction: column;
+	gap: 36px;
 }
 
 .subcontainer {
-  border-radius: 0px 36px 36px 36px;
-  border: 1px solid rgba(0, 0, 0, 0.4);
-  padding: 0 32px 32px;
-  margin-top: 56px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+	padding: 0;
+	margin-top: 56px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
 }
 
 .tabsHeader {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  align-items: center;
-  gap: 24px;
-  align-self: stretch;
-  margin-top: 48px;
+	margin-top: 24px;
 }
 
 .tabButton {
-  display: flex;
-  height: 150px;
-  padding: 19.346px 21.105px;
-  flex-direction: column;
-  align-items: flex-start;
-  gap: 14.07px;
+	display: none;
+	padding: 19.346px 21.105px;
+	flex-direction: column;
+	align-items: flex-start;
+	gap: 14.07px;
 
-  border-radius: 16px;
-  border: 0.879px solid black;
+	border-radius: 16px;
+	border: 0.879px solid black;
 }
 
 .tabButton.active {
-  background: rgba(223, 219, 255, 0.85);
-  box-shadow: 3.518px 3.518px 0px 0px #000;
+	display: flex;
+	background: rgba(223, 219, 255, 0.85);
+	box-shadow: 3.518px 3.518px 0px 0px #000;
 }
 
 .tabButtonIndex {
-  border-radius: 999px;
-  border: 1px solid black;
-  background: #a2a2a2;
+	border-radius: 999px;
+	border: 1px solid black;
+	background: #a2a2a2;
 
-  /* M3/Elevation Light/1 */
-  box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.3),
-    0px 1px 3px 1px rgba(0, 0, 0, 0.15);
+	/* M3/Elevation Light/1 */
+	box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.3),
+		0px 1px 3px 1px rgba(0, 0, 0, 0.15);
 
-  display: flex;
-  width: 34px;
-  height: 34px;
-  justify-content: center;
-  align-items: center;
+	display: flex;
+	width: 34px;
+	height: 34px;
+	justify-content: center;
+	align-items: center;
 }
 
 .tabButton.active .tabButtonIndex {
-  background: #4533e8;
-  color: white;
+	background: #4533e8;
+	color: white;
 }
 
 .tabButtonTitle {
-  color: var(--Neutrals-neutral-1000, #000);
-  font-variant-numeric: lining-nums proportional-nums;
-  font-family: "Space Grotesk";
-  font-size: 24px;
-  font-style: normal;
-  font-weight: 400;
-  line-height: normal;
-  letter-spacing: -0.96px;
+	color: var(--Neutrals-neutral-1000, #000);
+
+	font-size: 18px;
+	font-weight: 500;
+	line-height: 22.97px;
+	letter-spacing: -0.04em;
 }
 
 .tabButton.active .tabButtonTitle {
-  font-weight: 500;
+	font-weight: 500;
 }
 
 .tabButton p {
-  color: rgba(0, 0, 0, 0.6);
-  font-variant-numeric: lining-nums proportional-nums;
-  font-family: "Space Grotesk";
-  font-size: 16px;
-  font-style: normal;
-  font-weight: 500;
-  line-height: normal;
-  letter-spacing: -0.64px;
+	color: rgba(0, 0, 0, 0.6);
+
+	font-size: 14px;
+	font-weight: 500;
+	line-height: 17.86px;
+	letter-spacing: -0.04em;
 }
 
 .tabButton div {
-  display: flex;
-  gap: 12px;
-  align-items: flex-start;
+	display: flex;
+	gap: 12px;
+	align-items: flex-start;
 }
 
 .floatingTitle {
-  display: inline-flex;
-  padding: 10px;
-  justify-content: center;
-  align-items: center;
-  gap: 10px;
+	display: inline-flex;
+	padding: 10px;
+	justify-content: center;
+	align-items: center;
+	gap: 10px;
 
-  border-radius: 12px;
-  background: #f0eeff;
+	border-radius: 12px;
+	background: #f0eeff;
 
-  margin-top: -24px;
+	margin-top: -24px;
 }
 
 .tabBody {
-  margin-top: 24px;
-  display: flex;
-  align-items: center;
-  padding: 24px;
-  gap: 24px;
+	margin-top: 24px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	padding: 16px;
+	gap: 24px;
 
-  border-radius: 16px;
-  border: 1px solid rgba(0, 0, 0, 0.1);
-  background: #f7f7f7;
+	border-radius: 16px;
+	border: 1px solid rgba(0, 0, 0, 0.1);
+	background: #f7f7f7;
 }
 .tabBody > div {
-  width: 100%;
+	width: 100%;
 }
 
 .tabBodyTitle {
-  color: black;
-  font-variant-numeric: lining-nums proportional-nums;
-  font-family: "Space Grotesk";
-  font-size: 32px;
-  font-style: normal;
-  font-weight: 500;
-  line-height: normal;
-  letter-spacing: -1.28px;
-  margin-bottom: 16px;
+	color: black;
+	margin-bottom: 16px;
+
+	font-size: 24px;
+	font-weight: 500;
+	line-height: 30.62px;
+	letter-spacing: -0.04em;
 }
 
 .tabBodyCheckList {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-end;
-  gap: 8px;
-  align-self: stretch;
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	grid-template-rows: repeat(2, 1fr);
+	gap: 8px;
 }
 .tabBodyCheckList > div {
-  display: flex;
-  padding: 22px 16px;
-  align-items: center;
-  gap: 16px;
-  align-self: stretch;
+	display: flex;
+	flex-direction: column;
+	padding: 8px;
+	align-items: flex-start;
+	gap: 16px;
+	align-self: stretch;
 
-  border-radius: 16px;
-  background: #fff;
+	border-radius: 8px;
+	background: #fff;
 
-  color: #14181f;
+	color: #14181f;
 
-  /* Body/B1/Semibold */
-  font-family: "Space Grotesk";
-  font-size: 16px;
-  font-style: normal;
-  font-weight: 400;
-  line-height: normal;
+	font-size: 14px;
+	font-weight: 400;
+	line-height: 17.86px;
+	text-align: left;
 }
 
 .tabImage {
-  padding: 12px;
+	padding: 12px;
 
-  border-radius: 16px;
-  background: #fff;
+	border-radius: 16px;
+	background: #fff;
 }
 
 .tabImage img {
-  max-width: 100%;
-  width: 100%;
-  height: auto;
+	max-width: 100%;
+	width: 100%;
+	height: auto;
+}
+
+@media (min-width: 768px) {
+	.mainContainer {
+		margin-left: 124px;
+	}
+	.tabsHeader {
+		display: grid;
+		grid-template-columns: repeat(3, 1fr);
+		align-items: center;
+		gap: 24px;
+		align-self: stretch;
+		margin-top: 48px;
+	}
+	.tabButton {
+		display: flex;
+		height: 100%;
+	}
+	.subcontainer {
+		border-radius: 0px 36px 36px 36px;
+		border: 1px solid rgba(0, 0, 0, 0.4);
+		padding: 0 32px 32px;
+		margin-top: 56px;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+	}
+	.tabBody {
+		flex-direction: row;
+		padding: 24px;
+		gap: 24px;
+	}
+	.tabBodyCheckList {
+		display: flex;
+		flex-direction: column;
+		align-items: flex-end;
+		gap: 8px;
+		align-self: stretch;
+	}
+	.tabBodyCheckList > div {
+		flex-direction: row;
+		padding: 22px 16px;
+		align-items: center;
+		gap: 16px;
+
+		border-radius: 16px;
+
+		/* Body/B1/Semibold */
+		font-size: 16px;
+		font-style: normal;
+		font-weight: 400;
+		line-height: normal;
+	}
+	.tabBodyTitle {
+		font-size: 32px;
+		font-weight: 500;
+		line-height: normal;
+		letter-spacing: -1.28px;
+	}
+	.tabButtonTitle {
+		font-size: 24px;
+		font-weight: 400;
+		line-height: normal;
+		letter-spacing: -0.96px;
+	}
+	.tabButton p {
+		font-size: 16px;
+		font-weight: 500;
+		line-height: normal;
+		letter-spacing: -0.64px;
+	}
 }
