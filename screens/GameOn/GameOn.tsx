@@ -4,27 +4,30 @@ import Input from "@/components/InputElement/Input";
 import submitForm from "@/utils/submitForm";
 import { useRouter } from "next/navigation";
 import STRINGS from "./string";
+import { useState } from "react";
 
 const GameOn = ({
-	type,
-	formState,
-	setFormData,
-	setStep,
+  type,
+  formState,
+  setFormData,
+  setStep,
 }: {
-	type: string;
-	formState: any;
-	setFormData: any;
-	setStep: any;
+  type: string;
+  formState: any;
+  setFormData: any;
+  setStep: any;
 }) => {
   const router = useRouter();
-
-	const handleSubmit = async (e: any) => {
-		e.preventDefault();
-		const res = await submitForm(formState);
-		if (res.status === "success") {
-			setStep();
-		}
-	};
+  const [loading, setLoading] = useState(false);
+  const handleSubmit = async (e: any) => {
+    e.preventDefault();
+    setLoading(false);
+    const res = await submitForm(formState);
+    if (res.status === "success") {
+      setLoading(false);
+      setStep();
+    }
+  };
 
   return (
     <main className="main_container center_content">
@@ -66,7 +69,10 @@ const GameOn = ({
           />
           <div className={`submit_container`}>
             <button className="button_primary" disabled={!formState.email}>
-              Access now
+              Access now{" "}
+              {loading && (
+                <CircularProgress sx={{ color: "white" }} size={20} />
+              )}
             </button>
           </div>
         </form>
