@@ -37,7 +37,7 @@ const Point = ({
 				{data.hasSubpoints && (
 					<ol className={styles.subpoints}>
 						{data.subpoints.map((subpoint: any, index: number) => (
-							<li>
+							<li key={subpoint.title}>
 								<h3 className='heading_4_sb'>{subpoint.title}</h3>
 								<p className='subtitle_1_re'>
 									{ReactHtmlParser(`${subpoint.content}`)}
@@ -58,6 +58,7 @@ const Point = ({
 						<div>
 							{data.resources.map((resource: any, index: number) => (
 								<Link
+									key={index}
 									href={resource.link}
 									className='subtitle_1_re'
 									target='_blank'

@@ -33,7 +33,7 @@ const AuditGuide = ({ type }: { type: string }) => {
 					<div className={styles.last}>
 						{STRING[type]?.data.map((item: any, index: any) => {
 							return (
-								<div>
+								<div key={index}>
 									{index % 2 === 0 ? (
 										<>
 											<div
