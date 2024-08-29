@@ -1,5 +1,4 @@
 import React from "react";
-import Question5 from "./Forms/Question5";
 import LoaderAfterSubmit from "./Loader/Loader";
 import { useSelector, useDispatch } from "react-redux";
 import { RootState, setStep, setForm } from "../../src/redux/reducer";
@@ -7,6 +6,7 @@ import Question1 from "./Forms/Question1";
 import Question2 from "./Forms/Question2";
 import Question3 from "./Forms/Question3";
 import Question4 from "./Forms/Question4";
+import Question5 from "./Forms/Question5";
 import NeedNewLandingPage from "../NeedNewLandingPage/NeedNewLandingPage";
 import ScheduleCall from "../ScheduleCall/ScheduleCall";
 import Resources from "../Resources/Resources";
@@ -23,7 +23,6 @@ import ExpertDiagnosisLink from "../ExpertDiagnosisLink/ExpertDiagnosisLink";
 import ExpertRedesignLink from "../ExpertRedesignLink/ExpertRedesignLink";
 import GameOn from "../GameOn/GameOn";
 import AuditGuide from "../AuditGuide/AuditGuide";
-import SuccessModal from "@/components/ConfirmationModal/SuccessModal";
 
 const Question = () => {
 	const dispatch = useDispatch();
@@ -216,7 +215,7 @@ const Question = () => {
 					setStep={() => dispatch(setStep("AuditGuide"))}
 				/>
 			)}
-			{curStep === "AuditGuide" && <AuditGuide />}
+			{curStep === "AuditGuide" && <AuditGuide type='AUDIT_GUIDE' />}
 
 			{curStep === "Redesign" && (
 				<PageRedesign
@@ -254,7 +253,7 @@ const Question = () => {
 				/>
 			)}
 
-			{curStep === "RedesignGuide" && <AuditGuide />}
+			{curStep === "RedesignGuide" && <AuditGuide type='REDESIGN_GUIDE' />}
 		</>
 	);
 };
