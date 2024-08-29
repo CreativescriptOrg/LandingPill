@@ -88,7 +88,7 @@ export const Cards = ({ type }: { type: any }) => {
 		<div className={styles.flex1}>
 			{STRINGS[type].data.map((item: any) => {
 				return (
-					<div className={styles.box} key={item.text}>
+					<div className={styles.box} key={item?.title}>
 						<div className={styles.flex2}>
 							<Image src={item?.img} alt='img' height={28} width={28} />
 							<div>

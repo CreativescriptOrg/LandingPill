@@ -106,7 +106,7 @@ const Testimonials = () => {
 						>
 							{arr.map((item: any, i) => {
 								return (
-									<SwiperSlide>
+									<SwiperSlide key={i}>
 										<SwiperSlideContent
 											title={item.title}
 											name={item.name}
