@@ -20,15 +20,15 @@
 }
 .flex {
 	display: flex;
-	align-items: center;
 	justify-content: center;
 	gap: 8px;
 }
 .flex1 {
 	display: flex;
-	align-items: center;
+	flex-direction: column;
 	justify-content: space-between;
 	width: 100%;
+	gap: 24px;
 }
 .button {
 	border: 0.617px solid #000;
@@ -69,34 +69,25 @@
 	color: white;
 	padding: 8px 12px;
 }
-.btn1,
-.absolute1 {
-	transform: translateX(-50%);
-}
-.btn2,
-.absolute2 {
-	transform: translateX(50%);
-}
+
 .button1 {
 	position: relative;
 	border-radius: 73655.164px;
 	border: 7px solid #dddaff;
-	transform: translateX(-50%);
 	padding: 8px 8px 12px 8px;
 }
 
-.button1 .btn1,
-.button1 .absolute1 {
-	transform: translateX(0);
-}
 .arrow1 {
 	position: absolute;
-	right: -48px;
+	right: -10px;
+	bottom: -124px;
+}
+.button1 .arrow1 {
 	bottom: -130px;
 }
 .arrow2 {
 	position: absolute;
-	left: -48px;
+	left: -10px;
 	bottom: -126px;
 }
 
@@ -143,4 +134,46 @@
 
 .absolute button {
 	width: fit-content;
+}
+
+@media (max-width: 768px) {
+	.button {
+		font-size: 16px;
+		font-weight: 400;
+		line-height: 20.42px;
+		letter-spacing: -0.02em;
+		padding: 16px 24px;
+	}
+}
+
+@media (min-width: 768px) {
+	.flex {
+		align-items: center;
+	}
+	.flex1 {
+		flex-direction: row;
+		align-items: center;
+	}
+	.btn1,
+	.absolute1 {
+		transform: translateX(-50%);
+	}
+	.btn2,
+	.absolute2 {
+		transform: translateX(50%);
+	}
+	.button1 {
+		transform: translateX(-50%);
+	}
+
+	.button1 .btn1,
+	.button1 .absolute1 {
+		transform: translateX(0);
+	}
+	.arrow1 {
+		right: -48px;
+	}
+	.arrow2 {
+		left: -48px;
+	}
 }
