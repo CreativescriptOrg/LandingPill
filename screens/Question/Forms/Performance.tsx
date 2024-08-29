@@ -46,6 +46,7 @@ const Performance = ({
 				<div className={styles.optionsContainer}>
 					{options.map((option) => (
 						<Checkbox
+							key={option.id}
 							label={option.label}
 							id={option.id}
 							name={option.name}

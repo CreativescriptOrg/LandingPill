@@ -8,7 +8,7 @@ const Main = ({ point }: { point: any }) => {
 	const [activePoint, setActivePoint] = useState(1);
 
 	return (
-		<div className={styles.main}>
+		<div className={styles.main} id={point.id}>
 			<div className={styles.emptyDiv}></div>
 			<div>
 				<h1 className='heading_2_sb'>{ReactHtmlParser(`${point.title}`)}</h1>

@@ -1,6 +1,7 @@
 const REDESIGN_GUIDE = [
 	{
 		key: "Exploring Solution?",
+		id: "exploring-solutions",
 		title: "Why should you explore solutions?",
 		description: `Ideation is crucial for your landing page because it creates a variety of solutions, helping you identify the most effective way to address problems and improve performance.
             <br/><br/>
@@ -139,6 +140,7 @@ const REDESIGN_GUIDE = [
 	},
 	{
 		key: "Finding the best solution",
+		id: "finding-best-solution",
 		title: "Why you should explore solution?",
 		description: `Exploring solutions helps you identify the changes that will have the greatest impact on your landing page, ensuring that your resources are used efficiently and effectively`,
 		data: [
@@ -180,6 +182,7 @@ const REDESIGN_GUIDE = [
 	{
 		key: "Sketching It Out",
 		title: "Sketching It Out",
+		id: "sketching-it-out",
 		description: `Sketching your ideas allows you to visualize your landing page early on in the process and make desired changes as and when required.`,
 		data: [
 			{

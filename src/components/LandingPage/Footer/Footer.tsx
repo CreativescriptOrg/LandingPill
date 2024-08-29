@@ -62,6 +62,7 @@ const Footer = () => {
 							{GAME_ON_AUDIT.data.map((item: any) => {
 								return (
 									<div
+										key={item?.title}
 										className={styles.card}
 										style={{ background: item?.background }}
 									>

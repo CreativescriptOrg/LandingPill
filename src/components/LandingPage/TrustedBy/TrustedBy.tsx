@@ -41,6 +41,7 @@ const TrustedBy = () => {
 								width={60}
 								height={48}
 								style={{ marginLeft: "48px" }}
+								key={item}
 							/>
 						);
 					})}

@@ -62,7 +62,7 @@ results for our clients.'
 									length: 6,
 								}).map((el, i) => {
 									return (
-										<SwiperSlide>
+										<SwiperSlide key={i}>
 											<div className={styles.slideContent}>
 												<div className={styles.before}>
 													<span>before landing pill</span>

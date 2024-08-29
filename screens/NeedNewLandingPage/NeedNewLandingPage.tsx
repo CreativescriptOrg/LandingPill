@@ -32,7 +32,7 @@ const NeedNewLandingPage = ({ ctaAction }: { ctaAction: any }) => {
 					<CTACard
 						title='Build your own Landing Page'
 						ctaText='COMING SOON'
-						ctaAction={() => ctaAction("Self")}
+						ctaAction={() => {}}
 						recommended={false}
 					>
 						<div>
