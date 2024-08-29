@@ -1,7 +1,7 @@
-import QuestionsContainer from "@/components/QuestionsContainer/QuestionsContainer";
 import { PressEnterIcon } from "@/assets/vectors";
 import styles from "../Question.module.css";
 import Input from "@/components/InputElement/Input";
+import Container from "./Container";
 
 const Metadata = ({
 	setStep,
@@ -13,7 +13,7 @@ const Metadata = ({
 	metaData: string;
 }) => {
 	return (
-		<QuestionsContainer curStepProgress={3} iconDirection='top'>
+		<Container iconDirection='top'>
 			<form action='' className={styles.form} onSubmit={() => setStep()}>
 				<Input
 					label='Write it here, please!📖'
@@ -35,7 +35,7 @@ const Metadata = ({
 					</span>
 				</div>
 			</form>
-		</QuestionsContainer>
+		</Container>
 	);
 };
 

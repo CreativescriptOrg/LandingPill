@@ -4,32 +4,7 @@
 	align-items: center;
 	gap: 48px;
 }
-.container1 {
-	border-radius: 16px;
-	border: 1px solid #000;
-	background: #fff;
-	box-shadow: 4px 4px 0px 0px rgba(0, 0, 0, 0.4);
-	padding: 22px 16px;
-	width: 100%;
-	margin-top: 4px;
-	margin-bottom: 16px;
-}
 
-.text2 {
-	color: #1e1e1e;
-}
-.flex {
-	display: flex;
-	justify-content: center;
-	gap: 8px;
-}
-.flex1 {
-	display: flex;
-	flex-direction: column;
-	justify-content: space-between;
-	width: 100%;
-	gap: 24px;
-}
 .button {
 	border: 0.617px solid #000;
 	background: #fff;
@@ -143,6 +118,17 @@
 		line-height: 20.42px;
 		letter-spacing: -0.02em;
 		padding: 16px 24px;
+	}
+	.absolute {
+		border-radius: 32px;
+	}
+	.absolute > div > span:first-child {
+		color: var(--color-text-default-default);
+
+		font-size: 16px;
+		font-style: normal;
+		font-weight: 400;
+		line-height: normal;
 	}
 }
 

@@ -4,6 +4,12 @@
 	align-items: center;
 	gap: 48px;
 }
+.subcontainer {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	gap: 24px;
+}
 .flex {
 	display: flex;
 	align-items: center;
@@ -81,6 +87,8 @@
 	flex-direction: column;
 	width: 100%;
 	max-width: 694px;
+	margin-top: 0;
+	gap: 16px !important;
 }
 
 @media (min-width: 768px) {

@@ -12,7 +12,7 @@ const Question1 = ({
 	name: string;
 }) => {
 	return (
-		<Container curStepProgress={1}>
+		<Container iconDirection='top'>
 			<form action='' onSubmit={() => name && setStep()}>
 				<Input
 					type='text'

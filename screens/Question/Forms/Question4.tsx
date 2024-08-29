@@ -12,7 +12,7 @@ const Question4 = ({
 	haveALandingPage: boolean;
 }) => {
 	return (
-		<Container curStepProgress={4}>
+		<Container iconDirection='top'>
 			<form action='' onSubmit={() => setStep()}>
 				<label
 					htmlFor='gotOne'

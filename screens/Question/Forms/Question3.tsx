@@ -12,7 +12,7 @@ const Question3 = ({
 	businessName: string;
 }) => {
 	return (
-		<Container curStepProgress={3}>
+		<Container iconDirection='top'>
 			<form action='' onSubmit={() => businessName && setStep()}>
 				<Input
 					type='text'
