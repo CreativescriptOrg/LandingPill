@@ -82,17 +82,23 @@ const Benefits = () => {
               <Tab
                 index={1}
                 title="Landing Page (LP) Score"
+                setCurrentText={setCurrentText}
                 description="Instantly see how your landing page performs with our expert score."
+                currentText={currentText}
               />
               <Tab
+                setCurrentText={setCurrentText}
                 index={2}
                 title="Get Actionable Insights to Boost Conversion"
                 description="We focus on intuitive interfaces and seamless interactions, ensuring your digital products."
+                currentText={currentText}
               />
               <Tab
+                setCurrentText={setCurrentText}
                 index={3}
                 title="SEO Optimization & Copy Check"
                 description="Get your content found and read—optimize both SEO and copy."
+                currentText={currentText}
               />
             </div>
             <div className={styles.tabBody}>
@@ -146,17 +152,31 @@ const Tab = ({
   description,
   index,
   active,
+  setCurrentText,
+  currentText,
 }: {
   title: string;
   description: string;
   index: number;
   active?: boolean;
+  setCurrentText: any;
+  currentText: any;
 }) => {
   return (
-    <div className={`${styles.tabButton} ${active ? styles.active : ""}`}>
+    <div
+      className={`${styles.tabButton} ${
+        active || index - 1 === currentText ? styles.active : ""
+      }`}
+      onClick={() => {
+        setCurrentText(index - 1);
+      }}
+      style={{ cursor: "pointer" }}
+    >
       <div>
         <span className={styles.tabButtonIndex}>0{index}</span>
-        <span className={styles.tabButtonTitle}>{title}</span>
+        <span className={styles.tabButtonTitle} style={{ maxWidth: "308px" }}>
+          {title}
+        </span>
       </div>
       <p>{description}</p>
     </div>
