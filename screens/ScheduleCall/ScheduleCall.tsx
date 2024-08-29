@@ -68,7 +68,7 @@ const ScheduleCall = ({
 					<div className={`submit_container`}>
 						<button
 							className='button_primary'
-							disabled={!formState.email || !formState.website}
+							disabled={!formState.email || !formState.website || loading}
 						>
 							Schedule Call with expert
 							{loading && (
