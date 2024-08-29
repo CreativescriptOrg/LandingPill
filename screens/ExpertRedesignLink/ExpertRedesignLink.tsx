@@ -48,7 +48,10 @@ const ExpertRedesignLink = ({
 						error=''
 					/>
 					<div className={`submit_container`}>
-						<button className='button_primary' disabled={!formState.email}>
+						<button
+							className='button_primary'
+							disabled={!formState.email || loading}
+						>
 							Schedule call with expert
 							{loading && (
 								<CircularProgress sx={{ color: "white" }} size={20} />

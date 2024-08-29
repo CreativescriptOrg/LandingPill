@@ -2,7 +2,6 @@ import Image from "next/image";
 import styles from "./GameOn.module.css";
 import Input from "@/components/InputElement/Input";
 import submitForm from "@/utils/submitForm";
-import { useRouter } from "next/navigation";
 import STRINGS from "./string";
 import { useState } from "react";
 import { CircularProgress } from "@mui/material";
@@ -18,11 +17,11 @@ const GameOn = ({
 	setFormData: any;
 	setStep: any;
 }) => {
-	const router = useRouter();
 	const [loading, setLoading] = useState(false);
+
 	const handleSubmit = async (e: any) => {
 		e.preventDefault();
-		setLoading(false);
+		setLoading(true);
 		const res = await submitForm(formState);
 		if (res.status === "success") {
 			setLoading(false);
@@ -71,7 +70,10 @@ const GameOn = ({
 						value={formState.email}
 					/>
 					<div className={`submit_container`}>
-						<button className='button_primary' disabled={!formState.email}>
+						<button
+							className='button_primary'
+							disabled={!formState.email || loading}
+						>
 							Access now{" "}
 							{loading && (
 								<CircularProgress sx={{ color: "white" }} size={20} />

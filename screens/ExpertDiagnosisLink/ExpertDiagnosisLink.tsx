@@ -56,7 +56,10 @@ const ExpertDiagnosisLink = ({
 					/>
 
 					<div className={`submit_container`}>
-						<button className='button_primary' disabled={!formState.email}>
+						<button
+							className='button_primary'
+							disabled={!formState.email || loading}
+						>
 							Get Healthcheck done{" "}
 							{loading && (
 								<CircularProgress sx={{ color: "white" }} size={20} />
