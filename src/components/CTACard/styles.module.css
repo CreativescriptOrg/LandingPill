@@ -81,6 +81,12 @@
 	font-size: 14px;
 	font-weight: 700;
 }
+@media (max-width: 768px) {
+	.title,
+	.cta_card-list li {
+		font-size: 14px;
+	}
+}
 
 @media (min-width: 768px) {
 	.container {

@@ -71,11 +71,9 @@ img {
 	align-self: stretch;
 }
 .cta_card-list li {
-	color: var(--color-text-default-secondary);
+	color: var(--color-text-default-default);
 
-	/* Body/B1/Regular */
-	font-size: 16px;
-	font-style: normal;
+	font-size: 14px;
 	font-weight: 400;
 	line-height: normal;
 }
@@ -168,6 +166,10 @@ img {
 .title_content span {
 	color: #757575;
 	text-align: center;
+}
+.title_content svg {
+	max-width: 72px;
+	max-height: 72px;
 }
 
 button,
@@ -349,5 +351,18 @@ label {
 	}
 	.swiper-button-custom {
 		display: block;
+	}
+	.title_content svg {
+		max-width: none;
+		max-height: none;
+	}
+	.cta_card-list li {
+		color: var(--color-text-default-secondary);
+
+		/* Body/B1/Regular */
+		font-size: 16px;
+		font-style: normal;
+		font-weight: 400;
+		line-height: normal;
 	}
 }

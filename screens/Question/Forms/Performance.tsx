@@ -1,7 +1,7 @@
-import QuestionsContainer from "@/components/QuestionsContainer/QuestionsContainer";
 import { PressEnterIcon } from "@/assets/vectors";
 import Checkbox from "@/components/Checkbox/Checkbox";
 import styles from "../Question.module.css";
+import Container from "./Container";
 
 const options = [
 	{
@@ -41,7 +41,7 @@ const Performance = ({
 	performanceAnswers: string[];
 }) => {
 	return (
-		<QuestionsContainer curStepProgress={2}>
+		<Container iconDirection='right'>
 			<form action='' className={styles.form} onSubmit={() => setStep()}>
 				<div className={styles.optionsContainer}>
 					{options.map((option) => (
@@ -68,7 +68,7 @@ const Performance = ({
 					</span>
 				</div>
 			</form>
-		</QuestionsContainer>
+		</Container>
 	);
 };
 

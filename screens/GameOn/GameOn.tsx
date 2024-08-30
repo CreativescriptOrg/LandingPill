@@ -2,7 +2,6 @@ import Image from "next/image";
 import styles from "./GameOn.module.css";
 import Input from "@/components/InputElement/Input";
 import submitForm from "@/utils/submitForm";
-import { useRouter } from "next/navigation";
 import STRINGS from "./string";
 import { useState } from "react";
 import { CircularProgress } from "@mui/material";
@@ -18,11 +17,11 @@ const GameOn = ({
   setFormData: any;
   setStep: any;
 }) => {
-  const router = useRouter();
   const [loading, setLoading] = useState(false);
+
   const handleSubmit = async (e: any) => {
     e.preventDefault();
-    setLoading(false);
+    setLoading(true);
     const res = await submitForm(formState);
     if (res.status === "success") {
       setLoading(false);
@@ -31,8 +30,8 @@ const GameOn = ({
   };
 
   return (
-    <main className="main_container center_content">
-      <div className={styles.container}>
+    <div className={styles.container}>
+      <div className={styles.subcontainer}>
         <div className={`title_content`}>
           <h1 className="heading_1_sb">{STRINGS[type].title}</h1>
           <span className="subtitle_1_sb">{STRINGS[type].subtitle}</span>
@@ -45,9 +44,11 @@ const GameOn = ({
           </div>
           <span className="subtitle_1_re">Approved by 17+ Founders</span>
         </div>
+      </div>
 
-        <Cards type={type} />
+      <Cards type={type} />
 
+      <div className={styles.subcontainer}>
         <div className={styles.text2}>
           Don’t wait! Pop in your email for instant access to your guide!
         </div>
@@ -69,7 +70,10 @@ const GameOn = ({
             value={formState.email}
           />
           <div className={`submit_container`}>
-            <button className="button_primary" disabled={!formState.email}>
+            <button
+              className="button_primary"
+              disabled={!formState.email || loading}
+            >
               Access now{" "}
               {loading && (
                 <CircularProgress sx={{ color: "white" }} size={20} />
@@ -78,11 +82,12 @@ const GameOn = ({
           </div>
         </form>
       </div>
-    </main>
+    </div>
   );
 };
 
 export default GameOn;
+
 export const Cards = ({ type }: { type: any }) => {
   return (
     <div className={styles.flex1}>

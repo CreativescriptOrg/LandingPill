@@ -13,20 +13,18 @@ const LoaderToDiagnose = ({ setStep }: { setStep: any }) => {
 	}, []);
 
 	return (
-		<main className='main_container center_content'>
-			<div className={styles.container}>
-				<div className={`title_content`}>
-					<LandingPillIcon2 />
-					<span className='subtitle_1_sb'>Awesome!</span>
-					<h1 className='heading_1_sb'>Diagnosing your landing page...</h1>
-					<span className='subtitle_1_sb'>
-						🩺 Let me put on my doctor’s coat and take a closer look. This won’t
-						take long!
-					</span>
-				</div>
-				<Loader />
+		<div className={styles.container}>
+			<div className={`title_content`}>
+				<LandingPillIcon2 />
+				<span className='subtitle_1_sb'>Awesome!</span>
+				<h1 className='heading_1_sb'>Diagnosing your landing page...</h1>
+				<span className='subtitle_1_sb'>
+					🩺 Let me put on my doctor’s coat and take a closer look. This won’t
+					take long!
+				</span>
 			</div>
-		</main>
+			<Loader />
+		</div>
 	);
 };
 
