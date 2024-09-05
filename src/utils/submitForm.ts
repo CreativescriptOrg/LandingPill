@@ -4,7 +4,7 @@ const submitForm = async (formState: any) => {
   let data = JSON.stringify(formState);
   try {
     const res = await axios.post(
-      "http://localhost:8000/api/v1/page/storepagedata",
+      "https://pill.estulife.com/api/v1/page/storepagedata",
       data,
       {
         maxBodyLength: Infinity,
