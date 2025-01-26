@@ -7,7 +7,7 @@ import { CheckSuccessIcon } from "@/assets/vectors";
 import CTA from "@/components/LandingPage/CTA/CTA";
 import SectionTitle from "@/components/LandingPage/SectionTitle/SectionTitle";
 
-gsap.registerPlugin(ScrollTrigger);
+// gsap.registerPlugin(ScrollTrigger);
 
 const config = [
   {
@@ -27,44 +27,44 @@ const config = [
 const Benefits = () => {
   const [currentText, setCurrentText] = useState(0);
 
-  useEffect(() => {
-    const subcontainer: any = document.querySelector(`.${styles.subcontainer}`);
+  // useEffect(() => {
+  //   const subcontainer: any = document.querySelector(`.${styles.subcontainer}`);
 
-    if (!subcontainer) return; // Exit if subcontainer is not found
+  //   if (!subcontainer) return; // Exit if subcontainer is not found
 
-    const tabs = gsap.utils.toArray(`.${styles.tabButton}`);
+  //   const tabs = gsap.utils.toArray(`.${styles.tabButton}`);
 
-    gsap.to(tabs, {
-      scrollTrigger: {
-        trigger: subcontainer, // Target the subcontainer
-        start: "top-=50px top", // Trigger before the subcontainer hits the top by 50px
-        end: `+=${subcontainer.offsetHeight}`, // Pin until the height of the subcontainer
-        pin: true, // Pin the subcontainer in place
-        scrub: true, // Smooth scrubbing
-        pinSpacing: true, // Ensure the section below comes in naturally
-        onUpdate: (self) => {
-          const progress = self.progress;
-          const currentIndex = Math.floor(progress * (tabs.length - 1));
-          tabs.forEach((tab: any, index) => {
-            if (index === currentIndex) {
-              tab.classList.add(styles.active);
-            } else {
-              tab.classList.remove(styles.active);
-            }
-          });
+  //   // gsap.to(tabs, {
+  //   //   scrollTrigger: {
+  //   //     trigger: subcontainer, // Target the subcontainer
+  //   //     start: "top-=50px top", // Trigger before the subcontainer hits the top by 50px
+  //   //     end: `+=${subcontainer.offsetHeight}`, // Pin until the height of the subcontainer
+  //   //     pin: true, // Pin the subcontainer in place
+  //   //     scrub: true, // Smooth scrubbing
+  //   //     pinSpacing: true, // Ensure the section below comes in naturally
+  //   //     onUpdate: (self) => {
+  //   //       const progress = self.progress;
+  //   //       const currentIndex = Math.floor(progress * (tabs.length - 1));
+  //   //       tabs.forEach((tab: any, index) => {
+  //   //         if (index === currentIndex) {
+  //   //           tab.classList.add(styles.active);
+  //   //         } else {
+  //   //           tab.classList.remove(styles.active);
+  //   //         }
+  //   //       });
 
-          setCurrentText(currentIndex);
-        },
-        onLeave: () => {
-          ScrollTrigger.refresh(); // Refresh triggers when leaving pinning
-        },
-      },
-    });
+  //   //       setCurrentText(currentIndex);
+  //   //     },
+  //   //     onLeave: () => {
+  //   //       ScrollTrigger.refresh(); // Refresh triggers when leaving pinning
+  //   //     },
+  //   //   },
+  //   // });
 
-    return () => {
-      ScrollTrigger.getAll().forEach((trigger) => trigger.kill()); // Cleanup
-    };
-  }, []);
+  //   return () => {
+  //     ScrollTrigger.getAll().forEach((trigger) => trigger.kill()); // Cleanup
+  //   };
+  // }, []);
 
   return (
     <section id="benefits" className={styles.container}>
