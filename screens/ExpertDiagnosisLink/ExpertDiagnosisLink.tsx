@@ -1,7 +1,7 @@
 import styles from "./styles.module.css";
 import Input from "@/components/InputElement/Input";
 import { LandingPillIcon } from "@/assets/vectors";
-import submitForm from "@/utils/submitForm";
+import submitForm, { sendEmail } from "@/utils/submitForm";
 import { useState } from "react";
 import SuccessModal from "@/components/ConfirmationModal/SuccessModal";
 import { CircularProgress } from "@mui/material";
@@ -18,6 +18,7 @@ const ExpertDiagnosisLink = ({
 	const handleSubmit = async (e: any) => {
 		e.preventDefault();
 		setLoading(true);
+		const res1 = await sendEmail(formState)
 		const res = await submitForm(formState);
 		if (res.status === "success") {
 			setSuccess(true);
