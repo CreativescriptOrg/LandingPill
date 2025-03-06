@@ -43,7 +43,7 @@ const RazorpayCheckout = () => {
         receipt: 'receipt_' + Date.now()
       });
 
-      const { id, key_id } = orderResponse?.data?.data;
+      const { id, key_id,uniqueId } = orderResponse?.data?.data;
       const order_id = id;
       // 3. Configure Razorpay options
       const options = {
@@ -60,7 +60,8 @@ const RazorpayCheckout = () => {
             const verificationResponse = await axios.post(`${process.env.NEXT_PUBLIC_API_URL}/api/verify-payment`, {
               razorpay_payment_id: response?.razorpay_payment_id,
               razorpay_order_id: response?.razorpay_order_id,
-              razorpay_signature: response?.razorpay_signature
+              razorpay_signature: response?.razorpay_signature,
+              uniqueId,
             });
             
             console.log('verificationResponse',verificationResponse);
@@ -107,19 +108,7 @@ const RazorpayCheckout = () => {
       <div className="card max-w-md mx-auto p-6">
         
         <h1 className="text-2xl font-bold mb-4">Razorpay Payment</h1>
-        
-        <div className="mb-4">
-          <label className="block text-sm font-medium mb-1">Amount (₹):</label>
-          <input
-            type="number"
-            value={amount / 100}
-            onChange={(e) => setAmount(Math.round(parseFloat(e.target.value) * 100))}
-            className="w-full p-2 border rounded"
-            min="1"
-          />
-          <p className="text-sm text-gray-500 mt-1">Amount in paise: {amount}</p>
-        </div>
-        
+                
         <button
           onClick={initiatePayment}
           disabled={loading}
