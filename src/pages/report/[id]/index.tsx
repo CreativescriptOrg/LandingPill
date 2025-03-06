@@ -10,7 +10,6 @@ import SEOAuditFindings from "@/components/report/sections/SEOAuditFindings";
 import { result } from "@/seo-audit-dashboard";
 
 const Report = ({ reportData }: any) => {
-	console.log(reportData);
 	return (
 		<div className='min-h-screen bg-gray-50'>
 			<Header />

@@ -20,7 +20,7 @@ interface StepState {
 }
 
 const initialState: StepState = {
-	curStep: "name",
+	curStep: "website",
 	totalStep: 10,
 	form: {
 		name: "",

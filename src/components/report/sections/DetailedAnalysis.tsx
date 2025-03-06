@@ -1,27 +1,12 @@
 import React, { ReactNode } from "react";
 import { AccordionSection } from "../shared/AccordionSection";
-import { HeroSectionAudit } from "./detailed/HeroSectionAudit";
-import { FooterSection } from "./detailed/FooterSection";
 import {
 	Layout,
-	LayoutGrid,
-	MessageSquare,
-	Video,
-	LayoutList,
-	FormInput,
-	MessageCircle,
 	FilterIcon as FooterIcon,
-	Lightbulb,
 	Target,
 	CheckCircle,
 	AlertTriangle,
 } from "lucide-react";
-import { Section2 } from "@/components/report/sections/detailed/Section2";
-import { Section3 } from "@/components/report/sections/detailed/Section3";
-import { Section4 } from "@/components/report/sections/detailed/Section4";
-import { Section5 } from "@/components/report/sections/detailed/Section5";
-import { Section6 } from "@/components/report/sections/detailed/Section6";
-import { Section7 } from "@/components/report/sections/detailed/Section7";
 import { ResponsiveImage } from "@/components/report/shared/ResponsiveImage";
 
 const DetailedAnalysis = ({ data }: any) => {
@@ -31,35 +16,17 @@ const DetailedAnalysis = ({ data }: any) => {
 				Detailed Section Analysis
 			</h2>
 
-			{data.map(
-				(
-					audit: {
-						url: string;
-						auditReport: {
-							[x: string]: any;
-							sectionName:
-								| string
-								| number
-								| boolean
-								| React.ReactElement<
-										any,
-										string | React.JSXElementConstructor<any>
-								  >
-								| Iterable<React.ReactNode>
-								| React.PromiseLikeOfReactNode
-								| null
-								| undefined;
-						};
-					},
-					index: React.Key | null | undefined
-				) => (
+			{data.map((audit: any, index: React.Key | null | undefined) => {
+				const auditReport = audit.auditReport;
+
+				return (
 					<AccordionSection
 						key={index}
 						title={
 							<div className='flex items-center gap-2'>
 								{/* Use appropriate icons based on section name */}
 								<Layout className='text-primary' size={20} />
-								<span>{audit.auditReport.sectionName}</span>
+								<span>{auditReport.sectionName}</span>
 							</div>
 						}
 					>
@@ -74,7 +41,7 @@ const DetailedAnalysis = ({ data }: any) => {
 
 								<div className='space-y-6'>
 									{/* Text Overlay Contrast */}
-									{audit.auditReport.audit_results.problems_identified.map(
+									{auditReport.audit_results.problems_identified.map(
 										(
 											problem: {
 												[x: string]: ReactNode;
@@ -112,7 +79,7 @@ const DetailedAnalysis = ({ data }: any) => {
 									Section Strengths
 								</h3>
 								<ul className='space-y-3 text-sm text-gray-700'>
-									{audit.auditReport.audit_results.current_strengths.map(
+									{auditReport.audit_results.current_strengths.map(
 										(
 											strength: {
 												[x: string]: ReactNode;
@@ -139,7 +106,7 @@ const DetailedAnalysis = ({ data }: any) => {
 								</h3>
 
 								<div className='space-y-6'>
-									{audit.auditReport.audit_results.strategic_recommendations.map(
+									{auditReport.audit_results.strategic_recommendations.map(
 										(
 											recommendation: {
 												[x: string]: ReactNode;
@@ -161,8 +128,8 @@ const DetailedAnalysis = ({ data }: any) => {
 							</div>
 						</div>
 					</AccordionSection>
-				)
-			)}
+				);
+			})}
 		</section>
 	);
 };
