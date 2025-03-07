@@ -1,6 +1,6 @@
 import React from "react";
 
-export const Header = ({ setStep }: any) => {
+export const Header = ({ setStep, name, date }: any) => {
 	return (
 		<header className='w-full bg-gradient-to-r from-purple-light to-purple-lighter p-4 sm:p-6 shadow-sm sm:fixed sm:top-0 sm:left-0 sm:right-0 sm:z-50'>
 			<div className='max-w-6xl mx-auto flex justify-between items-center'>
@@ -19,10 +19,10 @@ export const Header = ({ setStep }: any) => {
 					</a>
 					<div>
 						<h1 className='text-lg sm:text-h2 font-bold text-primary'>
-							Landingpill Audit Report – Crossroads Global
+							Landingpill Audit Report – {name}
 						</h1>
 						<p className='text-sm sm:text-body text-gray-600'>
-							Prepared by Team Landingpill • 3rd Feb 2025
+							Prepared by Team Landingpill • {date}
 						</p>
 					</div>
 				</div>

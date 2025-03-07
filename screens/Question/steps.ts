@@ -111,13 +111,8 @@ const STEPS: StepsType = {
 	},
 	LPHealthReport: {
 		current: "LPHealthReport",
-		next: "ReportResult",
-		prev: "diagnosisResult",
-	},
-	ReportResult: {
-		current: "ReportResult",
 		next: "Redesign",
-		prev: "",
+		prev: "diagnosisResult",
 	},
 	AuditSelf: {
 		current: "AuditSelf",

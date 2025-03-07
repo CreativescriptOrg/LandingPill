@@ -30,7 +30,6 @@ import CTA from "@/components/SelfAudit/CTA/CTA";
 import { BackIcon } from "@/assets/vectors";
 import submitForm from "@/utils/submitForm";
 import LPHealthReport from "../LPHealthReport/LPHealthReport";
-import ReportResult from "../ReportResult/ReportResult";
 
 const Question = () => {
 	const dispatch = useDispatch();
@@ -39,7 +38,6 @@ const Question = () => {
 
 	const [success, setSuccess] = React.useState(false);
 	const [loading, setLoading] = React.useState(false);
-	const [report, setReport] = React.useState<any>(null);
 
 	const handleSubmit = async () => {
 		setLoading(true);
@@ -292,14 +290,6 @@ const Question = () => {
 						}
 						formState={formState}
 						setStep={() => dispatch(setStep(STEPS.LPHealthReport.next))}
-						setReport={setReport}
-					/>
-				)}
-
-				{curStep === STEPS.ReportResult.current && (
-					<ReportResult
-						reportData={report}
-						setStep={() => dispatch(setStep(STEPS.AuditCS.next))}
 					/>
 				)}
 

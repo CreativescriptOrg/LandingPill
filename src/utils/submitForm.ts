@@ -59,16 +59,7 @@ export const sendEmail = async (formState: any) => {
 };
 
 export const getHeroSectionAuditForm = async (formState: any) => {
-	// let data = JSON.stringify(formState);
-	let data = JSON.stringify({
-		url: "https://www.smallcase.com/",
-		ques1: ["No Clear Storytelling 📖", "Spacing Issues 📏"],
-		ques2: [
-			"Not getting enough sign-ups 📝",
-			"Visitors leaving too quickly 🚪",
-		],
-		emailId: "shuklasarthak100@gmail.com",
-	});
+	let data = JSON.stringify(formState);
 	try {
 		const res = await axios.post(
 			"https://pill.estulife.com/api/v1/page/getHeroSectionAudit",

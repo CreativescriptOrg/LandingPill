@@ -370,3 +370,48 @@ label {
 		line-height: normal;
 	}
 }
+
+.razorpay_container {
+	padding: 1rem;
+	border-radius: 11px;
+	position: relative;
+}
+.razorpay_backdrop {
+	position: absolute;
+	inset: 0;
+	border-radius: 11px;
+	border: 1px solid rgba(0, 0, 0, 0.1);
+	background: rgba(0, 0, 0, 0.33);
+	backdrop-filter: blur(1.5px);
+	z-index: 1;
+}
+
+.razorpay_btn {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	z-index: 2;
+}
+
+.purple_button {
+	border-radius: 17.92px;
+	border: 2.24px solid var(--200, #e9d5ff);
+	background: var(--100, #f3e8ff);
+
+	display: flex;
+	padding: 12px 24px;
+	justify-content: center;
+	align-items: center;
+	gap: 16px;
+	flex-shrink: 0;
+
+	color: var(--900, #581c87);
+
+	font-family: "Space Grotesk";
+	font-size: 32px;
+	font-style: normal;
+	font-weight: 400;
+	line-height: normal;
+	letter-spacing: -0.64px;
+}
