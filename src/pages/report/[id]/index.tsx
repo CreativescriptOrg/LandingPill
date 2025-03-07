@@ -9,13 +9,19 @@ import PerformanceSEO from "@/components/report/sections/PerformanceSEO";
 import SEOAuditFindings from "@/components/report/sections/SEOAuditFindings";
 import RazorpayCheckout from "@/components/Payment/RazorpayCheckout";
 import { ResponsiveImage } from "@/components/report/shared/ResponsiveImage";
+import { Loading } from "@/components/report/shared/Loading";
 
 const Report = ({ reportData, id, email }: any) => {
 	const isPaymentDone = reportData?.payment_status !== "pending";
+	const reportStatus = reportData?.report_status === "pending" && isPaymentDone;
 	const date = new Date(reportData?.date);
 	const formattedDate = `${date.getDate()} ${date.toLocaleString("default", {
 		month: "short",
 	})}, ${date.getFullYear()}`;
+
+	if (reportStatus) {
+		return <Loading />;
+	}
 
 	return (
 		<>
@@ -27,7 +33,7 @@ const Report = ({ reportData, id, email }: any) => {
 						<>
 							{reportData?.sectionAudit && (
 								<DetailedAnalysis
-									data={[JSON.parse(reportData?.sectionAudit)]}
+									data={[reportData?.sectionAudit]}
 									isPaymentDone={false}
 									url={reportData?.url}
 								/>
@@ -95,7 +101,7 @@ export const getServerSideProps: GetServerSideProps = async ({
 		props: {
 			reportData: reportData.data,
 			id: id,
-			email: reportData.data.emailId,
+			email: reportData.data?.emailId,
 		},
 	};
 };
