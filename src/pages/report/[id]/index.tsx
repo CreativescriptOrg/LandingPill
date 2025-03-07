@@ -7,28 +7,81 @@ import FinalActionPlan from "@/components/report/sections/FinalActionPlan";
 import KeyTakeaways from "@/components/report/sections/KeyTakeaways";
 import PerformanceSEO from "@/components/report/sections/PerformanceSEO";
 import SEOAuditFindings from "@/components/report/sections/SEOAuditFindings";
-import { result } from "@/seo-audit-dashboard";
+import RazorpayCheckout from "@/components/Payment/RazorpayCheckout";
+import { ResponsiveImage } from "@/components/report/shared/ResponsiveImage";
+import { Loading } from "@/components/report/shared/Loading";
 
-const Report = ({ reportData }: any) => {
+const Report = ({ reportData, id, email }: any) => {
+	const isPaymentDone = reportData?.payment_status !== "pending";
+	const reportStatus = reportData?.report_status === "pending" && isPaymentDone;
+	const date = new Date(reportData?.date);
+	const formattedDate = `${date.getDate()} ${date.toLocaleString("default", {
+		month: "short",
+	})}, ${date.getFullYear()}`;
+
+	if (reportStatus) {
+		return <Loading />;
+	}
+
 	return (
-		<div className='min-h-screen bg-gray-50'>
-			<Header />
+		<>
+			<div className='min-h-screen bg-gray-50'>
+				<Header name={reportData.name} date={formattedDate} />
 
-			<main className='max-w-5xl mx-auto px-4 sm:px-6 py-8 sm:pt-32 sm:pb-12'>
-				<ExecutiveSummary
-					data={reportData.finalReport.LandingPageReport.ExecutiveSummary}
-				/>
-				<KeyTakeaways
-					data={reportData.finalReport.LandingPageReport.KeyTakeaways}
-				/>
-				<DetailedAnalysis data={reportData.sectionAudit} />
-				{/* <PerformanceSEO data={reportData.PerformanceSEO} /> */}
-				<SEOAuditFindings data={reportData.seoAudit} />
-				{/* <FinalActionPlan data={reportData.FinalActionPlan} /> */}
-			</main>
+				<main className='max-w-5xl mx-auto px-4 sm:px-6 py-8 sm:pt-32 sm:pb-12'>
+					{!isPaymentDone ? (
+						<>
+							{reportData?.sectionAudit && (
+								<DetailedAnalysis
+									data={[reportData?.sectionAudit]}
+									isPaymentDone={false}
+									url={reportData?.url}
+								/>
+							)}
+							<div className='razorpay_container'>
+								<div className='razorpay_backdrop'></div>
+								<ResponsiveImage
+									src={"/razorpay_bg.png"}
+									alt='Hero Section Screenshot'
+								/>
+								<div className='razorpay_btn'>
+									<RazorpayCheckout orderId={id} email={email} />
+								</div>
+							</div>
+						</>
+					) : (
+						<>
+							{reportData?.finalReport?.LandingPageReport?.ExecutiveSummary && (
+								<ExecutiveSummary
+									data={
+										reportData.finalReport.LandingPageReport.ExecutiveSummary
+									}
+								/>
+							)}
+							{reportData?.finalReport?.LandingPageReport?.KeyTakeaways && (
+								<KeyTakeaways
+									data={reportData.finalReport.LandingPageReport.KeyTakeaways}
+								/>
+							)}
+							{reportData?.sectionAudit && (
+								<DetailedAnalysis
+									data={reportData?.sectionAudit}
+									isPaymentDone
+								/>
+							)}
 
-			<Footer />
-		</div>
+							{/* <PerformanceSEO data={reportData.PerformanceSEO} /> */}
+							{reportData?.seoAudit && (
+								<SEOAuditFindings data={reportData.seoAudit} />
+							)}
+							{/* <FinalActionPlan data={reportData.FinalActionPlan} /> */}
+						</>
+					)}
+				</main>
+
+				<Footer />
+			</div>
+		</>
 	);
 };
 
@@ -39,13 +92,16 @@ export const getServerSideProps: GetServerSideProps = async ({
 	const { id } = params || {};
 	if (!id) return { notFound: true };
 
-	// const res = await fetch(`https://api.example.com/report/${id}`);
-	// const reportData = await res.json();
-	const reportData = result;
+	const res = await fetch(
+		`https://pill.estulife.com/api/v1/page/getPaymentStatus?orderId=${id}`
+	);
+	const reportData = await res.json();
 
 	return {
 		props: {
-			reportData,
+			reportData: reportData.data,
+			id: id,
+			email: reportData.data?.emailId,
 		},
 	};
 };

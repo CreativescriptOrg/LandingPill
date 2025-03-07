@@ -5,20 +5,20 @@ import { getHeroSectionAuditForm } from "@/utils/submitForm";
 import { useState } from "react";
 import SuccessModal from "@/components/ConfirmationModal/SuccessModal";
 import { CircularProgress } from "@mui/material";
+import { useRouter } from "next/router";
 
 const LPHealthReport = ({
 	setFormData,
 	formState,
 	setStep,
-	setReport,
 }: {
 	setFormData: (email: string) => void;
 	formState: any;
 	setStep: any;
-	setReport: any;
 }) => {
 	const [success, setSuccess] = useState(false);
 	const [loading, setLoading] = useState(false);
+	const router = useRouter();
 
 	const handleSubmit = async (e: any) => {
 		e.preventDefault();
@@ -31,9 +31,8 @@ const LPHealthReport = ({
 		setLoading(true);
 		const res = await getHeroSectionAuditForm(formToSubmit);
 		if (res.status === "success") {
-			setReport(res);
 			setStep();
-			// // setSuccess(true);
+			router.push(`/report/${res.id}`);
 			setLoading(false);
 		}
 	};

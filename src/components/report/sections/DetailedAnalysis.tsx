@@ -9,7 +9,8 @@ import {
 } from "lucide-react";
 import { ResponsiveImage } from "@/components/report/shared/ResponsiveImage";
 
-const DetailedAnalysis = ({ data }: any) => {
+const DetailedAnalysis = ({ data, isPaymentDone, url }: any) => {
+	console.log(data);
 	return (
 		<section className='bg-white rounded-xl p-4 sm:p-6 shadow-sm mb-6 sm:mb-8'>
 			<h2 className='text-xl sm:text-h2 font-bold text-primary mb-4 sm:mb-6'>
@@ -17,7 +18,7 @@ const DetailedAnalysis = ({ data }: any) => {
 			</h2>
 
 			{data.map((audit: any, index: React.Key | null | undefined) => {
-				const auditReport = audit.auditReport;
+				const auditReport = !isPaymentDone ? audit : audit.auditReport;
 
 				return (
 					<AccordionSection
@@ -29,9 +30,13 @@ const DetailedAnalysis = ({ data }: any) => {
 								<span>{auditReport.sectionName}</span>
 							</div>
 						}
+						open={!isPaymentDone}
 					>
 						<div className='space-y-4 sm:space-y-6'>
-							<ResponsiveImage src={audit.url} alt='Hero Section Screenshot' />
+							<ResponsiveImage
+								src={isPaymentDone ? audit.url : url}
+								alt='Hero Section Screenshot'
+							/>
 							{/* Problems Identified */}
 							<div className='bg-red-50 p-4 rounded-lg'>
 								<h3 className='text-lg font-semibold text-red-800 mb-4 flex items-center gap-2'>
