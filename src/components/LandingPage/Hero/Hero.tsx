@@ -3,6 +3,8 @@ import styles from "./styles.module.css";
 import Link from "next/link";
 import Image from "next/image";
 
+import RazorpayCheckout from '@/components/Payment/RazorPay';
+
 const Hero = () => {
   return (
     <div>
@@ -95,6 +97,9 @@ const Hero = () => {
           </Link>
           <span>No subscription required | 55 slots booked</span>
         </div>
+
+          <RazorpayCheckout/>
+
       </div>
     </div>
   );
