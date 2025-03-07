@@ -33,15 +33,15 @@ const STEPS: StepsType = {
 		current: "hasLandingPage",
 		next: "website",
 		prev: "businessName",
-		progress: 4,
+		progress: 1,
 		totalStep: 5,
 	},
 	website: {
 		current: "website",
 		next: "loader1",
-		prev: "hasLandingPage",
-		progress: 5,
-		totalStep: 5,
+		prev: "",
+		progress: 1,
+		totalStep: 2,
 	},
 	needNewLandingPage: {
 		current: "needNewLandingPage",
@@ -67,7 +67,7 @@ const STEPS: StepsType = {
 	},
 	performance: {
 		current: "performance",
-		next: "metadata",
+		next: "loader2",
 		prev: "look",
 		progress: 2,
 		totalStep: 3,
@@ -86,8 +86,8 @@ const STEPS: StepsType = {
 	},
 	loader2: {
 		current: "loader2",
-		next: "diagnosisResult",
-		prev: "metadata",
+		next: "LPHealthReport",
+		prev: "performance",
 	},
 	diagnosisResult: {
 		current: "diagnosisResult",
@@ -108,6 +108,16 @@ const STEPS: StepsType = {
 		current: "AuditCSLink",
 		next: "",
 		prev: "AuditCS",
+	},
+	LPHealthReport: {
+		current: "LPHealthReport",
+		next: "ReportResult",
+		prev: "diagnosisResult",
+	},
+	ReportResult: {
+		current: "ReportResult",
+		next: "Redesign",
+		prev: "",
 	},
 	AuditSelf: {
 		current: "AuditSelf",

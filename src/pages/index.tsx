@@ -8,43 +8,45 @@ import HowItWorks from "@/components/LandingPage/Sections/HowItWorks/HowItWorks"
 import Footer from "@/components/LandingPage/Footer/Footer";
 import Script from "next/script";
 import { getCalApi } from "@calcom/embed-react";
+
 const index = () => {
-  /* First make sure that you have installed the package */
+	/* First make sure that you have installed the package */
 
-  /* If you are using yarn */
-  // yarn add @calcom/embed-react
+	/* If you are using yarn */
+	// yarn add @calcom/embed-react
 
-  /* If you are using npm */
-  // npm install @calcom/embed-react
-  React.useEffect(() => {
-    const triggerApi = async () => {
-      const cal = await getCalApi({ namespace: "15min" });
-      cal("ui", {
-        styles: { branding: { brandColor: "#000000" } },
-        hideEventTypeDetails: false,
-        layout: "month_view",
-      });
-    };
-    triggerApi();
-  }, []);
-  return (
-    <main>
-      <Header />
-      <Script
-        src="https://app.10xlaunch.ai/widget"
-        data-app-id="519bf231-fe1b-46db-9a63-3d99639d6ed0"
-        async
-        defer
-      />
+	/* If you are using npm */
+	// npm install @calcom/embed-react
+	React.useEffect(() => {
+		const triggerApi = async () => {
+			const cal = await getCalApi({ namespace: "15min" });
+			cal("ui", {
+				styles: { branding: { brandColor: "#000000" } },
+				hideEventTypeDetails: false,
+				layout: "month_view",
+			});
+		};
+		triggerApi();
+	}, []);
 
-      <Benefits />
-      <Testimonials />
-      <Projects />
-      <Solution />
-      <HowItWorks />
-      <Footer />
-    </main>
-  );
+	return (
+		<main>
+			<Header />
+			<Script
+				src='https://app.10xlaunch.ai/widget'
+				data-app-id='519bf231-fe1b-46db-9a63-3d99639d6ed0'
+				async
+				defer
+			/>
+
+			<Benefits />
+			<Testimonials />
+			<Projects />
+			<Solution />
+			<HowItWorks />
+			<Footer />
+		</main>
+	);
 };
 
 export default index;
