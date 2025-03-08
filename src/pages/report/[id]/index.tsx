@@ -1,4 +1,4 @@
-import { GetServerSideProps } from "next";
+import { useEffect, useState } from "react";
 import { Footer } from "@/components/report/layout/Footer";
 import { Header } from "@/components/report/layout/Header";
 import DetailedAnalysis from "@/components/report/sections/DetailedAnalysis";
@@ -10,23 +10,89 @@ import SEOAuditFindings from "@/components/report/sections/SEOAuditFindings";
 import RazorpayCheckout from "@/components/Payment/RazorpayCheckout";
 import { ResponsiveImage } from "@/components/report/shared/ResponsiveImage";
 import { Loading } from "@/components/report/shared/Loading";
+import axios from "axios";
+import { useRouter } from "next/router";
 
-const Report = ({ reportData, id, email }: any) => {
-	const isPaymentDone = reportData?.payment_status !== "pending";
-	const reportStatus = reportData?.report_status === "pending" && isPaymentDone;
-	const date = new Date(reportData?.date);
-	const formattedDate = `${date.getDate()} ${date.toLocaleString("default", {
-		month: "short",
-	})}, ${date.getFullYear()}`;
+interface ReportData {
+	report_status: string;
+	payment_status: string;
+	name: string;
+	date: string;
+	emailId: string;
+	url: string;
+	sectionAudit?: any;
+	finalReport?: {
+		LandingPageReport?: {
+			ExecutiveSummary?: any;
+			KeyTakeaways?: any;
+		};
+	};
+	seoAudit?: any;
+}
 
-	if (reportStatus) {
+const Report = () => {
+	const router = useRouter();
+	const { id } = router.query;
+
+	const [reportData, setReportData] = useState<ReportData | null>(null);
+	const [loading, setLoading] = useState(true);
+	const [generatingReport, setGeneratingReport] = useState(false);
+	const [isPaymentDone, setIsPaymentDone] = useState(false);
+	const [date, setDate] = useState("");
+
+	const fetchReportData = async () => {
+		try {
+			const res = await axios.get(
+				`https://pill.estulife.com/api/v1/page/getPaymentStatus?orderId=${id}`
+			);
+			let report = res.data.data;
+			setReportData(report);
+			setGeneratingReport(
+				report?.report_status === "pending" &&
+					report?.payment_status !== "pending"
+			);
+			setIsPaymentDone(report?.payment_status !== "pending");
+
+			const date = new Date(report?.date || "");
+			const formattedDate = `${date.getDate()} ${date.toLocaleString(
+				"default",
+				{
+					month: "short",
+				}
+			)}, ${date.getFullYear()}`;
+
+			setDate(formattedDate);
+			setLoading(false);
+		} catch (error) {
+			console.error("Error fetching report data:", error);
+			setLoading(false);
+		}
+	};
+
+	useEffect(() => {
+		if (id) {
+			fetchReportData();
+		}
+	}, [id]);
+
+	useEffect(() => {
+		if (generatingReport) {
+			const interval = setInterval(async () => {
+				fetchReportData();
+			}, 3000);
+
+			return () => clearInterval(interval);
+		}
+	}, [reportData, id, generatingReport]);
+
+	if (loading || generatingReport) {
 		return <Loading />;
 	}
 
 	return (
 		<>
 			<div className='min-h-screen bg-gray-50'>
-				<Header name={reportData.name} date={formattedDate} />
+				{reportData && <Header name={reportData.name} date={date} />}
 
 				<main className='max-w-5xl mx-auto px-4 sm:px-6 py-8 sm:pt-32 sm:pb-12'>
 					{!isPaymentDone ? (
@@ -45,7 +111,7 @@ const Report = ({ reportData, id, email }: any) => {
 									alt='Hero Section Screenshot'
 								/>
 								<div className='razorpay_btn'>
-									<RazorpayCheckout orderId={id} email={email} />
+									<RazorpayCheckout orderId={id} email={reportData?.emailId} />
 								</div>
 							</div>
 						</>
@@ -83,27 +149,6 @@ const Report = ({ reportData, id, email }: any) => {
 			</div>
 		</>
 	);
-};
-
-export const getServerSideProps: GetServerSideProps = async ({
-	req,
-	params,
-}) => {
-	const { id } = params || {};
-	if (!id) return { notFound: true };
-
-	const res = await fetch(
-		`https://pill.estulife.com/api/v1/page/getPaymentStatus?orderId=${id}`
-	);
-	const reportData = await res.json();
-
-	return {
-		props: {
-			reportData: reportData.data,
-			id: id,
-			email: reportData.data?.emailId,
-		},
-	};
 };
 
 export default Report;
