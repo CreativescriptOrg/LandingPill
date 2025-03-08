@@ -10,11 +10,9 @@ import { useRouter } from "next/router";
 const LPHealthReport = ({
 	setFormData,
 	formState,
-	setStep,
 }: {
 	setFormData: (email: string) => void;
 	formState: any;
-	setStep: any;
 }) => {
 	const [success, setSuccess] = useState(false);
 	const [loading, setLoading] = useState(false);
@@ -31,7 +29,6 @@ const LPHealthReport = ({
 		setLoading(true);
 		const res = await getHeroSectionAuditForm(formToSubmit);
 		if (res.status === "success") {
-			setStep();
 			router.push(`/report/${res.id}`);
 			setLoading(false);
 		}

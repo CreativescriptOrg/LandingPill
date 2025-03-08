@@ -85,7 +85,7 @@ const Question = () => {
 				)}
 
 				{/* Render the form based on the current step */}
-				{curStep === STEPS.name.current && (
+				{/* {curStep === STEPS.name.current && (
 					<Question1
 						setStep={() => dispatch(setStep(STEPS.name.next))}
 						name={formState.name}
@@ -93,8 +93,8 @@ const Question = () => {
 							dispatch(setForm({ ...formState, name }))
 						}
 					/>
-				)}
-				{curStep === STEPS.businessType.current && (
+				)} */}
+				{/* {curStep === STEPS.businessType.current && (
 					<Question2
 						customerName={formState.name}
 						setStep={() => dispatch(setStep(STEPS.businessType.next))}
@@ -103,8 +103,8 @@ const Question = () => {
 							dispatch(setForm({ ...formState, businessType }))
 						}
 					/>
-				)}
-				{curStep === STEPS.businessName.current && (
+				)} */}
+				{/* {curStep === STEPS.businessName.current && (
 					<Question3
 						setStep={() => dispatch(setStep(STEPS.businessName.next))}
 						businessName={formState.businessName}
@@ -112,8 +112,8 @@ const Question = () => {
 							dispatch(setForm({ ...formState, businessName }))
 						}
 					/>
-				)}
-				{curStep === STEPS.hasLandingPage.current && (
+				)} */}
+				{/* {curStep === STEPS.hasLandingPage.current && (
 					<Question4
 						setStep={() =>
 							dispatch(
@@ -140,7 +140,7 @@ const Question = () => {
 							);
 						}}
 					/>
-				)}
+				)} */}
 				{curStep === STEPS.website.current && formState.hasLandingPage && (
 					<Question5
 						setStep={() => dispatch(setStep(STEPS.website.next))}
@@ -148,37 +148,35 @@ const Question = () => {
 						setFormData={(website: string) =>
 							dispatch(setForm({ ...formState, website }))
 						}
+						setStep1={() => dispatch(setStep(STEPS.needNewLandingPage.current))}
 					/>
 				)}
-				{!formState.hasLandingPage && (
-					<>
-						{curStep === STEPS.needNewLandingPage.current && (
-							<NeedNewLandingPage
-								ctaAction={async (key: string) => {
-									dispatch(setForm({ ...formState, serviceType: key }));
-									await handleSubmit();
-								}}
-								loading={loading}
-							/>
-						)}
-						{formState.serviceType === "CS" &&
-							curStep === STEPS.scheduleCall.current && (
-								<ScheduleCall
-									setFormData={(email: string, website: string) =>
-										dispatch(setForm({ ...formState, email, website }))
-									}
-									formState={formState}
-								/>
-							)}
-						{formState.serviceType === "Self" &&
-							curStep === STEPS.resources.current && <Resources />}
-					</>
+				{curStep === STEPS.needNewLandingPage.current && (
+					<NeedNewLandingPage
+						ctaAction={async (key: string) => {
+							dispatch(setForm({ ...formState, serviceType: key }));
+							await handleSubmit();
+						}}
+						loading={loading}
+					/>
 				)}
+				{formState.serviceType === "CS" &&
+					curStep === STEPS.scheduleCall.current && (
+						<ScheduleCall
+							setFormData={(email: string, website: string) =>
+								dispatch(setForm({ ...formState, email, website }))
+							}
+							formState={formState}
+						/>
+					)}
 				{curStep === STEPS.loader1.current && (
 					<LoaderAfterSubmit
 						setStep={() => dispatch(setStep(STEPS.loader1.next))}
 					/>
 				)}
+				{/* {formState.serviceType === "Self" &&
+					curStep === STEPS.resources.current && <Resources />}
+				 */}
 				{curStep === STEPS.look.current && (
 					<LookAndFeel
 						setStep={() => dispatch(setStep(STEPS.look.next))}
@@ -289,7 +287,6 @@ const Question = () => {
 							dispatch(setForm({ ...formState, email }))
 						}
 						formState={formState}
-						setStep={() => dispatch(setStep(STEPS.LPHealthReport.next))}
 					/>
 				)}
 

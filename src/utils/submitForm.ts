@@ -22,7 +22,11 @@ const submitForm = async (formState: any) => {
 				  };
 		}
 	} catch (error) {
-		console.log(error);
+		let message = (error as any).response?.data?.message;
+		return {
+			status: "failed",
+			message: message ? message : "Something went wrong",
+		};
 	}
 };
 
@@ -54,7 +58,11 @@ export const sendEmail = async (formState: any) => {
 				  };
 		}
 	} catch (error) {
-		console.log(error);
+		let message = (error as any).response?.data?.message;
+		return {
+			status: "failed",
+			message: message ? message : "Something went wrong",
+		};
 	}
 };
 
@@ -80,7 +88,11 @@ export const getHeroSectionAuditForm = async (formState: any) => {
 				  };
 		}
 	} catch (error) {
-		console.log(error);
+		let message = (error as any).response?.data?.message;
+		return {
+			status: "failed",
+			message: message ? message : "Something went wrong",
+		};
 	}
 };
 
