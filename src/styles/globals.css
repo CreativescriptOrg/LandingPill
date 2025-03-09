@@ -415,3 +415,22 @@ label {
 	line-height: normal;
 	letter-spacing: -0.64px;
 }
+
+.link {
+	color: #000;
+	text-align: center;
+
+	/* Subtitle/S1/Regular */
+	font-family: "Space Grotesk";
+	font-size: 24px;
+	font-style: normal;
+	font-weight: 400;
+	line-height: normal;
+	letter-spacing: -0.48px;
+	text-decoration-line: underline;
+	text-decoration-style: solid;
+	text-decoration-skip-ink: auto;
+	text-decoration-thickness: auto;
+	text-underline-offset: auto;
+	text-underline-position: from-font;
+}
