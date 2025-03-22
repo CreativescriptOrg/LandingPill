@@ -10,6 +10,7 @@ export const ALL_LINKS = {
   RahulTwitter: "https://twitter.com/_astromartian",
   RahulTelle: "https://t.me/astro_martian",
   RahulLinkedin: "https://www.linkedin.com/in/rahul-mittal4233/",
+  BASE_URL: "https://pill.estulife.com",
 };
 
 // <iframe src="https://docsend.com/v/xzdy9/whitepaper" allow="fullscreen" width="640" height="480"></iframe>
