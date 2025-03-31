@@ -110,9 +110,9 @@ const Footer = () => {
               @2024, All rights reserved. Landingpill by{" "}
               <span
                 style={{ textDecoration: "underline", cursor: "pointer" }}
-                onClick={() => {
-                  window.open("https://creativescript.org/", "_blank");
-                }}
+                // onClick={() => {
+                //   window.open("https://creativescript.org/", "_blank");
+                // }}
               >
                 Creative Script
               </span>
